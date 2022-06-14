@@ -6,22 +6,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #sign{
+        body{
+            background-image: url('https://staticg.sportskeeda.com/Football+wallpapers/CR7/cr7.jpg');
+        }
+         #signs{
             display: flex;
             justify-content: right;
         }
+
+.bg-modal {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+    left: 0;
+	display: none;
+	justify-content: right;
+	align-items: center;
+}
+
+.modal-contents {
+	height: 630px;
+	width: 330px;
+	background-color: white;
+	/* text-align: center; */
+	padding: 0px;
+	position: relative;
+	border-radius: 4px;
+}
+.modal-contents>form>h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    margin-left: 25px;
+    color: #4F585E;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+	margin: 15px auto;
+	display: block;
+	width: 80%;
+    height: 20px;
+	padding: 8px;
+	border: 1px solid gray;
+    border-radius: 5px;
+}
+.close{
+    background-color: #10847e;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 0;
+	left: -40px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin-top: 20px;
+    /* margin-right: 10px; */
+}
+
+.close>div {
+	/* position: absolute; */
+	/* top: 0;
+	left: -30px; */
+	font-size: 30px;
+	color:white;
+	transform: rotate(45deg);
+	cursor: pointer;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+.button{
+    width:85%;
+    background-color: #10847e;
+    color: white;
+    margin-left: 8%;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 0px;
+
+}
+button+p{
+    font-size: 11px;
+    margin-left: 8%;
+    margin-top: 5%;
+    color: #4F585E;
+}
+.in-up-modal{
+    background-color: #10847e;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.in-up-modal>div:first-child{
+    width:42%;
+    
+}
+.in-up-modal>div:first-child>img{
+    width: 100%;
+    margin-top: 25px;
+}
+.in-up-modal>div:last-child{
+    
+    margin-top: 10px;
+    width:40%
+}
+.in-up-modal>div:last-child>img{
+    width:80%;
+    margin-top: 8px;
+}
+
+
     </style>
 </head>
 <body>
-    <div id="sign">
+    <div id="signs">
         <button id="sign">signup</button>
+    </div>
+    <div class="bg-modal">
+        <div class="modal-contents">
+            <div class="in-up-modal">
+                <div>
+                    <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png"/>
+                </div>
+                <div>
+                    <img src="https://assets.pharmeasy.in/web-assets/dist/1fe1322a.svg"/>
+                </div>
+                
+            </div>
+    
+            <div class="close">
+                <div>+</div>
+            </div>
+    
+            <form id="form" action="">
+                <h2>Quick Log-in/Register</h2>
+                <input type="text" placeholder="Phone Number" id="phonenum">
+                <button href="#" class="button">Submit</button>
+                <p>By clicking continue, you agree to our Privacy Policy</p>
+            </form>
+    
+        </div>
     </div>
 </body>
 </html>
 <script>
-    document.querySelector('#sign').addEventListener('click',sign)
+   document.getElementById('sign').addEventListener("click", function() {
+	document.querySelector('.bg-modal').style.display = "flex";
+});
 
-    function sign(){
-        document.createElement('div')
-    }
+document.querySelector('.close').addEventListener("click", function() {
+	document.querySelector('.bg-modal').style.display = "none";
+}); 
+// document.querySelector('.bg-modal').addEventListener("click", function() {
+// 	document.querySelector('.bg-modal').style.display = "none";
+// }); 
+document.querySelector('#form').addEventListener("click",inputs)
+
+function inputs(event){
+    event.preventDefault();
+    let phone=document.querySelector('#phonenum').value;
+    
+}
 </script>
