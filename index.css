@@ -3,11 +3,19 @@
     margin:0px;
 }
 .font{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+.spaceup
+{
+    margin:auto;
+    margin-top: 80px;
+    width:90%;
 }
 #navbar{
+    position: sticky;
+    top:0px;
     background-color: #10847e;
-    border:1px solid transparent;
+    border:1px solid transparent;    
 }
 #upperNav{
     margin-top: 15px;
@@ -43,11 +51,28 @@ input{
     margin-left: 13%;
     
 }
-#lowerNav>div:first-child div{
-    border:1px solid transparent;
-}
 #lowerNav>div:first-child>div{
-    padding:20px 15px;
+    padding:20px 15px 10px 20px
+    /* border:1px solid red; */
+}
+.highlight
+{
+    position: relative;
+    /* border:1px solid black; */
+    height:3px;
+    margin: 0px;
+    top:10px;
+    
+}
+
+#lowerNav>div>div:hover > .highlight
+{
+   background-color: white;
+   transition: 350ms;
+}
+#lowerNav>div:nth-child(2)>div:hover > .highlight
+{
+   background-color: white;
 }
 #lowerNav>div:last-child{
     /* border:1px solid red; */
@@ -69,7 +94,7 @@ input{
 #login p,#login+div p{
     margin: auto;
 }
-/* --NavBar-- */
+/* --NavBarEnd-- */
 #slider{
     border:1px solid red;
     height: 300px;
@@ -127,12 +152,24 @@ input{
     width:90%;
     border-radius: 10px;
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 20% 60% 15%;
     background-color: #a291fa;
+    gap:10px;
+    justify-content: space-between;
+}
+#strip>div>img:first-child{
+     width: 85%;
+     padding-top: 20px;
+     margin-left: 30px;
+}
+#strip>div:nth-child(3){
+    position: relative;
+    bottom:64px;
 }
 #strip>div:nth-child(2){
     display: flex;
-    align-items: center;
+    /* align-items: center; */
+    padding-top: 40px;
     color: white;
     font-size: 20px ;
     font-weight:bold ;
@@ -183,7 +220,7 @@ input{
     margin:auto;
     margin-top: 80px;
     height:350px;
-    width:80%;
+    width:90%;
     
 }
 #healthArticles>Div:first-child
@@ -192,4 +229,86 @@ input{
     font-size: 25px;
     font-family: 'Noto Sans', sans-serif;
 
+}
+#imageStrip
+{
+    /* border:1px solid red; */
+   
+   display:grid;
+   grid-template-columns: repeat(4,1fr);
+   gap:20px;
+}
+#imageStrip>div>img+h1{
+    font-size: 45px;
+    color:#4f585e;
+    margin-top: 25px;
+}
+#imageStrip>div>img+h1+p{
+    margin-top: 20px;
+    color:#4f585e;
+    font-size: 20px;
+}
+#reviewstrip
+{
+    border:1px solid red;
+    height:300px;
+}
+#reviewstrip>div>p
+{
+    font-size: 20px;
+    font-weight: bold;
+    color:#4f585e;
+}
+#download{
+    /* border:1px solid red; */
+    height:320px;
+    width:100%;
+    background-color: #f2f5f5;
+    display: flex;
+    justify-content: space-between;
+}
+#download>div>div{
+    /* border:1px solid blue; */
+    /* height:30%; */
+    width:500px;
+    margin-left: 80px;
+}
+#download>div>div
+{
+    font-size: 25px;
+    font-weight: bolder;
+    color:#4f585e;
+}
+#download>div>div:first-child
+{
+    
+    height: 20%;
+}
+#download>div>div:nth-child(2)
+{
+    font-size: 26px;
+    height: 30%;
+}
+#downloadImg
+{
+    height:100%;
+    color:#4f585e;
+}
+#play-app-Store
+{
+    /* border:1px solid red; */
+    /* height:20px; */
+    /* margin: auto; */
+    margin-top: 18px;
+    display: flex;
+    width:86%;
+    justify-content: space-between;
+}
+#play-app-Store>div
+{
+    /* border:1px solid yellow; */
+    width: 200px;;
+}
+#play-app-Store>div>img{
+    width:100%;
 }
