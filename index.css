@@ -12,8 +12,10 @@
     width:90%;
 }
 #navbar{
+    position: sticky;
+    top:0px;
     background-color: #10847e;
-    border:1px solid transparent;
+    border:1px solid transparent;    
 }
 #upperNav{
     margin-top: 15px;
@@ -235,10 +237,6 @@ input{
    display:grid;
    grid-template-columns: repeat(4,1fr);
    gap:20px;
-}
-#imageStrip div{
-    /* border: 1px solid blue; */
-    
 }
 #imageStrip>div>img+h1{
     font-size: 45px;
