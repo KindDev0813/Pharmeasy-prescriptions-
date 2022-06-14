@@ -236,10 +236,6 @@ input{
    grid-template-columns: repeat(4,1fr);
    gap:20px;
 }
-#imageStrip div{
-    /* border: 1px solid blue; */
-    
-}
 #imageStrip>div>img+h1{
     font-size: 45px;
     color:#4f585e;
