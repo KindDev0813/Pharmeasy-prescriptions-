@@ -1,0 +1,195 @@
+/* --Navbar-- */
+*{
+    margin:0px;
+}
+.font{
+    font-family: 'Noto Sans', sans-serif;
+}
+#navbar{
+    background-color: #10847e;
+    border:1px solid transparent;
+}
+#upperNav{
+    margin-top: 15px;
+}
+#upperNav>div:first-child{
+    /* border: 1px solid red; */
+    display: flex;
+    width:90%;
+    margin: auto;
+
+}
+#upperNav>div>img{
+    width:180px
+}
+input{
+    width:60%;
+    margin-left: 5%;
+    border-radius: 6px;
+    border: 0px;
+    
+}
+#lowerNav{
+    color:white;
+    display: flex;
+    justify-content: space-around;
+    font-size: 17px;
+    font-family: 'Noto Sans', sans-serif;
+    margin: auto;
+}
+#lowerNav>div:first-child{
+    /* border:1px solid red; */
+    display: flex;
+    margin-left: 13%;
+    
+}
+#lowerNav>div:first-child div{
+    border:1px solid transparent;
+}
+#lowerNav>div:first-child>div{
+    padding:20px 15px;
+}
+#lowerNav>div:last-child{
+    /* border:1px solid red; */
+    display:flex;
+    align-items: center;
+
+}
+#lowerNav>div:last-child>div{
+    /* border:1px solid blue; */
+    padding:22px;
+    margin-bottom: -10px;
+}
+#login{
+    display: flex;
+}
+#login+div{
+    display: flex;
+}
+#login p,#login+div p{
+    margin: auto;
+}
+/* --NavBar-- */
+#slider{
+    border:1px solid red;
+    height: 300px;
+}
+#cont1{
+  /* border:1px solid grey; */
+  margin: auto;
+  margin-top: 40px;
+  width:90%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:30px;
+  height:200px;
+}
+.tophalf{
+    /* border:1px solid red; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height:65%;
+    background-color: #cff0ea;
+}
+#card,#card1,#card2
+{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+#cont1>div{
+    /* border:1px solid blue; */
+    border-radius: 10px;
+}
+#cont1 button{
+    padding:15px 30px;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-left: 35px;
+    border-radius: 8px;
+    color: white;
+    border: 0px;
+}
+#card>div>button
+{
+    background-color: #3bb896;
+}
+#card1>div>button
+{
+    background-color: #fc8019;
+}
+#card2>div>button
+{
+    background-color: #00b9e1;
+}
+#strip{
+    height: 100px;
+    margin:auto;
+    margin-top: 80px;
+    width:90%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    background-color: #a291fa;
+}
+#strip>div:nth-child(2){
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px ;
+    font-weight:bold ;
+    font-family: 'Noto Sans', sans-serif;
+}
+.cardtext
+{    
+    color:#4f585e;
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    width:70%;
+    margin-left: 30px;
+    font-family: 'Noto Sans', sans-serif;
+}
+.space
+{
+    height:46%;
+}
+#offerSlider{
+    border:1px solid green;
+    margin: 80px 10px;
+    height: 100px;
+}
+
+#labtestStrip
+{
+    /* border:1px solid red; */
+    height:300px;
+    background-color: #d4e2fa;
+}
+
+#featuredslider
+{
+    border:1px solid green;
+    margin-top: 80px;
+    height:250px;
+}
+#dealsOfDay
+{
+    border:1px solid green;
+    margin-top: 80px;
+    height:350px;
+}
+#healthArticles
+{
+    border:1px solid green;
+    margin:auto;
+    margin-top: 80px;
+    height:350px;
+    width:80%;
+    
+}
+#healthArticles>Div:first-child
+{
+    border:1px solid red;
+    font-size: 25px;
+    font-family: 'Noto Sans', sans-serif;
+
+}
