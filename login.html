@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>otp</title>
     <style>
         body{
             background-image: url('https://staticg.sportskeeda.com/Football+wallpapers/CR7/cr7.jpg');
@@ -84,10 +84,14 @@ input {
     margin-left: 8%;
     border: none;
     border-radius: 5px;
-    padding: 8px 0px;
+    padding: 8px 25px;
+    height:30px;
 
 }
-button+p{
+.button:hover{
+    cursor: pointer;
+}
+input+p{
     font-size: 11px;
     margin-left: 8%;
     margin-top: 5%;
@@ -117,7 +121,68 @@ button+p{
     width:80%;
     margin-top: 8px;
 }
+#display{
+    font-family:'Open Sans', sans-serif;
+    font-size: 10px;
+    color: red;
+    margin-left: 25px;
+}
+#newdis{
+    padding-left: 25px;
+    padding-right: 25px;
+    line-height: 15px;
+}
+#newdis>div>h2{
+    font-size: 16px;
+    /* margin-left: 8%;
+    margin-top: 5%; */
+    color: #4F585E;
+    margin-left: 0px;
+    margin-top: 20px;
+}
 
+#newdis>div>div{
+    display: flex;
+    justify-content: space-evenly;
+}
+#newdis>div>div>input{
+    width:30px;
+    height: 20px;
+    border: 1px solid #10847e ;
+}
+
+#newdis>div>div+div{
+    display: flex;
+    justify-content: space-between;
+}
+#newdis>div>div+div>p{
+    color:#10847e;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+}
+#newdis>div>div+div>p:hover{
+    cursor: pointer;
+}
+
+#newdis>div>button{
+    width:95%;
+    background-color: #10847e;
+    color: white;
+    margin-left: 3%;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 35px;
+    height:30px;
+}
+#newdis>div>button:hover{
+    cursor: pointer;
+}
+#newdis>div>p{
+    font-size: 11px;
+    /* margin-left: 8%;
+    margin-top: 5%; */
+    color: #4F585E;
+}
 
     </style>
 </head>
@@ -144,8 +209,12 @@ button+p{
             <form id="form" action="">
                 <h2>Quick Log-in/Register</h2>
                 <input type="text" placeholder="Phone Number" id="phonenum">
-                <button href="#" class="button">Submit</button>
+                <!-- <button href="#" class="button">Submit</button> -->
+                <input type="submit" class="button" value="continue">
                 <p>By clicking continue, you agree to our Privacy Policy</p>
+                <p id="display"> </p>
+            </form>
+            <form id="newdis">
             </form>
     
         </div>
@@ -163,11 +232,72 @@ document.querySelector('.close').addEventListener("click", function() {
 // document.querySelector('.bg-modal').addEventListener("click", function() {
 // 	document.querySelector('.bg-modal').style.display = "none";
 // }); 
-document.querySelector('#form').addEventListener("click",inputs)
+document.querySelector('#form').addEventListener("submit",inputs)
+
+
 
 function inputs(event){
     event.preventDefault();
-    let phone=document.querySelector('#phonenum').value;
-    
+    let phone=document.querySelector('#phonenum').value;   
+    let modi=Math.floor(phone);
+    //console.log(modi.length)
+    if(typeof(modi)==='number'){
+        if(phone.length===10){
+            //console.log(modi)
+            //document.getElementById("phonenum").innerHTML="";
+            newdiss()
+            //document.querySelector('#newdis').a
+        }
+        else{
+            // console.log("wrong number")
+            // var card=document.createElement("div");
+            document.querySelector('#display').innerText="Wrong number";
+        }
+    }
+    else{
+        //console.log("wrong character")
+        document.querySelector('#display').innerText="Wrong character";
+    }
 }
+
+function newdiss(){
+    document.querySelector('form').innerHTML="";
+    var card=document.createElement("div")
+
+    var heading=document.createElement("h2")
+    heading.innerText="Enter otp to continue";
+
+    var innercard=document.createElement("div");
+    var inputotp1=document.createElement("input");
+    inputotp1.innerText="";
+    var inputotp2=document.createElement("input");
+    inputotp2.innerText="";
+    var inputotp3=document.createElement("input");
+    inputotp3.innerText="";
+    var inputotp4=document.createElement("input");
+    inputotp4.innerText="";
+
+    innercard.append(inputotp1,inputotp2,inputotp3,inputotp4);
+
+    var innercardtext=document.createElement("div");
+    var leftw=document.createElement("p")
+    leftw.innerText="Change Number";
+
+    var rightw=document.createElement("p")
+    rightw.innerText="Resend Otp";
+
+    innercardtext.append(leftw,rightw);
+
+    var inputsubmit=document.createElement("button");
+    inputsubmit.innerText="continue"
+
+    var underbuttontext=document.createElement("p")
+    underbuttontext.innerText="By clicking continue, you agree to our Privacy Policy";
+
+    card.append(heading,innercard,innercardtext,inputsubmit,underbuttontext)
+    document.querySelector("#newdis").append(card)
+
+}
+
+
 </script>
