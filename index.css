@@ -1,9 +1,15 @@
+
 /* --Navbar-- */
 *{
     margin:0px;
 }
 .font{
     font-family: 'Open Sans', sans-serif;
+}
+.heading{
+    font-size: 22px;
+    font-weight: 600;
+    color:#4f585e;
 }
 .spaceup
 {
@@ -16,7 +22,7 @@
     top:0px;
     background-color: #10847e;
     border:1px solid transparent;
-    z-index: 1;
+    z-index: 4;
 }
 #upperNav{
     margin-top: 15px;
@@ -97,6 +103,17 @@ input{
 }
 
 /* --NavBarEnd-- */
+.flex{
+    display: flex;
+    gap:10px;
+}
+.material-symbols-rounded {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
 .hoverGreen:hover
 {
    opacity: 1;
@@ -104,22 +121,23 @@ input{
 }
 #slider1{
     border:0px solid transparent;
+    overflow: hidden;
     /* height: 300px; */
 }
 .slider-slideshow{
     height: 100%;
-    overflow: hidden;
     position:relative;
+    overflow: hidden;
 }
 .slider-wrapper
 {
-    /* border:0px solid transparent; */
+    border:0px solid transparent;
     display:flex;
     margin: 0px;
     width:400%;
     height: 100%;
     position: relative;
-    animation : slideshow infinite; 
+    transition: all 1s;
 }
 .slideImg
 {
@@ -148,7 +166,7 @@ input{
     left: 50%;
     bottom: 37%;;
     transform: scale(0.7); 
-    z-index:50 ;
+    z-index:1 ;
 }
 
 /* positioning individual buttons */
@@ -279,24 +297,173 @@ input{
     height:46%;
 }
 #offerSlider{
-    border:1px solid green;
-    margin: 80px 10px;
-    height: 100px;
+    /* border:1px solid green; */
+    margin: 80px 80px;
+}
+#offerSlider>div:first-child
+{
+    /* border: 1px solid grey; */
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Noto Sans', sans-serif;
+    color:#4f585e;
+}
+#offerSlider>div:first-child>p{
+    padding-left: 10px;
+}
+.carousel2
+{
+    width:1370px;
+    position: relative;
+    /* border:1px solid yellow; */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.offerSlider{
+    /* border:1px solid green; */
+    display:flex;
+    gap:20px;
+    /* transform: translate(-320px); */
+    transition: all 0.3s;
+}
+.offerSliderControls
+{
+    display: flex;
+    position: absolute;
+    right:5%;
+    gap: 30px;
+}
+.offerSliderControls>div:first-child
+{
+    color:#10847e;
+    font-weight: bold;
+}
+.Offertab1
+{
+    border: 2px solid #ccc;
+    width:300px;
+    height:100px;
+    border-radius: 5px;
+    display:flex;
+}
+.Offertab1>div:first-child
+{
+    /* border:1px solid red; */
+    width:25%;
+    padding:20px 10px;
+}
+.Offertab1>div:last-child
+{
+    /* border:1px solid red; */
+    padding-top: 20px;
+}
+.Offertab1>div>img{
+    width:100%;
+    height:100%;
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
 #labtestStrip
 {
     /* border:1px solid red; */
     height:300px;
     background-color: #d4e2fa;
 }
+.labTestContainer{
+    position: relative;
+    border:1px solid green;
+    width:1366px;
+    height: 281px;
+    top:26%;
+    left:5%;
+}
+.labTestContainer>div:first-child{
+    /* border:1px solid red; */
+    padding-bottom: 10px;
+    display: flex;
+}
+.labTestContainer>div:first-child>p{
+    display: block;
+    padding-bottom: 10px;
+}
+.arrowhover:hover{
+    /* border:1px solid transparent; */
+    background-color: white;
+    padding:5px 5px 2px 5px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.labTestCarousel{
+  border:1px solid red;
+  height:83%;
+}
+.labTestSlider
+{
+    border:1px solid black
+}
+.labTestSlider>div{
+    border:1px solid white;
+}
+.labTestMargin{
+    margin-top: 20px;
+    opacity: 0.7;
+}
 
 #featuredslider
 {
-    border:1px solid green;
-    margin-top: 80px;
-    height:250px;
+    /* border:1px solid pink; */
+    margin: 100px 80px;
 }
+#featuredslider>div:first-child
+{
+    /* border: 1px solid red; */
+    font-size: 20px;
+    font-weight: bold;
+    color:#4f585e;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.featuredCarousel
+{
+    /* border:1px solid blue; */
+    position: relative;
+    height:100%;
+    overflow: hidden;
+}
+.FeaturedofferSliderControls
+{
+    display: flex;
+    position: absolute;
+    right:8%;
+    gap: 30px;
+}
+.featuredSlider
+{
+    position: relative;
+   display: flex;
+   gap:25px;
+   transition: all 0.3s;
+   /* transform: translate(-160px); */
+}
+.featuredSlider>div>img{
+    border-radius: 8px;
+}
+.featuredSlider>div>img:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    
+}
+
 #dealsOfDay
 {
     border:1px solid green;
