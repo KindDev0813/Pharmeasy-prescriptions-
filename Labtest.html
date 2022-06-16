@@ -11,8 +11,14 @@
         a{
             text-decoration: none;
         }
+     
 .font{
     font-family: 'Open Sans', sans-serif;
+}
+.heading{
+    font-size: 22px;
+    font-weight: 600;
+    color:#4f585e;
 }
 .spaceup
 {
@@ -25,7 +31,7 @@
     top:0px;
     background-color: #10847e;
     border:1px solid transparent;
-    z-index: 1;
+    z-index: 4;
 }
 #upperNav{
     margin-top: 15px;
@@ -50,6 +56,8 @@ input{
 #lowerNav{
     color:white;
     display: flex;
+    /* border: 1px solid red; */
+    align-items: center;
     justify-content: space-around;
     font-size: 17px;
     font-family: 'Noto Sans', sans-serif;
@@ -62,8 +70,9 @@ input{
     
 }
 #lowerNav>div:first-child>div{
-    padding:20px 15px 10px 20px
+    padding:20px 15px 10px 20px;
     /* border:1px solid red; */
+    margin: auto;
 }
 .highlight
 {
@@ -72,7 +81,6 @@ input{
     height:3px;
     margin: 0px;
     top:10px;
-    
     
 }
 
@@ -925,7 +933,7 @@ input{
     <div id="navbar">            
         <div id="upperNav">
             <div>
-            <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="pharmeasyimage">
+            <img src="images/navbarimg.png" alt="pharmeasyimage">
             <input type="text">
             </div>
         </div>
@@ -933,7 +941,7 @@ input{
             <div>
                 <div>
                     <p>Order Medicines</p> 
-                    <div></div>
+                    <div class="highlight"></div>
                 </div>
                 <div>Healthcare Products
                     <div class="highlight"></div>
@@ -947,19 +955,18 @@ input{
             </div>
             <div>
                 <div id="offer">
-                    <img src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" alt="">
+                    <img src="images/discount.png" alt="flaticon">
                     Offers</div>
                 <div id="login">
-                    <img src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" alt="">
+                    <img src="images/loginsignup.svg" alt="login/signup">
                     <p>Login/Signup</p>
                 </div>
                 <div>
-                    <img src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" alt="">
+                    <img src="images/cart.svg" alt="">
                     <p>Cart</p>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <div id="slider">
         <img id="sliderimg" src="https://cms-contents.pharmeasy.in/banner/c5d7f1f2b79-1_MonsoonFever_HP.jpg" alt="">
