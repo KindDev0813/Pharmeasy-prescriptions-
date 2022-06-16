@@ -1,3 +1,18 @@
+// Navbar on scroll FUnctionality
+window.onscroll = function (){scroll()}
+function scroll()
+{
+    let lowerNav = document.querySelector("#lowerNav")
+    if(document.documentElement.scrollTop<1)
+    {
+        lowerNav.style.paddingTop = "75px";
+        lowerNav.style.marginBottom = "0px";
+    }else{
+        lowerNav.style.paddingTop = "10px";
+        lowerNav.style.marginBottom = "20px";
+    }
+}
+
 let slider = document.querySelector(".offerSlider");
 let leftArrow = document.querySelector(".leftarrow");
 let rightArrow = document.querySelector(".rightarrow");
@@ -52,7 +67,7 @@ featuredLeftArrow.addEventListener("click",function(){
     featuredSlider.style.transform = "translate("+(featuredIndex)*-170 +"px)";
 
 })
-
+// Timing function 
 setInterval(function(){
     if(featuredIndex<7)
     {
@@ -60,7 +75,7 @@ setInterval(function(){
     }else{
         featuredIndex =1;
     }
-    console.log(featuredIndex);
+    // console.log(featuredIndex);
     featuredSlider.style.transform = "translate("+(featuredIndex)*-170 +"px)";
 
 },3000)
