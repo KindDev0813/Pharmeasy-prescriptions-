@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin:0px;
+}
+.font{
+    font-family: 'Open Sans', sans-serif;
+}
+.spaceup
+{
+    margin:auto;
+    margin-top: 80px;
+    width:90%;
+}
+#navbar{
+    position: sticky;
+    top:0px;
+    background-color: #10847e;
+    border:1px solid transparent;
+    z-index: 1;
+}
+#upperNav{
+    margin-top: 15px;
+}
+#upperNav>div:first-child{
+    /* border: 1px solid red; */
+    display: flex;
+    width:90%;
+    margin: auto;
+}
+#upperNav>div>img{
+    width:180px
+}
+input{
+    width:60%;
+    margin-left: 5%;
+    border-radius: 6px;
+    border: 0px;
+    
+}
+#lowerNav{
+    color:white;
+    display: flex;
+    justify-content: space-around;
+    font-size: 17px;
+    font-family: 'Noto Sans', sans-serif;
+    margin: auto;
+}
+#lowerNav>div:first-child{
+    /* border:1px solid red; */
+    display: flex;
+    margin-left: 13%;
+    
+}
+#lowerNav>div:first-child>div{
+    padding:20px 15px 10px 20px
+    /* border:1px solid red; */
+}
+.highlight
+{
+    position: relative;
+    /* border:1px solid black; */
+    height:3px;
+    margin: 0px;
+    top:10px;
+    
+}
+#lowerNav>div>div:hover > .highlight
+{
+   background-color: white;
+   transition: 350ms;
+}
+#lowerNav>div:nth-child(2)>div:hover > .highlight
+{
+   background-color: white;
+}
+#lowerNav>div:last-child{
+    /* border:1px solid red; */
+    display:flex;
+    align-items: center;
+}
+#lowerNav>div:last-child>div{
+    /* border:1px solid blue; */
+    padding:22px;
+    margin-bottom: -10px;
+}
+#login{
+    display: flex;
+}
+#login+div{
+    display: flex;
+}
+#login p,#login+div p{
+    margin: auto;
+}
+
+#lower{
+    /* border: 1px solid red; */
+    display: flex;
+    margin: auto;
+    width: 60%;
+    height:700px;
+    justify-content: space-around;
+    margin-top: 120px;
+}
+#lowerleft{
+    /* border: 1px solid red; */
+    width:30%;
+    height:500px;
+}
+#lowerright{
+    /* border:1px solid red; */
+    width:60%;
+    height:270px;
+    display: grid;
+    grid-template-columns: (1,1fr);
+    grid-template-rows: (7,30px);
+    line-height: 25px;
+    padding:25px;
+    box-shadow: 0 3px 20px 0 rgb(0 0 0 / 23%);;
+}
+#lowerright>p{
+    font-size: 11px;
+    color: #4F585E;
+    margin-left: 25px;
+}
+#lowerright>input{
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 0px;
+    height: 30px;
+    width: 90%;
+}
+#lowerright>div{
+    /* border: 1px solid; */
+    text-align: right;
+}
+#lowerright>div>button{
+    text-align: right;
+    padding: 5px 25px;
+    margin-right: 15px;
+}
+#lowerleft>div:first-child{
+    height:100px;
+    width: 100%;
+    border: 1px solid;
+    background-color: #8573E1;
+    color: white;
+    display: flex;
+    justify-content:space-between;
+}
+#lowerleft>div:last-child{
+   margin-top: 15px;
+    height:570px;
+    width:100%;
+    border: 1px solid;
+}
+#lowerleft>div:first-child>div>p{
+    font-size: 15px;
+    margin-left: 9px;
+}
+#lowerleft>div:first-child>div:first-child>img{
+    width:25px;
+}
+#lowerleft>div:first-child>div{
+    margin-top: 15px;
+}
+
+    </style>
+</head>
+<body>
+<!-- -- Navbar start-- -->
+    <div id="navbar">            
+        <div id="upperNav">
+            <div>
+            <img src="images/navbarimg.png" alt="pharmeasyimage">
+            <input type="text">
+            </div>
+        </div>
+        <div id="lowerNav">
+            <div>
+                <div>
+                    <p>Order Medicines</p> 
+                    <div></div>
+                </div>
+                <div>Healthcare Products
+                    <div class="highlight"></div>
+                </div>
+                <div>Lab Tests
+                    <div class="highlight"></div>
+                </div>
+                <div>RTPCR
+                    <div class="highlight"></div>
+                </div>
+            </div>
+            <div>
+                <div id="offer">
+                    <img src="images/discount.png" alt="flaticon">
+                    Offers</div>
+                <div id="login">
+                    <img src="images/loginsignup.svg" alt="login/signup">
+                    <p>Login/Signup</p>
+                </div>
+                <div>
+                    <img src="images/cart.svg" alt="">
+                    <p>Cart</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --Navbar end-- -->
+
+    <div id="lower">
+        <div id="lowerleft">
+            <div>
+                <div><img src="https://assets.pharmeasy.in/web-assets/dist/3864b471.svg"></div>
+                <div><p>Save flat 5% extra on medicines &amp; enjoy FREE delivery with </p></div>
+                <div><img src="https://assets.pharmeasy.in/web-assets/dist/ab5ce12b.svg"/></div>    
+            </div>
+            <div>
+            
+            </div>
+        </div>
+        <div id="lowerright">
+            <p>Name</p>
+            <input type="text" placeholder="Name" />
+            <p>Mobile Number</p>
+            <input type="text" placeholder="Phone Number"/>
+            <p>E-mail</p>
+            <input type="text" placeholder="Email"/><br>
+            <div><button>SAVE</button></div>
+
+        </div>
+    </div>
+</body>
+</html>

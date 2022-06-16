@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url('https://staticg.sportskeeda.com/Football+wallpapers/CR7/cr7.jpg');
+        }
+         #signs{
+            display: flex;
+            justify-content: right;
+        }
+
+.bg-modal {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+    left: 0;
+	display: none;
+	justify-content: right;
+	align-items: center;
+}
+
+.modal-contents {
+	height: 630px;
+	width: 330px;
+	background-color: white;
+	/* text-align: center; */
+	padding: 0px;
+	position: relative;
+	border-radius: 4px;
+}
+.modal-contents>form>h2:first-child{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    margin-left: 25px;
+    color: #4F585E;
+    margin-top: 55px;
+    line-height: 10px;
+    /* margin-bottom: 25px; */
+}
+h2+h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    margin-left: 25px;
+    color: #4F585E;
+    /* margin-bottom: 25px; */
+}
+
+input {
+	margin: 15px auto;
+	/* display: block; */
+	width: 50%;
+    height: 12px;
+	padding: 8px;
+	border: 1px solid gray;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-left: 20px;
+    margin-top: -5px;
+}
+.close{
+    background-color: white;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 0;
+	left: -40px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin-top: 20px;
+    /* margin-right: 10px; */
+}
+
+.close>div {
+	/* position: absolute; */
+	/* top: 0;
+	left: -30px; */
+	font-size: 30px;
+	color:#4F585E;
+	transform: rotate(45deg);
+	cursor: pointer;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+.button{
+    width:25%;
+    background-color: #10847e;
+    color: white;
+    margin-left: -5px;
+    border: none;
+    /* border-radius: 5px; */
+    
+    height:31px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+.button:hover{
+    cursor: pointer;
+}
+form>p{
+    font-size: 13px;
+    margin-left: 8%;
+    margin-top: 5px;
+    color: #4F585E;
+    font-weight: bolder;
+}
+#lowerdis{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(3,auto);
+    /* border: 1px solid red; */
+    height: 250px;
+    width:80%;
+    margin-left: 25px;
+}
+#lowerdis>div{
+    border: 1px solid;
+    width: 60%;
+    height:50px;
+
+}
+#lowerdis>div:first-child{
+    display: flex;
+    justify-content: space-around;
+    padding-right: 105px;
+   border-style:dashed;
+   border-radius: 5px;
+}
+#lowerdis>div:first-child>div>img{
+    width:80%;
+    margin-top: 10px;
+}
+#lowerdis>div:first-child>div>img:hover{
+    cursor: pointer;
+}
+#lowerdis>div:first-child>div>p{
+    font-size: 11px;
+    font-family: 'Open Sans', sans-serif;
+    color: #4F585E;
+    margin-top: 17px;
+    margin-left: -13px;
+    font-weight: bold;
+}
+#lowerdis>div:nth-child(2){
+    display: flex;
+    justify-content: space-evenly;
+    padding-right: 50px;
+    width: 81%;
+    background-color: #f3f6fa;
+    border: none;
+    border-radius: 5px;
+}
+#lowerdis>div:nth-child(2)>div>img{
+    width:90%;
+    margin-top: 10px;
+    margin-left: 10px;
+    /* border: 1px solid ; */
+}
+
+#lowerdis>div:nth-child(2)>div>p{
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    color: #4F585E;
+    margin-top: 12px;
+    margin-left: 20px;
+    /* border: 1px solid ; */
+}
+#lowerdis>div:nth-child(3){
+    display: flex;
+    justify-content: space-evenly;
+    padding-right: 50px;
+    width: 81%;
+   background-color: #e9f9ff;
+   border: none;
+   border-radius: 5px;
+}
+#lastdiv>div>img{
+    width: 70%;
+    margin-top: 10px;
+}
+#lastdiv>div>div{
+    margin-bottom: -10px;
+}
+#lastdiv>div>div>p{
+    font-size:11px ;
+}
+#lastdiv>div>div:last-child>p{
+    color: rgb(11, 117, 216);
+}
+#lastdiv>div>div:last-child>p:hover{
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <div id="signs">
+        <button id="sign">signup</button>
+    </div>
+    <div class="bg-modal">
+        <div class="modal-contents">
+          <div class="close">
+                <div>+</div>
+            </div>
+
+            <form id="form" action="">
+                <h2>Choose your</h2>
+                <h2>location</h2>
+                <input type="text" placeholder="Enter Pincode" id="phonenum">
+                <!-- <button href="#" class="button">Submit</button> -->
+                <a><button class="button">Check</button></a>
+                <p>Save Addresses</p>
+                <p id="display"> </p>
+            </form>
+            <form id="newdis">
+            </form>
+            <div id="lowerdis">
+            <div>
+                <div><img src="https://assets.pharmeasy.in/web-assets/dist/7fdb7fcb.svg"/></div>
+                <div><p>Add New address</p></div>
+            </div>
+            <div>
+                <div><img src="https://assets.pharmeasy.in/web-assets/dist/90ee736b.svg"/></div>
+                <div><p>Serving more than 1,000 towns and cities in India.</p></div>
+            </div>
+            <div id="lastdiv">
+                <div><img src="https://assets.pharmeasy.in/web-assets/dist/0c22e009.svg?dim=0x32&dpr=0.6666666865348816&q=100"/></div>
+                <div>
+                    <div><p>Over 30,00,000 orders safely delivered</p></div>
+                    <div><p>know more</p></div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    document.getElementById('sign').addEventListener("click", function() {
+	document.querySelector('.bg-modal').style.display = "flex";
+});
+
+document.querySelector('.close').addEventListener("click", function() {
+	document.querySelector('.bg-modal').style.display = "none";
+}); 
+</script>
