@@ -164,3 +164,95 @@ labTestTab.forEach(function(elem){
     document.querySelector(".labTestSlider").append(tab);
 
 })
+
+//DoD products information and Tab creation
+
+let DodProducts=[{
+    image:"images/Dodimg1.webp",
+    name:"Baiyanath Ashok Ghrita -100 Gm",
+    mrp:"₹249",
+    dealPrice:"₹124.5"
+},{
+    image:"images/Dodimg2.webp",
+    name:"Onetouch Select Plus Simple Glucometer With 10 Free...",
+    mrp:"₹1147",
+    dealPrice:"₹871.72"
+},{
+    image:"images/Dodimg2.webp",
+    name:"Onetouch Select Plus Simple Glucometer With 10 Free...",
+    mrp:"₹1147",
+    dealPrice:"₹871.72"
+},{
+    image:"images/Dodimg2.webp",
+    name:"Onetouch Select Plus Simple Glucometer With 10 Free...",
+    mrp:"₹1147",
+    dealPrice:"₹871.72"
+},{
+    image:"images/Dodimg2.webp",
+    name:"Onetouch Select Plus Simple Glucometer With 10 Free...",
+    mrp:"₹1147",
+    dealPrice:"₹871.72"
+},{
+    image:"images/Dodimg2.webp",
+    name:"Onetouch Select Plus Simple Glucometer With 10 Free...",
+    mrp:"₹1147",
+    dealPrice:"₹871.72"
+},{
+    image:"images/Dodimg2.webp",
+    name:"Onetouch Select Plus Simple Glucometer With 10 Free...",
+    mrp:"₹1147",
+    dealPrice:"₹871.72"
+},{
+    image:"images/Dodimg2.webp",
+    name:"Onetouch Select Plus Simple Glucometer With 10 Free...",
+    mrp:"₹1147",
+    dealPrice:"₹871.72"
+}]
+
+DodProducts.forEach(function(elem){
+    const tab = document.createElement('div');
+    tab.setAttribute("class","DodTab");
+    const imageDiv = document.createElement('div');
+    imageDiv.setAttribute("class","imgDiv");
+    const image = document.createElement('img');
+    image.setAttribute("src",elem.image);
+    imageDiv.append(image);
+    const h3 = document.createElement('h3');
+    h3.innerText=elem.name;
+    h3.setAttribute("class","font");
+    const p1 = document.createElement('p');
+    p1.innerHTML=`MRP <strike>${elem.mrp}`;
+    p1.setAttribute("class","p1 font");
+    const p2 = document.createElement('p');
+    p2.setAttribute("class","p2");
+    p2.innerHTML=`<b>${elem.dealPrice}</b>`;
+    tab.append(imageDiv,h3,p1,p2);
+    document.querySelector("#dealsOfTheDaySlider").append(tab);
+})
+
+// Deal of the Day Arrow Functionality
+let dealsOfTheDaySlider = document.querySelector("#dealsOfTheDaySlider");
+let DodleftArrow = document.querySelector(".Dodleftarrow");
+let DodrightArrow = document.querySelector(".Dodrightarrow");
+let DodselectionIndex = 0;
+
+DodrightArrow.addEventListener("click",function(){
+    if(DodselectionIndex<4)
+    {
+        DodselectionIndex+=1;
+    }else{
+        DodselectionIndex =4;
+    }
+    console.log(DodselectionIndex);
+    dealsOfTheDaySlider.style.transform = "translate("+(DodselectionIndex)*-12.8 +"%)";
+})
+
+DodleftArrow.addEventListener("click",function(){
+    if(DodselectionIndex>0)
+    {
+        DodselectionIndex-=1;
+    }else{
+        DodselectionIndex =0;
+    }
+    dealsOfTheDaySlider.style.transform = "translate("+(DodselectionIndex)*-12.8 +"%)";
+})
