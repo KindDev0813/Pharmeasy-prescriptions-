@@ -164,7 +164,7 @@ input{
     /* positoning the button */
     position: absolute;
     left: 50%;
-    bottom: 37%;;
+    bottom: 45%;;
     transform: scale(0.7); 
     z-index:1 ;
 }
@@ -381,11 +381,12 @@ input{
 }
 .labTestContainer{
     position: relative;
-    border:1px solid green;
+    /* border:1px solid green; */
     width:1366px;
     height: 281px;
     top:26%;
     left:5%;
+    overflow: hidden;
 }
 .labTestContainer>div:first-child{
     /* border:1px solid red; */
@@ -404,20 +405,84 @@ input{
     transition: 0.5s;
 }
 .labTestCarousel{
-  border:1px solid red;
+  /* border:1px solid red; */
   height:83%;
+  width: 400%;
+  position: relative;
 }
 .labTestSlider
 {
-    border:1px solid black
-}
-.labTestSlider>div{
-    border:1px solid white;
+    /* border:1px solid black; */
+    height: 100%;
+    gap:30px;
+    transition:all 0.3s;
 }
 .labTestMargin{
     margin-top: 20px;
     opacity: 0.7;
 }
+.labTestFirstTab
+{
+    width:280px;
+}
+.labtestTab
+{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    background-color: white;
+    border-radius: 8px;
+    width:300px;
+    /* height: 100%; */
+}
+.p1{
+    font-size: 18px;
+    font-weight: bold;
+    color: #6d747a;
+    margin:10px 0px 0px 10px;
+}
+.p2{
+    margin:5px 0px 0px 10px;
+    opacity: 0.7;
+    font-size: 15px;
+}
+.p3{
+    margin:3px 0px 10px 10px;
+    opacity: 0.6;
+    font-size: 13px;
+}
+.priceButtondiv{
+    padding-top: 6px;
+    padding-bottom: 15px;
+    margin-left: 10px;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.priceButtondiv>p{
+    opacity: 0.7;
+}
+.priceButtondiv>button{
+   font-size: 15px;
+   height:40px;
+   width:120px;
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
+   border: 0px;
+   background-color: white;
+   color:#10847e
+}
+.labtestTab:hover{
+    border:2px solid #10847e;
+}
+.labtestTab:hover > .priceButtondiv>button{
+    background-color:  #10847e;
+    color: white;
+}
+.labtestTab>img{
+    /* border:1px solid red; */
+    margin: 30px 0px 0px 10px;
+    width:60px
+}
+
 
 #featuredslider
 {
