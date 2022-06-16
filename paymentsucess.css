@@ -1,0 +1,95 @@
+*{
+  margin:0px;
+}
+.font{
+  font-family: 'Open Sans', sans-serif;
+}
+.spaceup
+{
+  margin:auto;
+  margin-top: 80px;
+  width:90%;
+}
+#navbar{
+  position: sticky;
+  top:0px;
+  background-color: #10847e;
+  border:1px solid transparent;    
+}
+#upperNav{
+  margin-top: 15px;
+}
+#upperNav>div:first-child{
+  /* border: 1px solid red; */
+  display: flex;
+  width:90%;
+  margin: auto;
+
+}
+#upperNav>div>img{
+  width:180px
+}
+input{
+  width:60%;
+  margin-left: 5%;
+  border-radius: 6px;
+  border: 0px;
+  
+}
+#lowerNav{
+  color:white;
+  display: flex;
+  justify-content: space-around;
+  font-size: 17px;
+  font-family: 'Noto Sans', sans-serif;
+  margin: auto;
+}
+#lowerNav>div:first-child{
+  /* border:1px solid red; */
+  display: flex;
+  margin-left: 13%;
+  
+}
+#lowerNav>div:first-child>div{
+  padding:20px 15px 10px 20px
+  /* border:1px solid red; */
+}
+.highlight
+{
+  position: relative;
+  /* border:1px solid black; */
+  height:3px;
+  margin: 0px;
+  top:10px;
+  
+}
+
+#lowerNav>div>div:hover > .highlight
+{
+ background-color: white;
+ transition: 350ms;
+}
+#lowerNav>div:nth-child(2)>div:hover > .highlight
+{
+ background-color: white;
+}
+#lowerNav>div:last-child{
+  /* border:1px solid red; */
+  display:flex;
+  align-items: center;
+
+}
+#lowerNav>div:last-child>div{
+  /* border:1px solid blue; */
+  padding:22px;
+  margin-bottom: -10px;
+}
+#login{
+  display: flex;
+}
+#login+div{
+  display: flex;
+}
+#login p,#login+div p{
+  margin: auto;
+}
