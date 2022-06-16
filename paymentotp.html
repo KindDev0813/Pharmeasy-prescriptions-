@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    <style>
+       *{
+            font-family: sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+        #container{
+            /* border: 1px solid green; */
+            width: 40%;
+            margin: auto;
+        }
+        #header{
+            width: 100%;
+            height: 130px;
+            background-color: #0f847d ;
+        }
+        #header>img{
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 20px;
+        }
+        #container>#form{
+            border: 1px solid transparent;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            width: 90%;
+            border-radius: 15px;
+            /* height: 500px; */
+            margin: auto;
+            margin-top: 100px;
+            padding-bottom: 50px;
+            cursor: pointer;
+
+        }
+        #container>#form:hover{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            cursor: pointer;
+        }
+        input{
+            width: 87%;
+            height: 45px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid lightgrey;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-left: 30px;
+            padding-left: 10px;
+        }
+        ::placeholder{
+            color: lightgrey;
+            font-size: 15px;
+        }
+        input[type=password]{
+            font-size: 20px;
+        }
+        label{
+            font-weight: bold;
+            padding-left: 33px;
+            font-size: 15px;
+            margin-top:10px;
+            display:inline-block;
+        }
+        #cvv{
+            width: 30%;
+        }
+        input[type=submit]{
+            background: #0f847d ;
+            color: white;
+            border-radius: 6px;
+            width: 88%;
+            font-weight: bold;
+            height: 50px;
+            margin-top: 20px;
+            cursor: pointer;
+            }
+        h3{
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+       #p1{
+            color: grey;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 13px;
+            width: 80%;
+            margin: auto;
+        }
+        p{
+            color: grey;
+            text-align: center;
+            padding-top: 20px;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        #month{
+            width: 50%;
+        }
+        #google{
+            /* background: #2463eb; */
+            border: 1px solid lightgrey;
+            color: black;
+            border-radius: 6px;
+            width: 88%;
+            font-weight: bold;
+            margin: auto;
+            height: 50px;
+            margin-top: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+        }
+        #date{
+            display: flex;
+        }
+        #month{
+            margin-left: 25px;
+        }
+        #cvv{
+            margin-right: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="">
+    </div>
+    <div id="container">
+    <div id="form">
+        <form>
+            <h3>AUTHENTICATION</h3>
+            <label for="">ENTER YOUR OTP</label><br />
+            <input
+              id="otp"
+              type="password"
+              placeholder="Enter Your Card Number"
+              required
+            /><br />
+            <input type="submit" value="MAKE PAYMENT"/>
+          </form>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+document.getElementById("form").addEventListener("submit",function(){
+    event.preventDefault();
+    let otp="1234";
+    let icard = document.getElementById("otp").value;
+
+   if(icard==otp){
+    alert("Congratulations.Payment Successful")
+    window.location.href="paymentsucess.html"
+   }else{
+    alert("You Entered Wrong OTP.Please Try Again")
+    window.location.reload()
+   }
+})
+</script>
