@@ -1,0 +1,93 @@
+function first() {
+    document.getElementById("sliderimg").src = "https://cms-contents.pharmeasy.in/banner/4acf73cf129-2_MonsoonStomach_HP.jpg"
+}
+function second() {
+    document.getElementById("sliderimg").src = "https://cms-contents.pharmeasy.in/banner/491919cffc0-02_health-checkups_Cat_696x301_v1.jpg"
+}
+function third() {
+    document.getElementById("sliderimg").src = "https://cms-contents.pharmeasy.in/banner/67144bc5fec-1_Cat_696x301_Grand1000.jpg"
+}
+setInterval(first, 2000)
+setInterval(second, 4000)
+setInterval(third, 6000)
+let answers = document.querySelectorAll(".section");
+answers.forEach((event) => {
+    event.addEventListener('click', () => {
+        if (event.classList.contains("active")) {
+            event.classList.remove("active");
+        }
+        else {
+            event.classList.add("active");
+        }
+    })
+})
+//slider for divs..... start>//
+let slider=document.querySelector("#packages")
+let left=document.querySelector("#left")
+let right=document.querySelector("#right")
+let index=0
+right.addEventListener("click",function(){
+    if(index<3){
+        index=index+1
+    }
+    else{
+        index=3
+    }
+  slider.style.transform="translate("+index*-16.5+"%)"
+})
+left.addEventListener("click",function(){
+    if(index>0){
+        index=index-1
+    }
+    else{
+        index=0
+    }
+  slider.style.transform="translate("+index*-16.5+"%)"
+})
+//slider for divs..... ends>//
+let slide=document.querySelector("#our")
+let lef=document.querySelector("#lef")
+let righ=document.querySelector("#rig")
+let inde=0
+righ.addEventListener("click",function(){
+    if(inde<3){
+        inde=inde+1
+    }
+    else{
+        inde=3
+    }
+  slide.style.transform="translate("+inde*-25+"%)"
+})
+lef.addEventListener("click",function(){
+    if(inde>0){
+        inde=inde-1
+    }
+    else{
+        inde=0
+    }
+  slide.style.transform="translate("+inde*-25+"%)"
+})
+
+//review//
+let mover=document.querySelector(".report")
+let perv=document.querySelector("#prev")
+let next=document.querySelector("#next")
+let count=0
+next.addEventListener("click",function(){
+    if(count<1){
+    count=count+1
+    }
+    else{
+        count=1
+    }
+  mover.style.transform="translate("+count*-66+"%)"
+})
+perv.addEventListener("click",function(){
+    if(count>0){
+        count=count-1
+    }
+    else{
+        count=0
+    }
+  mover.style.transform="translate("+count*-25+"%)"
+})
