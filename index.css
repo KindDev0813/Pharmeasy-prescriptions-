@@ -666,27 +666,94 @@ h3{
 }
 
 
-
-
-
-
-
 #healthArticles
 {
-    border:1px solid green;
     margin:auto;
     margin-top: 80px;
-    height:350px;
     width:90%;
     
 }
+#NewsContainer{
+    overflow: hidden;
+}
 #healthArticles>Div:first-child
 {
-    border:1px solid red;
+    /* border:1px solid red; */
     font-size: 25px;
     font-family: 'Noto Sans', sans-serif;
 
 }
+#NewsSlider{
+    position:relative;
+    display: flex;
+    margin-top: 20px;
+    width:164%;
+    gap:20px;
+    transition: all 0.5s
+}
+#NewsSlider>div>div>img{
+    border-radius: 8px;
+    width:100%;
+}
+#NewsSlider>div>button{
+    font-size: 16px;
+    font-weight: bold;
+    padding:0px;
+    background-color: white;
+    border:0px;
+    color:#10847e;
+    font-family: sans-serif;
+}
+.NewsHead{
+    font-size: 17px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color:#4f585e;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.NewsContent{
+    font-size: 17px;
+    font-family: sans-serif;
+    color:#4f585e;
+    padding-bottom: 5px;
+}
+#healthArticles>div:first-child {
+    display: flex;
+    justify-content: space-between;
+}
+.NewsControls{
+    display:flex ;
+    gap:30px;
+    margin-right: 30px;
+}
+.NewsControls>div:first-child{
+    color:#10847e;
+    cursor:pointer;
+}
+.Newsleftarrow:hover{
+    height:fit-content;
+    width:30px;
+    padding-top: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: white;
+    transition: 0.3s;
+}
+.Newsrightarrow:hover{
+    height:fit-content;
+    width:30px;
+    padding-top: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+
+
 #imageStrip
 {
     /* border:1px solid red; */
@@ -707,8 +774,34 @@ h3{
 }
 #reviewstrip
 {
-    border:1px solid red;
+    /* border:1px solid red; */
     height:300px;
+}
+
+
+.reviewleftarrow:hover{
+    height:fit-content;
+    width:30px;
+    padding-top: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: white;
+    transition: 0.3s;
+}
+.reviewrightarrow:hover{
+    height:fit-content;
+    width:30px;
+    padding-top: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: white;
+    transition: 0.3s;
+}
+#reviewstrip>div:first-child{
+    display:flex;
+    justify-content: space-between;
 }
 #reviewstrip>div>p
 {
@@ -716,6 +809,48 @@ h3{
     font-weight: bold;
     color:#4f585e;
 }
+#reviewDisplay{
+    /* position: relative; */
+    /* border:1px solid blue; */
+    margin-top: 20px;
+    overflow: hidden;
+}
+#reviewSlider{
+    /* border:1px solid orange; */
+    display: flex;
+    position: relative;
+    width:2856px;
+    gap:20px;
+    transition:all 0.5s;
+}
+#reviewSlider>div{
+    /* border:1px solid red; */
+    width:350px;
+    height:240px;
+}
+.lowerhalf{
+    margin-top: 23px;
+    font-size: 13px;
+    background-color: #f2fff8;
+    height:200px;
+}
+.review{
+    padding: 15px;
+    color:#4f585e;
+    padding-top: 50px;
+    
+}
+.HeadName{
+    font-weight: bold;
+    color:#4f585e;
+}
+.headDate
+{
+    opacity: 0.5;
+    font-family: sans-serif;
+}
+
+
 #download{
     /* border:1px solid red; */
     height:320px;

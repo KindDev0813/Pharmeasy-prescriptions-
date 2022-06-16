@@ -13,6 +13,21 @@ function scroll()
     }
 }
 
+//Carousel 1 auto functionality
+let bigSlider = document.querySelector(".slider-wrapper");
+let BigIndex = 0;
+setInterval(function(){
+    if(BigIndex<3)
+    {
+        BigIndex+=1;
+    }else{
+        BigIndex=1;
+    }
+    // console.log(featuredIndex);
+    bigSlider.style.transform = "translate("+(BigIndex)*-25 +"%)";
+
+},5000)
+
 let slider = document.querySelector(".offerSlider");
 let leftArrow = document.querySelector(".leftarrow");
 let rightArrow = document.querySelector(".rightarrow");
@@ -270,4 +285,153 @@ DodleftArrow.addEventListener("click",function(){
         DodselectionIndex =0;
     }
     dealsOfTheDaySlider.style.transform = "translate("+(DodselectionIndex)*-12.8 +"%)";
+})
+
+// News Carousel
+let news=[{
+    image:"images/NewsImg1.jpg",
+    heading:"Home Remedies That Ease Your Hydrocele",
+    content:"Table of Contents Introduction:What is a hydrocele?What are the symptoms?When to consult with a doctor?Home remedies for"
+},{
+    image:"images/NewsImg2.jpg",
+    heading:"6 Safe And Simple Exersises For Hydrocele",
+    content:"Table of Contents The symptoms of hydrocele include:Is exercise good for Hydrocele?6 Exercises and yoga for people with..."
+},{
+    image:"images/NewsImg3.jpg",
+    heading:"Ramsay Hunt Syndrome: What Is THis Rare Condition?",
+    content:"Table of Contents Why does it occur?Signs and symptoms to look out forRisksComplicationsTreatment for Hunt..."
+},{
+    image:"images/NewsImg4.jpg",
+    heading:"How Is Internet Addiction Affecting Your Mental Health?",
+    content:"Table of Contents Introduction:What causes internet addiction?Symptoms of internet addictionTreatment of internet..."
+},{
+    image:"images/NewsImg5.jpg",
+    heading:"Kiwi: Uses, Benefits, Side Effects and More!",
+    content:"Table of Contents Introduction:Nutritional Value of Kiwi:Therapeutic Uses of Kiwi:Benefits of Kiwi:How to Use Kiwi?..."
+}]
+
+news.forEach(function(elem){
+    const tab = document.createElement('div');
+    const div = document.createElement('div');
+    const image = document.createElement('img');
+    image.setAttribute("src",elem.image);
+    div.append(image);
+    const p1 = document.createElement('p');
+    p1.innerText=elem.heading;
+    p1.setAttribute("class","NewsHead");
+    const p2 = document.createElement('p');
+    p2.innerText = elem.content;
+    p2.setAttribute("class","NewsContent");
+    const button = document.createElement('button');
+    button.innerText = "Read More >";
+    tab.append(div,p1,p2,button);
+    document.querySelector("#NewsSlider").append(tab);
+
+})
+let NewsSlider = document.querySelector("#NewsSlider");
+let NewsleftArrow = document.querySelector(".Newsleftarrow");
+let NewsrightArrow = document.querySelector(".Newsrightarrow");
+let NewsselectionIndex = 0;
+
+NewsrightArrow.addEventListener("click",function(){
+    if(DodselectionIndex<4)
+    {
+        NewsselectionIndex+=1;
+    }else{
+        NewsselectionIndex =4;
+    }
+    NewsSlider.style.transform = "translate("+(NewsselectionIndex)*-476 +"px)";
+})
+
+NewsleftArrow.addEventListener("click",function(){
+    if(NewsselectionIndex>0)
+    {
+        NewsselectionIndex-=1;
+    }else{
+        NewsselectionIndex =0;
+    }
+    NewsSlider.style.transform = "translate("+(NewsselectionIndex)*-476 +"px)";
+})
+
+
+// Review Slider
+
+let reviews=[{
+    name:"Darpan Dholakia",
+    date:"April 23,2020",
+    review:"Very good App Would recommend it to everyone requiring fast and Efficient delivery of medicinal Products at the doorstep"
+},{
+    name:"Darpan Dholakia",
+    date:"April 23,2020",
+    review:"Very Good App Would recommend it to everyone requiring fast and Efficient delivery of medicinal Products at the doorstep"
+},{
+    name:"Darpan Dholakia",
+    date:"April 23,2020",
+    review:"Very Good App Would recommend it to everyone requiring fast and Efficient delivery of medicinal Products at the doorstep"
+},{
+    name:"Darpan Dholakia",
+    date:"April 23,2020",
+    review:"Very Good App Would recommend it to everyone requiring fast and Efficient delivery of medicinal Products at the doorstep"
+},{
+    name:"Darpan Dholakia",
+    date:"April 23,2020",
+    review:"Very Good App Would recommend it to everyone requiring fast and Efficient delivery of medicinal Products at the doorstep"
+},{
+    name:"Darpan Dholakia",
+    date:"April 23,2020",
+    review:"Very Good App Would recommend it to everyone requiring fast and Efficient delivery of medicinal Products at the doorstep"
+},{
+    name:"Darpan Dholakia",
+    date:"April 23,2020",
+    review:"Very Good App Would recommend it to everyone requiring fast and Efficient delivery of medicinal Products at the doorstep"
+},{
+    name:"Darpan Dholakia",
+    date:"April 23,2020",
+    review:"Very Good App Would recommend it to everyone requiring fast and Efficient delivery of medicinal Products at the doorstep"
+}];
+
+reviews.forEach(function(elem){
+    const tab = document.createElement('div');
+    const upperhalf = document.createElement('div');
+    upperhalf.setAttribute("class","upperhalf");
+    const lowerhalf = document.createElement('div');
+    lowerhalf.setAttribute("class","lowerhalf")
+    const name = document.createElement('p');
+    name.setAttribute("class","HeadName")
+    name.innerText = elem.name;
+    const date = document.createElement('p');
+    date.setAttribute("class","headDate");
+    date.innerText = elem.date;
+    upperhalf.append(name,date);
+    const review = document.createElement('p');
+    review.innerText = elem.review;
+    review.setAttribute("class","review font");
+    lowerhalf.append(review);
+    tab.append(upperhalf,lowerhalf);
+    document.querySelector("#reviewSlider").append(tab);
+})
+
+let reviewSlider = document.querySelector("#reviewSlider");
+let reviewleftArrow = document.querySelector(".reviewleftarrow");
+let reviewrightArrow = document.querySelector(".reviewrightarrow");
+let reviewselectionIndex = 0;
+
+reviewrightArrow.addEventListener("click",function(){
+    if(reviewselectionIndex<6)
+    {
+        reviewselectionIndex+=1;
+    }else{
+        reviewselectionIndex =6;
+    }
+    reviewSlider.style.transform = "translate("+(reviewselectionIndex)*-357 +"px)";
+})
+
+reviewleftArrow.addEventListener("click",function(){
+    if(reviewselectionIndex>0)
+    {
+        reviewselectionIndex-=1;
+    }else{
+        reviewselectionIndex =0;
+    }
+    reviewSlider.style.transform = "translate("+(reviewselectionIndex)*-357 +"px)";
 })
