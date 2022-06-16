@@ -25,7 +25,20 @@
     z-index: 4;
 }
 #upperNav{
+    position: absolute;
+    width:1520px;
+    /* border:1px solid red; */
     margin-top: 15px;
+    z-index: 1;
+}
+#upperNav>div>button:last-child{
+    height:60px;
+    width:50px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #f4f7fb;
+    border: 0px;
+
 }
 #upperNav>div:first-child{
     /* border: 1px solid red; */
@@ -37,20 +50,38 @@
 #upperNav>div>img{
     width:180px
 }
+#NavPincode
+{
+ border:0px;
+  color: #10847e;
+  padding-left: 10px;
+  font-family: sans-serif;
+  background-color: white;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
 input{
-    width:60%;
-    margin-left: 5%;
-    border-radius: 6px;
+    font-size: 20px;
+    width:46%;
     border: 0px;
     
 }
 #lowerNav{
+    /* border:1px solid blue; */
+    position: relative;
     color:white;
     display: flex;
+    padding-top: 70px;
     justify-content: space-around;
     font-size: 17px;
     font-family: 'Noto Sans', sans-serif;
     margin: auto;
+    transition: 0.5s;
 }
 #lowerNav>div:first-child{
     /* border:1px solid red; */
@@ -159,12 +190,9 @@ input{
     /* dimensions of the circular */
      width:10px;
     height: 10px;
-    /* width: 0.1rem; */
-    /* height: 0.5rem; */
-    /* positoning the button */
     position: absolute;
     left: 50%;
-    bottom: 45%;;
+    bottom: 315px;;
     transform: scale(0.7); 
     z-index:1 ;
 }
