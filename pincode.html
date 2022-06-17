@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>pincode</title>
     <style>
         body{
             background-image: url('https://staticg.sportskeeda.com/Football+wallpapers/CR7/cr7.jpg');
@@ -215,7 +215,7 @@ form>p{
                 <h2>location</h2>
                 <input type="text" placeholder="Enter Pincode" id="phonenum">
                 <!-- <button href="#" class="button">Submit</button> -->
-                <a><button class="button">Check</button></a>
+                <a href="index.html"><button class="button">Check</button></a>
                 <p>Save Addresses</p>
                 <p id="display"> </p>
             </form>
@@ -250,4 +250,8 @@ form>p{
 document.querySelector('.close').addEventListener("click", function() {
 	document.querySelector('.bg-modal').style.display = "none";
 }); 
+let cross = document.querySelector(".close");
+cross.addEventListener("click",function(){
+    window.location.href = "index.html";
+});
 </script>
