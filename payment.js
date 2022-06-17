@@ -1,8 +1,9 @@
+
 var elements = document.getElementsByClassName("linkwallet");
 
 var myFunction = function() {
     alert("Payment Successful");
-    window.location.href = "paymentsuccess.html";
+    window.location.href = "paymentsucess.html";
 };
 
 for (var i = 0; i < elements.length; i++) {
