@@ -283,15 +283,16 @@ input{
   height:200px;
 }
 .tophalf{
-    /* border:1px solid red; */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     height:65%;
     background-color: #cff0ea;
+    justify-content: space-between;
 }
 #card,#card1,#card2
 {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    height:225px;
 }
 #cont1>div{
     /* border:1px solid blue; */
@@ -352,15 +353,24 @@ input{
 {    
     color:#4f585e;
     display: block;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     width:70%;
     margin-left: 30px;
     font-family: 'Noto Sans', sans-serif;
 }
 .space
-{
-    height:46%;
+{   
+    padding-top: 15%;
+    padding-left: 0px;
+}
+.resize{
+    position: relative;
+    height:147%;
+}
+.resize>img{
+    height:100%;
+    border-top-right-radius: 5px;
 }
 #offerSlider{
     /* border:1px solid green; */
