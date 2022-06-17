@@ -4,6 +4,11 @@
 .font{
   font-family: 'Open Sans', sans-serif;
 }
+.heading{
+  font-size: 22px;
+  font-weight: 600;
+  color:#4f585e;
+}
 .spaceup
 {
   margin:auto;
@@ -13,12 +18,25 @@
 #navbar{
   position: sticky;
   top:0px;
-  height: 130px;
   background-color: #10847e;
-  border:1px solid transparent;    
+  border:1px solid transparent;
+  z-index: 4;
 }
 #upperNav{
+  position: absolute;
+  width:105%;
+  /* border:1px solid red; */
   margin-top: 15px;
+  z-index: 1;
+}
+#upperNav>div>button:last-child{
+  height:60px;
+  width:50px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #f4f7fb;
+  border: 0px;
+
 }
 #upperNav>div:first-child{
   /* border: 1px solid red; */
@@ -28,22 +46,41 @@
 
 }
 #upperNav>div>img{
-  width:180px
+  width:9%;
+  height: 10%;
+}
+#NavPincode
+{
+border:0px;
+color: #10847e;
+padding-left: 10px;
+font-family: sans-serif;
+background-color: white;
+display: flex;
+font-size: 18px;
+justify-content: center;
+align-items: center;
+margin-left: 4%;
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
 }
 input{
-  width:60%;
-  margin-left: 5%;
-  border-radius: 6px;
+  font-size: 20px;
+  width:46%;
   border: 0px;
   
 }
 #lowerNav{
+  /* border:1px solid blue; */
+  position: relative;
   color:white;
   display: flex;
+  padding-top: 70px;
   justify-content: space-around;
   font-size: 17px;
   font-family: 'Noto Sans', sans-serif;
   margin: auto;
+  transition: 0.5s;
 }
 #lowerNav>div:first-child{
   /* border:1px solid red; */
