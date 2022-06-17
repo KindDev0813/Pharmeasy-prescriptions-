@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My profile</title>
+    <title>Wallet</title>
     <style>
 /* --Navbar-- */
 *{
@@ -121,47 +121,22 @@ input{
 #lowerright{
     /* border:1px solid red; */
     width:60%;
-    height:270px;
+    height:500px;
     display: grid;
     grid-template-columns: (1,1fr);
     grid-template-rows: (7,30px);
     line-height: 25px;
     padding:25px;
-    box-shadow: 0 3px 20px 0 rgb(0 0 0 / 23%);
     margin-left: 40px;
     border-radius: 5px;
+    border: 1px solid rgb(224, 224, 224);
 }
-#lowerright>p{
-    font-size: 11px;
-    color: #4F585E;
-    margin-left: 30px;
-    font-family: 'Open Sans', sans-serif;
+#lowerright>img{
+    text-align: center;
+    width: 190px;
+    margin: 40px auto 32px;
 }
-#lowerright>input{
-    border: 1px solid rgb(196, 196, 196);
-    border-radius: 3px;
-    height: 30px;
-    width: 90%;
-    color: rgb(224, 224, 224);
-    font-size: 10px;
-}
-#lowerright>div{
-    /* border: 1px solid; */
-    text-align: right;
-}
-#lowerright>div>button{
-    text-align: right;
-    padding: 5px 25px;
-    margin-right: 15px;
-    background-color: rgb(224, 224, 224);
-    color: rgb(160, 160, 160);
-    border: none;
 
-}
-#lowerright>div>button:hover{
-    background-color: #10847e;
-    color: white;
-}
 #lowerleft>div:first-child{
     height:100px;
     width: 100%;
@@ -235,17 +210,35 @@ input{
 }
 #pagehead{
     height:40px;
-    width:500px;
+    width:1050px;
     margin: auto;
     margin-top: 90px;
     margin-left: 15%;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    /* border: 1px solid; */
 }
 #lowerleft>div>div:last-child{
     cursor: pointer;
 }
+#lowerwallet{
+    width:100%;
+    height:50.24px;
+    /* border: 1px solid; */
+    text-align: center;
+}
 
+#lowerwallet>div:first-child>p{
+    font-size: 26px;
+    font-family: 'Open Sans', sans-serif;
+    color:#4F585E;
+}
+#lowerwallet>div:last-child>p{
+    font-size: 12px;
+    margin-top: 5px;
+    font-family: 'Open Sans', sans-serif;
+    color:#4F585E;
+}
 
 /* ffffffffffffffffffffffffffffffffffflooooooooooooooooooooooooooooooooooooootttttttttttttteeeeeeeeeerrrrrrrrrrrrrr */
 #endpart{
@@ -419,7 +412,8 @@ input{
     <div></div>
     <div id="pagehead">
         <div style="width:40px;height:40px;border-radius: 20px;background-color:#10847e ;text-align: center;border: none;"><p style="color: white;font-size: 20px;margin-top: 7px;">U</p></div>
-        <div style="width:170px;height:18px;margin-top: 20px;"><p style="color:#4f585e;font-weight:bolder;font-family: 'Open Sans', sans-serif; margin-left: 20%;">EDIT PROFILE</p></div>
+        <div style="width:170px;height:18px;margin-top: 20px;margin-left: 290px;"><p style="color:#4f585e;font-weight:bolder;font-family: 'Open Sans', sans-serif; margin-left: 20%;">EDIT PROFILE</p></div>
+        <div style="width:40px;height: 40px;margin-left: 520px;"><p style="color:#10847e;font-size: 20px;font-weight: bold;margin-top: 7px;">₹0</p></div>
     </div>
     <div id="lower">
         <div id="lowerleft">
@@ -450,29 +444,29 @@ input{
                 <div><p  style="margin-left: 65px;">All</p></div>
                 <div>
                     <img src="https://assets.pharmeasy.in/web-assets/dist/a2995809.svg"/>
-                    <p style="font-weight:bold;font-size:13px">Profile Settings</p>
+                    <a href="myprofile.html"><p style="font-weight:bold;font-size:12px;font-family:'Open Sans', sans-serif;
+                        color:#4F585E;
+                        margin-left: 20px;
+                        font-size: 15px;
+                        margin-top: 5px;">Profile Settings</p></a>
                 </div>
-                <div style="background-color: #f4f7fb;"><p  style="margin-left: 65px;font-weight:bold;font-size:13px;color: #10847e;">Edit Profile</p></div>
+                <div ><p  style="margin-left: 65px;">Edit Profile</p></div>
                 <div><p style="margin-left: 65px;">Manage address</p></div>
                 <div><p style="margin-left: 65px;">Manage Refunds</p></div>
-                <div>
+                <div style="background-color: #f4f7fb;">
                     <img src="https://assets.pharmeasy.in/web-assets/dist/ab7afe51.svg"/>
-                   <a href="wallet.html"> <p style="font-weight:bold;font-size:12px;font-family:'Open Sans', sans-serif;
-                    color:#4F585E;
-                    margin-left: 20px;
-                    font-size: 15px;
-                    margin-top: 5px;">Wallet</p></a>
+                    <p style="font-weight:bold;font-size:13px;font-weight:bold;font-size:13px;color: #10847e;">Wallet</p>
                 </div>
                 <div>
                     <img src="https://assets.pharmeasy.in/web-assets/dist/319c59f0.svg"/>
-                   <a href="refer.html"> <p style="font-weight:bold;font-size:12px;font-family:'Open Sans', sans-serif;
-                    color:#4F585E;
-                    margin-left: 20px;
-                    font-size: 15px;
-                    margin-top: 5px;">Refer Earn</p></a></div>
+                    <a href="refer.html"> <p style="font-weight:bold;font-size:12px;font-family:'Open Sans', sans-serif;
+                        color:#4F585E;
+                        margin-left: 20px;
+                        font-size: 15px;
+                        margin-top: 5px;">Refer Earn</p></a></div>
                 <div>
                     <img src="https://assets.pharmeasy.in/web-assets/dist/9a22e94b.svg"/>
-                   <a href="index.html"><p style="font-weight:bold;font-size:12px;font-family:'Open Sans', sans-serif;
+                   <a href="index.html"><p style="font-weight:bold;font-size:13px;font-family:'Open Sans', sans-serif;
                     color:#4F585E;
                     margin-left: 20px;
                     font-size: 15px;
@@ -481,13 +475,19 @@ input{
             </div>
         </div>
         <div id="lowerright">
-            <p>Name</p>
+            <!-- <p>Name</p>
             <input type="text" placeholder="Name" />
             <p>Mobile Number</p>
             <input type="text" placeholder="Phone Number"/>
             <p>E-mail</p>
             <input type="text" placeholder="Email"/><br>
-            <div><button>SAVE</button></div>
+            <div><button>SAVE</button></div> -->
+            <img src="https://assets.pharmeasy.in/web-assets/dist/2907b0cf.png"/>
+            <div id="lowerwallet">
+                <div><p>Wallet is Empty</p></div>
+                <div><p>Your Cashback will be credited here</p></div>
+            </div>
+
 
         </div>
     </div>
