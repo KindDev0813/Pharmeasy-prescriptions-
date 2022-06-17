@@ -80,7 +80,7 @@ next.addEventListener("click",function(){
     else{
         count=1
     }
-  mover.style.transform="translate("+count*-66+"%)"
+  mover.style.transform="translate("+count*-50+"%)"
 })
 perv.addEventListener("click",function(){
     if(count>0){
