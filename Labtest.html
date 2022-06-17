@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LabTest</title>
     <link rel="icon" type="image/png" href="images/pharmeasyfavicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <style>
-        a{
-            text-decoration: none;
-        }
-     
+       /* --Navbar-- */
 .font{
     font-family: 'Open Sans', sans-serif;
 }
@@ -34,7 +33,20 @@
     z-index: 4;
 }
 #upperNav{
+    position: absolute;
+    width:105%;
+    /* border:1px solid red; */
     margin-top: 15px;
+    z-index: 1;
+}
+#upperNav>div>button:last-child{
+    height:60px;
+    width:50px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #f4f7fb;
+    border: 0px;
+
 }
 #upperNav>div:first-child{
     /* border: 1px solid red; */
@@ -44,24 +56,41 @@
 
 }
 #upperNav>div>img{
-    width:180px
+    width:9%;
+    height: 10%;
+}
+#NavPincode
+{
+ border:0px;
+  color: #10847e;
+  padding-left: 10px;
+  font-family: sans-serif;
+  background-color: white;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 input{
-    width:60%;
-    margin-left: 5%;
-    border-radius: 6px;
+    font-size: 20px;
+    width:46%;
     border: 0px;
     
 }
 #lowerNav{
+    /* border:1px solid blue; */
+    position: relative;
     color:white;
     display: flex;
-    /* border: 1px solid red; */
-    align-items: center;
+    padding-top: 70px;
     justify-content: space-around;
     font-size: 17px;
     font-family: 'Noto Sans', sans-serif;
     margin: auto;
+    transition: 0.5s;
 }
 #lowerNav>div:first-child{
     /* border:1px solid red; */
@@ -72,7 +101,13 @@ input{
 #lowerNav>div:first-child>div{
     padding:20px 15px 10px 20px;
     /* border:1px solid red; */
-    margin: auto;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
 }
 .highlight
 {
@@ -113,7 +148,6 @@ input{
 #login p,#login+div p{
     margin: auto;
 }
-
 
         #slider {
             /* border: 1px solid red; */
@@ -340,9 +374,6 @@ input{
             border-radius: 10px;
             cursor: pointer; 
         }
-        #afordable{
-         /* border: 1px solid blue; */
-      }
        #display{
       /* border: 1px solid black; */
        width: 80%;
@@ -464,6 +495,7 @@ input{
 
         .section:hover {
             cursor: pointer;
+            border: 0.5px solid coral;
         }
 
         .accordion__answer {
@@ -590,7 +622,7 @@ input{
             transition: all 0.5s;
         }
         .report{
-            width: 150%;
+            width: 200%;
             /* border: 1px solid blue; */
             margin: auto;
             /* height: 300px; */
@@ -654,7 +686,7 @@ input{
         }
         .conve{
             /* border: 1px solid teal; */
-            width: 45%;
+            width: 80%;
             height:280px;
             
 
@@ -930,26 +962,38 @@ input{
 </head>
 
 <body>
+    <!-- -- Navbar start-- -->
     <div id="navbar">            
         <div id="upperNav">
             <div>
             <img src="images/navbarimg.png" alt="pharmeasyimage">
-            <input type="text">
+            <button id="NavPincode">
+                Select Pincode
+                <span class="material-symbols-outlined">
+                arrow_drop_down
+                </span>
+            </button>
+            <input type="search" placeholder="| Select medicines/Healthcare products">
+            <button>
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+            </button>
             </div>
         </div>
         <div id="lowerNav">
-            <div>
+            <div id="scroll">
                 <div>
                     <p>Order Medicines</p> 
                     <div class="highlight"></div>
                 </div>
-                <div>Healthcare Products
+                <div id="Health">Healthcare Products
                     <div class="highlight"></div>
                 </div>
-                <div>Lab Tests
+                <div id="labtestb">Lab Tests
                     <div class="highlight"></div>
                 </div>
-                <div>RTPCR
+                <div id="Rtpcr">RTPCR
                     <div class="highlight"></div>
                 </div>
             </div>
@@ -961,13 +1005,14 @@ input{
                     <img src="images/loginsignup.svg" alt="login/signup">
                     <p>Login/Signup</p>
                 </div>
-                <div>
+                <div id="cart">
                     <img src="images/cart.svg" alt="">
                     <p>Cart</p>
                 </div>
             </div>
         </div>
     </div>
+    <!-- --Navbar end-- -->
     <div id="slider">
         <img id="sliderimg" src="https://cms-contents.pharmeasy.in/banner/c5d7f1f2b79-1_MonsoonFever_HP.jpg" alt="">
     </div>
@@ -1355,6 +1400,11 @@ input{
                     <h3>Affordable Pricing</h3>
                     <p>Get the best price for tests and packages by comparing across Multiple Labs.</p>
                    </div>
+                   <div class="conve">
+                    <img src="https://cdn01.pharmeasy.in/dam/diagnostics/usp-images/55f90440a9873704a771d084cb65b909" alt="">
+                    <h3>Accurate Reports</h3>
+                    <p>Get accurate and timely reports from over certified partner Labs.</p>
+                </div>
                   
              </div>
         </div>

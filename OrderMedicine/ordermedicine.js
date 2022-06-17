@@ -1,3 +1,10 @@
+//linking part
+
+let BacktoHomeImg = document.querySelector("#upperNav>div>img:first-child");
+BacktoHomeImg.addEventListener("click",function(){
+    window.location.href = "index.html";
+})
+
 let img2=document.querySelector("#img2");
 
 let button2=document.querySelectorAll(".button2")

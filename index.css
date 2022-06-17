@@ -26,7 +26,7 @@
 }
 #upperNav{
     position: absolute;
-    width:1520px;
+    width:105%;
     /* border:1px solid red; */
     margin-top: 15px;
     z-index: 1;
@@ -48,7 +48,8 @@
 
 }
 #upperNav>div>img{
-    width:180px
+    width:9%;
+    height: 10%;
 }
 #NavPincode
 {
@@ -666,27 +667,94 @@ h3{
 }
 
 
-
-
-
-
-
 #healthArticles
 {
-    border:1px solid green;
     margin:auto;
     margin-top: 80px;
-    height:350px;
     width:90%;
     
 }
+#NewsContainer{
+    overflow: hidden;
+}
 #healthArticles>Div:first-child
 {
-    border:1px solid red;
+    /* border:1px solid red; */
     font-size: 25px;
     font-family: 'Noto Sans', sans-serif;
 
 }
+#NewsSlider{
+    position:relative;
+    display: flex;
+    margin-top: 20px;
+    width:164%;
+    gap:20px;
+    transition: all 0.5s
+}
+#NewsSlider>div>div>img{
+    border-radius: 8px;
+    width:100%;
+}
+#NewsSlider>div>button{
+    font-size: 16px;
+    font-weight: bold;
+    padding:0px;
+    background-color: white;
+    border:0px;
+    color:#10847e;
+    font-family: sans-serif;
+}
+.NewsHead{
+    font-size: 17px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color:#4f585e;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.NewsContent{
+    font-size: 17px;
+    font-family: sans-serif;
+    color:#4f585e;
+    padding-bottom: 5px;
+}
+#healthArticles>div:first-child {
+    display: flex;
+    justify-content: space-between;
+}
+.NewsControls{
+    display:flex ;
+    gap:30px;
+    margin-right: 30px;
+}
+.NewsControls>div:first-child{
+    color:#10847e;
+    cursor:pointer;
+}
+.Newsleftarrow:hover{
+    height:fit-content;
+    width:30px;
+    padding-top: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: white;
+    transition: 0.3s;
+}
+.Newsrightarrow:hover{
+    height:fit-content;
+    width:30px;
+    padding-top: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+
+
 #imageStrip
 {
     /* border:1px solid red; */
@@ -707,8 +775,34 @@ h3{
 }
 #reviewstrip
 {
-    border:1px solid red;
+    /* border:1px solid red; */
     height:300px;
+}
+
+
+.reviewleftarrow:hover{
+    height:fit-content;
+    width:30px;
+    padding-top: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: white;
+    transition: 0.3s;
+}
+.reviewrightarrow:hover{
+    height:fit-content;
+    width:30px;
+    padding-top: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: white;
+    transition: 0.3s;
+}
+#reviewstrip>div:first-child{
+    display:flex;
+    justify-content: space-between;
 }
 #reviewstrip>div>p
 {
@@ -716,6 +810,48 @@ h3{
     font-weight: bold;
     color:#4f585e;
 }
+#reviewDisplay{
+    /* position: relative; */
+    /* border:1px solid blue; */
+    margin-top: 20px;
+    overflow: hidden;
+}
+#reviewSlider{
+    /* border:1px solid orange; */
+    display: flex;
+    position: relative;
+    width:2856px;
+    gap:20px;
+    transition:all 0.5s;
+}
+#reviewSlider>div{
+    /* border:1px solid red; */
+    width:350px;
+    height:240px;
+}
+.lowerhalf{
+    margin-top: 23px;
+    font-size: 13px;
+    background-color: #f2fff8;
+    height:200px;
+}
+.review{
+    padding: 15px;
+    color:#4f585e;
+    padding-top: 50px;
+    
+}
+.HeadName{
+    font-weight: bold;
+    color:#4f585e;
+}
+.headDate
+{
+    opacity: 0.5;
+    font-family: sans-serif;
+}
+
+
 #download{
     /* border:1px solid red; */
     height:320px;
@@ -769,3 +905,135 @@ h3{
 #play-app-Store>div>img{
     width:100%;
 }
+
+<<<<<<< HEAD
+
+/* Footer css */
+
+=======
+/* Main fooooooooooooooooooooter is here */
+>>>>>>> 28da6a5ee47e1270a9bd9d9a1a3fd67373764c42
+#endpart{
+    background-color: #f4f7fb;
+  
+  }
+  #fourthdiv {
+    height: 900px;
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+    /* border: 1px solid black; */
+    
+  }
+  
+  #kolo {
+    /* border: 1px solid black; */
+    width: 90%;
+    margin: auto;
+    height: 75%;
+    margin-top: 50px;
+    display: flex;
+  }
+  .footerheadings{
+    font-size: 16px;
+    margin-top: 20px;
+    color: #4F585E;
+  }
+  
+  .CFN {
+    height: 100%;
+    width: 90%;
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .CFN>div {
+    height: 100%;
+    /* border: 1px solid black; */
+    font-family: sans-serif;
+    margin-left: 110px;
+  }
+  
+  .CFN>div>p {
+    margin-top: 18px;
+    font-size: 16px;
+    color: #4f585e;
+  }
+  
+  
+  #followus {
+    height: 20%;
+    margin-left: 90px;
+    /* border: 1px solid red; */
+    width: 40%;
+  }
+  
+  #followus>h3 {
+    font-family: Open Sans, sans-serif;
+    text-rendering: optimizeLegibility;
+    font-weight: 400;
+  }
+  
+  #followus>div {
+    height: 50%;
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+  }
+  
+  #followus>div>a {
+    margin-right: 30px;
+    color: #10847e;
+  }
+  
+  #partners {
+    height: 180px;
+    width: 90%;
+    margin: auto;
+    margin-left: 170px;
+    margin-top: 20px;
+    /* border: 2px solid black; */
+    font-family: sans-serif;
+  }
+  
+  #partners>div {
+    height: 100px;
+    width: 100%;
+    /* border: 1px solid black; */
+    margin-top: 10px;
+    display: flex;
+  }
+  
+  .logos {
+    height: 100%;
+    width: 67%;
+    margin-top: 20px;
+    /* border: 1px solid black; */
+  }
+  
+  .logos>img {
+    height: 28px;
+    /* width: 42px; */
+    margin-right: 21px;
+  }
+  
+  #rights {
+    height: 100%;
+    width: 20%;
+    /* border: 1px solid red; */
+    margin-left: 20px;
+  }
+  
+  #rights>p {
+    font-size: 17px;
+    color: #4f585e;
+  }
+  #h4name{
+    font-size: 19px;
+  }
+
+  a{
+    text-decoration: none;
+  }
