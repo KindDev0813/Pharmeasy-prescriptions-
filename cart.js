@@ -1,3 +1,10 @@
+//linking part
+
+let BacktoHomeImg = document.querySelector("#upperNav>div>img:first-child");
+BacktoHomeImg.addEventListener("click",function(){
+    window.location.href = "index.html";
+})
+
 
 let data=JSON.parse(localStorage.getItem("cart"))||[]
 display(data)

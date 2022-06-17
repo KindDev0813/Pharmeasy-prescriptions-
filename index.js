@@ -17,6 +17,14 @@ function scroll()
     }
 }
 
+
+//linking part
+
+let BacktoHomeImg = document.querySelector("#upperNav>div>img:first-child");
+BacktoHomeImg.addEventListener("click",function(){
+    location.reload();
+})
+
 //Carousel 1 auto functionality
 let bigSlider = document.querySelector(".slider-wrapper");
 let BigIndex = 0;
