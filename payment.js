@@ -1,3 +1,35 @@
+//linking part
+
+let BacktoHomeImg = document.querySelector("#upperNav>div>img:first-child");
+BacktoHomeImg.addEventListener("click",function(){
+    window.location.href = "index.html";
+})
+let cart = document.querySelector("#cart");
+cart.addEventListener("click",function(){
+    window.location.href = "cart.html";
+});
+let login = document.querySelector("#login");
+login.addEventListener("click",function(){
+    window.location.href = "login.html";
+})
+let labtest = document.querySelector("#labtestb");
+labtest.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "Labtest.html";
+});
+
+let Rtpcr = document.querySelector("#Rtpcr");
+Rtpcr.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "RTPCR.html";
+});
+
+let Healthcare = document.querySelector("#Health");
+Healthcare.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "healthcare.html";
+});
+
 
 var elements = document.getElementsByClassName("linkwallet");
 

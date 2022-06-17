@@ -52,17 +52,34 @@
                 <div class="highlight"></div>
             </div>
         </div>
-        <div>
-            <div id="offer">
-                <img src="images/discount.png" alt="flaticon">
-                Offers</div>
-            <div id="login">
-                <img src="images/loginsignup.svg" alt="login/signup">
-                <p>Login/Signup</p>
+        <div id="lowerNav">
+            <div>
+                <div>
+                    <p>Order Medicines</p> 
+                    <div class="highlight"></div>
+                </div>
+                <div id="Health">Healthcare Products
+                    <div class="highlight"></div>
+                </div>
+                <div id="labtestb">Lab Tests
+                    <div class="highlight"></div>
+                </div>
+                <div id="Rtpcr">RTPCR
+                    <div class="highlight"></div>
+                </div>
             </div>
             <div>
-                <img src="images/cart.svg" alt="">
-                <p>Cart</p>
+                <div id="offer">
+                    <img src="images/discount.png" alt="flaticon">
+                    Offers</div>
+                <div id="login">
+                    <img src="images/loginsignup.svg" alt="login/signup">
+                    <p>Login/Signup</p>
+                </div>
+                <div id="cart">
+                    <img src="images/cart.svg" alt="">
+                    <p>Cart</p>
+                </div>
             </div>
         </div>
     </div>
@@ -349,6 +366,7 @@
       </div>
 </body>
 </html>
+<<<<<<< HEAD
 <script>
   window.onscroll = function (){scroll()}
 function scroll()
@@ -367,4 +385,39 @@ function scroll()
         document.querySelector("#offer").style.opacity ="0";
     }
 }
+=======
+
+<script>
+  //linking part
+
+let BacktoHomeImg = document.querySelector("#upperNav>div>img:first-child");
+BacktoHomeImg.addEventListener("click",function(){
+    window.location.href = "index.html";
+})
+let cart = document.querySelector("#cart");
+cart.addEventListener("click",function(){
+    window.location.href = "cart.html";
+});
+let login = document.querySelector("#login");
+login.addEventListener("click",function(){
+    window.location.href = "login.html";
+})
+let labtest = document.querySelector("#labtestb");
+labtest.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "Labtest.html";
+});
+
+let Rtpcr = document.querySelector("#Rtpcr");
+Rtpcr.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "RTPCR.html";
+});
+
+let Healthcare = document.querySelector("#Health");
+Healthcare.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "healthcare.html";
+});
+>>>>>>> ddf3c18defc9f6045160f73e3caf6edfc62f070b
 </script>

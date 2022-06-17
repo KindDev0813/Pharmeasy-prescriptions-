@@ -905,3 +905,135 @@ h3{
 #play-app-Store>div>img{
     width:100%;
 }
+
+<<<<<<< HEAD
+
+/* Footer css */
+
+=======
+/* Main fooooooooooooooooooooter is here */
+>>>>>>> 28da6a5ee47e1270a9bd9d9a1a3fd67373764c42
+#endpart{
+    background-color: #f4f7fb;
+  
+  }
+  #fourthdiv {
+    height: 900px;
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+    /* border: 1px solid black; */
+    
+  }
+  
+  #kolo {
+    /* border: 1px solid black; */
+    width: 90%;
+    margin: auto;
+    height: 75%;
+    margin-top: 50px;
+    display: flex;
+  }
+  .footerheadings{
+    font-size: 16px;
+    margin-top: 20px;
+    color: #4F585E;
+  }
+  
+  .CFN {
+    height: 100%;
+    width: 90%;
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .CFN>div {
+    height: 100%;
+    /* border: 1px solid black; */
+    font-family: sans-serif;
+    margin-left: 110px;
+  }
+  
+  .CFN>div>p {
+    margin-top: 18px;
+    font-size: 16px;
+    color: #4f585e;
+  }
+  
+  
+  #followus {
+    height: 20%;
+    margin-left: 90px;
+    /* border: 1px solid red; */
+    width: 40%;
+  }
+  
+  #followus>h3 {
+    font-family: Open Sans, sans-serif;
+    text-rendering: optimizeLegibility;
+    font-weight: 400;
+  }
+  
+  #followus>div {
+    height: 50%;
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+  }
+  
+  #followus>div>a {
+    margin-right: 30px;
+    color: #10847e;
+  }
+  
+  #partners {
+    height: 180px;
+    width: 90%;
+    margin: auto;
+    margin-left: 170px;
+    margin-top: 20px;
+    /* border: 2px solid black; */
+    font-family: sans-serif;
+  }
+  
+  #partners>div {
+    height: 100px;
+    width: 100%;
+    /* border: 1px solid black; */
+    margin-top: 10px;
+    display: flex;
+  }
+  
+  .logos {
+    height: 100%;
+    width: 67%;
+    margin-top: 20px;
+    /* border: 1px solid black; */
+  }
+  
+  .logos>img {
+    height: 28px;
+    /* width: 42px; */
+    margin-right: 21px;
+  }
+  
+  #rights {
+    height: 100%;
+    width: 20%;
+    /* border: 1px solid red; */
+    margin-left: 20px;
+  }
+  
+  #rights>p {
+    font-size: 17px;
+    color: #4f585e;
+  }
+  #h4name{
+    font-size: 19px;
+  }
+
+  a{
+    text-decoration: none;
+  }

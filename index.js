@@ -17,6 +17,41 @@ function scroll()
     }
 }
 
+
+//linking part
+
+let BacktoHomeImg = document.querySelector("#upperNav>div>img:first-child");
+BacktoHomeImg.addEventListener("click",function(){
+    location.reload();
+})
+let cart = document.querySelector("#cart");
+cart.addEventListener("click",function(){
+    window.location.href = "cart.html";
+});
+let login = document.querySelector("#login");
+login.addEventListener("click",function(){
+    window.location.href = "login.html";
+})
+let labtest = document.querySelector("#labtestb");
+labtest.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "Labtest.html";
+});
+
+let Rtpcr = document.querySelector("#Rtpcr");
+Rtpcr.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "RTPCR.html";
+});
+
+let Healthcare = document.querySelector("#Health");
+Healthcare.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "healthcare.html";
+});
+
+
+
 //Carousel 1 auto functionality
 let bigSlider = document.querySelector(".slider-wrapper");
 let BigIndex = 0;
