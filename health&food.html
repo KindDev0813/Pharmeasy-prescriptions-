@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Food And Drink</title>
     <link rel="icon" type="image/png" href="images/pharmeasyfavicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <style>
          * {
         margin: 0px;
@@ -134,6 +135,14 @@
 
       /* --NavBarEnd-- */
 
+
+      .material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
 
 
         /* footer */
@@ -484,15 +493,15 @@ box-shadow:1px 1px 1px 1px #8897a2;
             <p>Order Medicines</p>
             <div class="highlight"></div>
           </div>
-          <div>
+          <div id="Health">
             Healthcare Products
             <div class="highlight"></div>
           </div>
-          <div>
+          <div id="labtestb">
             Lab Tests
             <div class="highlight"></div>
           </div>
-          <div>
+          <div id="Rtpcr">
             RTPCR
             <div class="highlight"></div>
           </div>
@@ -506,7 +515,7 @@ box-shadow:1px 1px 1px 1px #8897a2;
             <img src="images/loginsignup.svg" alt="login/signup" />
             <p>Login/Signup</p>
           </div>
-          <div>
+          <div id="cart">
             <img src="images/cart.svg" alt="" />
             <p>Cart</p>
           </div>
@@ -792,6 +801,39 @@ box-shadow:1px 1px 1px 1px #8897a2;
   </body>
 </html>
 <script>
+//linking part
+
+let BacktoHomeImg = document.querySelector("#upperNav>div>img:first-child");
+BacktoHomeImg.addEventListener("click",function(){
+    window.location.href = "index.html";
+})
+let cart = document.querySelector("#cart");
+cart.addEventListener("click",function(){
+  console.log("in");
+    window.location.href = "cart.html";
+})
+let login = document.querySelector("#login");
+login.addEventListener("click",function(){
+    window.location.href = "login.html";
+})
+let labtest = document.querySelector("#labtestb");
+labtest.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "Labtest.html";
+});
+
+let Rtpcr = document.querySelector("#Rtpcr");
+Rtpcr.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "RTPCR.html";
+});
+
+let Healthcare = document.querySelector("#Health");
+Healthcare.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "healthcare.html";
+});
+
     let productdata=[
     {
       image:
