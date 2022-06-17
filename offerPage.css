@@ -193,9 +193,9 @@ input{
     grid-template-columns: 25% 75%;
     grid-template-rows: auto;
 }
-.innerbox>div{
-    /* border: 1px solid yellow; */
-}
+/* .innerbox>div{
+    border: 1px solid yellow;
+} */
 .lowerbox{
 display: grid;
 grid-template-columns: 30% 30%;
@@ -372,9 +372,7 @@ align-items: center;
         color: #8897a2;
         text-align: left;
       }
-      .horizontalline2{
-       
-      }
+    
     
       /* product guaranty end */
     
