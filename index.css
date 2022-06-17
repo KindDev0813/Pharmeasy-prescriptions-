@@ -26,7 +26,7 @@
 }
 #upperNav{
     position: absolute;
-    width:1520px;
+    width:105%;
     /* border:1px solid red; */
     margin-top: 15px;
     z-index: 1;
@@ -48,7 +48,8 @@
 
 }
 #upperNav>div>img{
-    width:180px
+    width:9%;
+    height: 10%;
 }
 #NavPincode
 {
@@ -905,9 +906,13 @@ h3{
     width:100%;
 }
 
+<<<<<<< HEAD
 
 /* Footer css */
 
+=======
+/* Main fooooooooooooooooooooter is here */
+>>>>>>> 28da6a5ee47e1270a9bd9d9a1a3fd67373764c42
 #endpart{
     background-color: #f4f7fb;
   

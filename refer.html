@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My profile</title>
+    <title>refer&earn</title>
     <style>
 /* --Navbar-- */
 *{
@@ -118,50 +118,13 @@ input{
     width:30%;
     height:820px;
 }
-#lowerright{
-    /* border:1px solid red; */
-    width:60%;
-    height:270px;
-    display: grid;
-    grid-template-columns: (1,1fr);
-    grid-template-rows: (7,30px);
-    line-height: 25px;
-    padding:25px;
-    box-shadow: 0 3px 20px 0 rgb(0 0 0 / 23%);
-    margin-left: 40px;
-    border-radius: 5px;
-}
-#lowerright>p{
-    font-size: 11px;
-    color: #4F585E;
-    margin-left: 30px;
-    font-family: 'Open Sans', sans-serif;
-}
-#lowerright>input{
-    border: 1px solid rgb(196, 196, 196);
-    border-radius: 3px;
-    height: 30px;
-    width: 90%;
-    color: rgb(224, 224, 224);
-    font-size: 10px;
-}
-#lowerright>div{
-    /* border: 1px solid; */
-    text-align: right;
-}
-#lowerright>div>button{
-    text-align: right;
-    padding: 5px 25px;
-    margin-right: 15px;
-    background-color: rgb(224, 224, 224);
-    color: rgb(160, 160, 160);
-    border: none;
 
-}
-#lowerright>div>button:hover{
-    background-color: #10847e;
-    color: white;
-}
+/* #lowerright>img{
+    text-align: center;
+    width: 190px;
+    margin: 40px auto 32px;
+} */
+
 #lowerleft>div:first-child{
     height:100px;
     width: 100%;
@@ -235,17 +198,61 @@ input{
 }
 #pagehead{
     height:40px;
-    width:500px;
+    width:1050px;
     margin: auto;
     margin-top: 90px;
     margin-left: 15%;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    /* border: 1px solid; */
 }
 #lowerleft>div>div:last-child{
     cursor: pointer;
 }
-
+#lowerright{
+    /* border:1px solid red; */
+    width:60%;
+    height:370px;
+    display: grid;
+    grid-template-columns: (1,1fr);
+    grid-template-rows: (7,30px);
+    padding:25px;
+    margin-left: 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(224, 224, 224);
+}
+#lowerright>div{
+    width:100%;
+    /* border: 1px solid red; */
+}
+#lowerright>div:first-child{
+    height:30px;
+    margin-top: -10px;
+    margin-bottom:-25px;
+    display: flex;
+    justify-content: flex-end;
+}
+#lowerright>div:nth-child(2){
+    height:120px;
+    margin-top: -45px;
+    margin-bottom: -5px;
+   
+}
+#lowerright>div:nth-child(2)>img{
+    width: 100%;
+}
+#lowerright>div:nth-child(3){
+    height: 110px;
+    margin-top: -65px;
+    margin-bottom: -55px;
+    display: flex;
+}
+#lowerright>div:nth-child(4){
+height:100px;
+margin-top: -15px;
+/* border: 1px solid green; */
+margin-bottom: -95px;
+}
 
 /* ffffffffffffffffffffffffffffffffffflooooooooooooooooooooooooooooooooooooootttttttttttttteeeeeeeeeerrrrrrrrrrrrrr */
 #endpart{
@@ -419,7 +426,8 @@ input{
     <div></div>
     <div id="pagehead">
         <div style="width:40px;height:40px;border-radius: 20px;background-color:#10847e ;text-align: center;border: none;"><p style="color: white;font-size: 20px;margin-top: 7px;">U</p></div>
-        <div style="width:170px;height:18px;margin-top: 20px;"><p style="color:#4f585e;font-weight:bolder;font-family: 'Open Sans', sans-serif; margin-left: 20%;">EDIT PROFILE</p></div>
+        <div style="width:270px;height:18px;margin-top: 20px;margin-left: 270px;"><p style="color:#4f585e;font-weight:bolder;font-family: 'Open Sans', sans-serif; margin-left: 20%;">REFER AND EARN</p></div>
+        <!-- <div style="width:40px;height: 40px;margin-left: 520px;"><p style="color:#10847e;font-size: 20px;font-weight: bold;margin-top: 7px;">₹0</p></div> -->
     </div>
     <div id="lower">
         <div id="lowerleft">
@@ -455,29 +463,30 @@ input{
                 <div><p  style="margin-left: 65px;">All</p></div>
                 <div>
                     <img src="https://assets.pharmeasy.in/web-assets/dist/a2995809.svg"/>
-                    <p style="font-weight:bold;font-size:13px">Profile Settings</p>
+                    <a href="myprofile.html"><p style="font-weight:bold;font-size:12px;font-family:'Open Sans', sans-serif;
+                        color:#4F585E;
+                        margin-left: 20px;
+                        font-size: 15px;
+                        margin-top: 5px;">Profile Settings</p></a>
                 </div>
-                <div style="background-color: #f4f7fb;"><p  style="margin-left: 65px;font-weight:bold;font-size:13px;color: #10847e;">Edit Profile</p></div>
+                <div ><p  style="margin-left: 65px;">Edit Profile</p></div>
                 <div><p style="margin-left: 65px;">Manage address</p></div>
                 <div><p style="margin-left: 65px;">Manage Refunds</p></div>
-                <div>
+                <div >
                     <img src="https://assets.pharmeasy.in/web-assets/dist/ab7afe51.svg"/>
-                   <a href="wallet.html"> <p style="font-weight:bold;font-size:12px;font-family:'Open Sans', sans-serif;
+                   <a href="wallet.html"> <p style="font-weight:bold;font-size:13px;font-family:'Open Sans', sans-serif;
                     color:#4F585E;
                     margin-left: 20px;
                     font-size: 15px;
                     margin-top: 5px;">Wallet</p></a>
                 </div>
-                <div>
+                <div style="background-color: #f4f7fb;">
+                    <!--  </div> -->
                     <img src="https://assets.pharmeasy.in/web-assets/dist/319c59f0.svg"/>
-                   <a href="refer.html"> <p style="font-weight:bold;font-size:12px;font-family:'Open Sans', sans-serif;
-                    color:#4F585E;
-                    margin-left: 20px;
-                    font-size: 15px;
-                    margin-top: 5px;">Refer Earn</p></a></div>
+                    <p style="font-weight:bold;font-size:13px;font-weight:bold;font-size:13px;color: #10847e;">Refer Earn</p></div>
                 <div>
                     <img src="https://assets.pharmeasy.in/web-assets/dist/9a22e94b.svg"/>
-                   <a href="index.html"><p style="font-weight:bold;font-size:12px;font-family:'Open Sans', sans-serif;
+                   <a href="index.html"><p style="font-weight:bold;font-size:13px;font-family:'Open Sans', sans-serif;
                     color:#4F585E;
                     margin-left: 20px;
                     font-size: 15px;
@@ -486,13 +495,60 @@ input{
             </div>
         </div>
         <div id="lowerright">
-            <p>Name</p>
-            <input type="text" placeholder="Name" />
-            <p>Mobile Number</p>
-            <input type="text" placeholder="Phone Number"/>
-            <p>E-mail</p>
-            <input type="text" placeholder="Email"/><br>
-            <div><button>SAVE</button></div>
+           <div>
+            <div style="border:1px solid #10847e;margin-right:10px;border-radius: 14px;width:20px;height:20px;margin-top:5px;"><p style="margin-top:1px;text-align: center;font-size:18px;font-family:'Open Sans', sans-serif;color: #10847e;">?</p></div>
+            <div><p style="margin-right:15px;font-size:14px;font-family:'Open Sans', sans-serif;color: #10847e;font-weight: bolder;margin-top:10px;">Help</p></div>
+           </div>
+           <div>
+            <img src="https://assets.pharmeasy.in/web-assets/dist/651d1013.jpg"/>
+           </div>
+           <div>
+            <div style="line-height: 20px;width:50%;">
+                <p style="font-weight:bold;font-size:16px;font-family:'Open Sans', sans-serif;
+                color:#4F585E;margin-top: 15px;">REFER FRIEND AND SAVE TOGETHER</p>
+                <p style="font-size:14px;font-family:'Open Sans', sans-serif;
+                color:#4F585E;margin-top: 10px;">You both get EXTRA 5% OFF on the next order. Hurry, refer now!</p>
+            </div>
+            <div style="width:60%;">
+                <div style="background-color:#5573AD;margin-top: 15px;border-radius: 5px;width:85%;height:62px;margin-left: 25px;padding-top:15px">
+                <div style="border:1px  solid white;border-style: dashed;width:85%;height:45px;margin-left: 22px;display:flex"><div style="margin-right:20px">
+                    <p style="color:white;font-family:'Open Sans', sans-serif;font-size: 13px;margin-left: 25px;margin-top: 15px;">REFERAL CODE</p>
+                </div>
+                <div>
+                    <p style="color:white;font-family:'Open Sans', sans-serif;font-size:18px;margin-left: 25px;margin-top: 11px;font-weight: bold;">AHJVJ</p>
+                </div>
+            </div>
+            </div>
+            <p style="font-size:10px;font-family:'Open Sans', sans-serif;
+            color:#4F585E;margin-top: 10px;margin-left: 25px;">Click to copy the code</p>
+           </div>
+            </div>
+            <div>
+                <div style="width:100%;height:30px;">
+                    <p style="font-weight:bold;font-size:15px;font-family:'Open Sans', sans-serif;
+                    color:#4F585E;margin-top: 5px;">REFER TO YOUR FRIEND</p>
+                </div>
+                <div style="display:flex">
+                  <div>
+                   <a> <img src="https://assets.pharmeasy.in/web-assets/dist/a303616c.png" style="width: 80%;"></a>
+                    <p style="font-size:8px;font-family:'Open Sans', sans-serif;
+                    color:#4F585E;margin-top: 5px;">WHATSAPP</p>
+                  </div>
+                  <div>
+                   <a><img src="https://assets.pharmeasy.in/web-assets/dist/ca255b3f.png" style="width: 50%; margin-left: 25px"/></a> 
+                    <p style="font-size:8px;font-family:'Open Sans', sans-serif;
+                    color:#4F585E;margin-top: 5px; margin-left: 25px;">FACEBOOK</p>
+                </div>
+                  <div>
+                <a><img src="https://www.danoneinstitute.org/wp-content/uploads/2020/06/logo-rond-twitter.png" style="width:6.5%; margin-left: 25px;"/></a> 
+                  <p style="font-size:8px;font-family:'Open Sans', sans-serif;
+                  color:#4F585E;margin-top: 5px; margin-left: 25px">TWITTER</p>
+                </div>
+                  </div>
+                </div>
+
+            </div>
+                   
 
         </div>
     </div>

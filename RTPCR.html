@@ -481,13 +481,13 @@ input{
                     <p>Order Medicines</p> 
                     <div></div>
                 </div>
-                <div>Healthcare Products
+                <div id="Health">Healthcare Products
                     <div class="highlight"></div>
                 </div>
-                <div>Lab Tests
+                <div id="labtestb">Lab Tests
                     <div class="highlight"></div>
                 </div>
-                <div>RTPCR
+                <div id="Rtpcr">RTPCR
                     <div class="highlight"></div>
                 </div>
             </div>
@@ -499,7 +499,7 @@ input{
                     <img src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" alt="">
                     <p>Login/Signup</p>
                 </div>
-                <div>
+                <div id="cart">
                     <img src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" alt="">
                     <p>Cart</p>
                 </div>
@@ -530,7 +530,8 @@ input{
                <h2>Description</h2>
                <div></div>
                <p>The COVID-19 laboratory test can detect positive coronavirus cases. Any individual with symptoms like cough, high fever, shortness of breath, respiratory and breathing difficulties, and with a history of international travel or contact with Covid -19 positive cases, can book this test with prior consultation by General Physician. The result of this test will be informed to the relevant authorities as mandated by the government. Home sample collection will be done by an expert technician.</p>
-        </div>
+              
+            </div>
         <div id="trusted">
             <div id="labs">
              <div>
@@ -757,15 +758,48 @@ input{
 </body>
 </html>
 <script>
-  let data=document.querySelector("button").addEventListener("click",callme)
-  let arr= JSON.parse(localStorage.getItem("fortest"))||[]
-        function callme(){
-          let obj={
-            img:document.querySelector("#pic").src,
-            test:document.querySelector("#testname").innerText,
-            price:document.querySelector("#testprice").innerText
-          };
-           arr.push(obj)
-           localStorage.setItem(("fortest"),JSON.stringify(arr))
-        }
+//linking part
+
+let BacktoHomeImg = document.querySelector("#upperNav>div>img:first-child");
+BacktoHomeImg.addEventListener("click",function(){
+    window.location.href = "index.html";
+})
+let cart = document.querySelector("#cart");
+cart.addEventListener("click",function(){
+    window.location.href = "cart.html";
+});
+let login = document.querySelector("#login");
+login.addEventListener("click",function(){
+    window.location.href = "login.html";
+})
+let labtest = document.querySelector("#labtestb");
+labtest.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "Labtest.html";
+});
+
+let Rtpcr = document.querySelector("#Rtpcr");
+Rtpcr.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "RTPCR.html";
+});
+
+let Healthcare = document.querySelector("#Health");
+Healthcare.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "healthcare.html";
+});
+
+
+  // let data=document.querySelector("button").addEventListener("click",callme)
+  // let arr= JSON.parse(localStorage.getItem("cart"))||[]
+  //       function callme(){
+  //         let obj={
+  //           image:document.querySelector("#pic").src,
+  //           name:document.querySelector("#testname").innerText,
+  //           Price:document.querySelector("#testprice").innerText
+  //         };
+  //          arr.push(obj)
+  //          localStorage.setItem(("cart"),JSON.stringify(arr))
+  //       }
 </script>
