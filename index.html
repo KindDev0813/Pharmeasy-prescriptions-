@@ -16,11 +16,22 @@
         <div id="upperNav">
             <div>
             <img src="images/navbarimg.png" alt="pharmeasyimage">
-            <input type="text">
+            <button id="NavPincode">
+                Select Pincode
+                <span class="material-symbols-outlined">
+                arrow_drop_down
+                </span>
+            </button>
+            <input type="search" placeholder="| Select medicines/Healthcare products">
+            <button>
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+            </button>
             </div>
         </div>
         <div id="lowerNav">
-            <div>
+            <div id="scroll">
                 <div>
                     <p>Order Medicines</p> 
                     <div class="highlight"></div>
@@ -327,11 +338,42 @@
 
         </div>
     </div>
-    <div id="dealsOfDay"></div>
+    <div id="dealsOfDay">
+        <div id="timerWithBackground">
+            <img src="images/dealsOfTheDay.svg" alt="">
+            <div class="font">Deals of the Day</div>
+            <div class="DodControls">
+                <div class="font">View All</div>
+                <div class="Dodleftarrow"><span class="material-symbols-outlined">
+                    arrow_back
+                    </span></div>
+                <div class="Dodrightarrow"><span class="material-symbols-outlined">
+                    arrow_forward
+                    </span></div>
+            </div>
+        </div>
+        <div id="dealsOfTheDayDisplay">
+              <div id="dealsOfTheDaySlider" class="font">
+        </div>
+    </div>
     <div id="healthArticles">
-        <div><p>Health Articles</p></div>
-        <div>
+        <div><p>Health Articles</p>
+            <div class="NewsControls">
+                <div class="font">See All</div>
+                <div class="Newsleftarrow"><span class="material-symbols-outlined">
+                    arrow_back
+                    </span></div>
+                <div class="Newsrightarrow"><span class="material-symbols-outlined">
+                    arrow_forward
+                    </span></div>
+            </div>
+        </div>
+        <div id="NewsContainer">
             <!-- grid with slider -->
+            <div id="NewsDisplay">
+                <div id="NewsSlider">
+                </div>
+            </div>
         </div>
     </div>
     <div id="imageStrip" class="spaceup">
@@ -359,9 +401,19 @@
     <div id="reviewstrip" class="spaceup font">
         <div>
             <p>What our customers have to say</p>
+            <div class="NewsControls">
+                <div class="reviewleftarrow"><span class="material-symbols-outlined">
+                    arrow_back
+                    </span></div>
+                <div class="reviewrightarrow"><span class="material-symbols-outlined">
+                    arrow_forward
+                    </span></div>
+            </div>
         </div>
-        <div>
-            <!-- --customer message-- -->
+        <div id="reviewDisplay">
+            <div id="reviewSlider">
+                
+            </div>
         </div>
     </div>
     <div id="download" class="font spaceup">
