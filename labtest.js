@@ -1,3 +1,25 @@
+// Navbar on scroll FUnctionality
+window.onscroll = function (){scroll()}
+function scroll()
+{
+    let lowerNav = document.querySelector("#lowerNav")
+    if(document.documentElement.scrollTop<1)
+    {
+        lowerNav.style.paddingTop = "75px";
+        lowerNav.style.marginBottom = "0px";
+        document.querySelector("#scroll").style.opacity ="1";
+        document.querySelector("#offer").style.opacity ="1";
+    }else{
+        lowerNav.style.paddingTop = "10px";
+        lowerNav.style.marginBottom = "20px";
+        document.querySelector("#scroll").style.opacity ="0";
+        document.querySelector("#offer").style.opacity ="0";
+    }
+}
+
+
+
+
 function first() {
     document.getElementById("sliderimg").src = "https://cms-contents.pharmeasy.in/banner/4acf73cf129-2_MonsoonStomach_HP.jpg"
 }
@@ -80,7 +102,7 @@ next.addEventListener("click",function(){
     else{
         count=1
     }
-  mover.style.transform="translate("+count*-66+"%)"
+  mover.style.transform="translate("+count*-50+"%)"
 })
 perv.addEventListener("click",function(){
     if(count>0){
