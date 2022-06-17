@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>healthcare product</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Food And Drink</title>
     <link rel="icon" type="image/png" href="images/pharmeasyfavicon.png">
     <style>
-      /* --Navbar-- */
-      * {
+         * {
         margin: 0px;
+        padding: 0%;
+        box-sizing: border-box;
       }
       .font {
         font-family: "Open Sans", sans-serif;
@@ -133,38 +134,10 @@
 
       /* --NavBarEnd-- */
 
-      /* main start */
-      #main {
-        width: 90%;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto;
-        gap: 20px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-      #main > div {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow:1px 1px 1px 1px #8897a2;
-        padding:10px
-      }
-      #main > div:hover{
-        box-shadow:2px 2px 2px 2px #10847e;
-        cursor: pointer;
-      }
-      #main > div > img {
-        width: 20%;
-      }
-      #main > div > p + p {
-        color: #10847e;
-      }
 
-      /* main end */
-      /* footer */
-      .horizontalline {
+
+        /* footer */
+        .horizontalline {
     width: 100%;
     border: 0.5px dotted #4f585e;
     /* margin-top:  */
@@ -429,94 +402,64 @@
   a{
     text-decoration: none;
   }
+
+  /* main */
+  #main{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  #main >#filtred{
+width: 30%;
+box-shadow:1px 1px 1px 1px #8897a2;
+margin-top: 30px;
+  }
+  #main>#product{
+width: 60%;
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: auto;
+gap: 20px;
+/*  */
+  }
+  #main>#product>div{
+margin-top: 30px;
+display: flex;
+flex-direction: column;
+padding-bottom: 0px;
+border-radius: 5px;
+box-shadow:1px 1px 1px 1px #8897a2;
+  }
+  #main>#product>div>div{
+    width:100%;
+    height: auto;
+    /* border: 2px solid green; */
+    padding-top: 30px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  #main>#product>div>div>img{
+    width: 200px;
+    height: 300px;
+  }
+
   /* header */
-  #slider1{
-    border:0px solid transparent;
-    overflow: hidden;
-    /* height: 300px; */
-}
-.slider-slideshow{
-    height: 100%;
-    position:relative;
-    overflow: hidden;
-}
-.slider-wrapper
-{
-    border:0px solid transparent;
-    display:flex;
-    margin: 0px;
-    width:400%;
-    height: 100%;
-    position: relative;
-    transition: all 1s;
-}
-.slideImg
-{
-    width:100%;
-    height:100%;
-    cursor: pointer;
-}
-.slideImg>img{
-    width:100%;
-    height:100%;
-    object-fit: cover;
-}
-.sliderBtn
-{
-    border-radius: 50%;
-    border: 0px;
-    background-color: black;
-    opacity: 0.1;
-    /* dimensions of the circular */
-     width:10px;
-    height: 10px;
-    position: absolute;
-    left: 50%;
-    bottom: 315px;;
-    transform: scale(0.7); 
-    z-index:1 ;
-}
-
-/* positioning individual buttons */
-.sliderBtn1
-{
-    left:47%;
-}
-.sliderBtn2
-{
-    left:48%;
-}
-.sliderBtn3
-{
-    left:49%;
-}
-.sliderBtn4
-{
-    left:50%;
-}
-/* slide Functionality */
-.sliderBtn1:focus~.slider-wrapper{
-    animation:none;
-    left: 0;
-}
-.sliderBtn2:focus~.slider-wrapper{
-    animation:none;
-    left:-100%;
-}
-.sliderBtn3:focus~.slider-wrapper{
-    animation:none;
-    left:-200%;
-}
-.sliderBtn4:focus~.slider-wrapper{
-    animation:none;
-    left:-300%;
-}
-
-/* Slider 1 end */
-  /* end header */
+  #header{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <!-- -- Navbar start-- -->
     <div id="navbar">
       <div id="upperNav">
@@ -571,276 +514,63 @@
       </div>
     </div>
     <!-- --Navbar end-- -->
-    <!-- carousel 1 -->
-    <!-- <div id="slider1">
-      <div id="slider-slideshow">
-          <button class="sliderBtn sliderBtn1 hoverGreen"></button>
-          <button class="sliderBtn sliderBtn2 hoverGreen"></button>
-          <button class="sliderBtn sliderBtn3 hoverGreen"></button>
-          <button class="sliderBtn sliderBtn4 hoverGreen"></button>
-          <div class="slider-wrapper">
-              <div class="slideImg">
-                  <img src="images/slideImg1.jpg" alt="">
-              </div>
-              <div class="slideImg">
-                  <img src="images/slideImg2.jpg" alt="">
-              </div>
-              <div class="slideImg">
-                  <img src="images/slideImg3.jpg" alt="">
-              </div>
-              <div class="slideImg">
-                  <img src="images/slideImg4.jpg" alt="">
-              </div>
-          </div>
-      </div>
+    <!-- header start -->
 
-  </div> -->
-  <!-- carousel 1 end -->
+    <div id="header">
+     <h1>Filter</h1>
+     <h1>Health Food and Drinks</h1>
+     <div>
+     <label for="">sort by:</label>
+     <select name="sort" id="sorting">
+        <option value="high">High to low</option>
+        <option value="low">Low to high</option>
+     </select>
+    </div>
+    </div>
+    <!-- heaader end -->
+
+    <!-- main start -->
     <div id="main">
-      <div id="Covid_Essential">
-        <img
-          src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/6d462f424a43372ea8b7b6f8ca13e052.png"
-          alt=""
-        />
-        <p>Covid Essential</p>
-        <p>Upto 77% off</p>
+      <div id="filtred">
+        <div class="category">
+            <fieldset>
+            <legend>Category</legend>
+            <label for="category">Health Food and Drinks</label>
+            <input type="checkbox" id="category" value="Covid Essentials" checked>
+            
+            </fieldset>
+      </div> 
+            <hr>
+            <fieldset>
+                <legend>Sub Category:</legend>
+            
+                <div>
+                 
+                  <label for="scales">Men Care</label>
+                  <input type="checkbox" id="scales" name="scales"
+                  >
+                </div>
+            
+                <div>
+                  
+                  <label for="disinfectants">Women Care</label>
+                  <input type="checkbox" id="disinfectants" name="disinfectants">
+                </div>
+                <div>
+                  
+                    <label for="Hygiene">Oral Care</label>
+                    <input type="checkbox" id="Hygiene" name="Hygiene">
+                  </div>
+            </fieldset>
+        
       </div>
-      <div id="Personal_Care">
-        <img
-          src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/b4a3a67a59783e0ca738884c9acc8e7b.png"
-          alt=""
-        />
-        <p>Personal Care</p>
-        <p>Upto 80% off</p>
-      </div>
-      <div id="FoodandDrinks">
-        <img
-          src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/62e6d7551ecf3a5da1d2336c41cc0549.png"
-          alt=""
-        />
-        <p>Health Food and Drinks</p>
-        <p>Upto 57% off</p>
-      </div>
-      <div id="skin">
-        <img
-          src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/ff5aaa03881e3016bf409f85b4e328aa.png"
-          alt=""
-        />
-        <p>Skin Care</p>
-        <p>Upto 50% off</p>
-      </div>
-      <div id="HomeCare">
-        <img
-          src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/62e6d7551ecf3a5da1d2336c41cc0549.png"
-          alt=""
-        />
-        <p>Home Care</p>
-        <p>Upto 35% off</p>
-      </div>
+      <div id="product">
 
-      <div>
-        <img
-          src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/68ae87e29f4a3abbb8ed69fe7ecf057c.png"
-          alt=""
-        />
-        <p>Sexual Welness</p>
-        <p>Upto 53% off</p>
-      </div>
-      <div>
-        <img
-          src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/4209e1d247cd30fca1f619786fa3e9c1.png"
-          alt=""
-        />
-        <p>Ayurvedic Care</p>
-        <p>Upto 70% off</p>
-      </div>
-      <div>
-        <img
-          src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/7e509ee2f5413b0483d00c0b30067ee0.png"
-          alt=""
-        />
-        <p>Fitness & Supplements</p>
-        <p>Upto 70% off</p>
-      </div>
-      <div>
-        <img
-          src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/af8d32e30757338787ca3e9267865d4f.png"
-          alt=""
-        />
-        <p>Mother and Baby Care</p>
-        <p>Upto 50% off</p>
-      </div>
-      <div>
-        <img
-          src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/e17c6d96de443b65988f5b2366b6ebb1.png"
-          alt=""
-        />
-        <p>Healthcare Devices</p>
-        <p>Upto 65% off</p>
-      </div>
-      <div>
-        <img
-          src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/2e58770425cc39a983d6d71fb0cc07e2.png"
-          alt=""
-        />
-        <p>Surgical and Dessigns</p>
-        <p>Upto 53% off</p>
-      </div>
-      <div>
-        <img
-          src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/14bac4e33b11338299d8d6c1d905ca8f.png"
-          alt=""
-        />
-        <p>Health Condition</p>
-        <p>Upto 65% off</p>
-      </div>
-      <div>
-        <img
-          src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/ec716b08ac643f88971944792e2c5549.png"
-          alt=""
-        />
-        <p>Diabetic Care</p>
-        <p>Upto 65% off</p>
-      </div>
-      <div>
-        <img
-          src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/292b08b6deab3ba9bd76d3a6ed4d71e0.png"
-          alt=""
-        />
-        <p>Elderly Care</p>
-        <p>Upto 35% off</p>
-      </div>
-      <div>
-        <img
-          src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/236fc993bd00381fb7061ee2333ad0e3.png"
-          alt=""
-        />
-        <p>Accessories And Wearables</p>
-        <p>Upto 35% off</p>
-      </div>
-      <div>
-        <img
-          src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/0c3fa8b647b9323194033076f6653662.png"
-          alt=""
-        />
-        <p>Beauty</p>
-        <p>Upto % off</p>
       </div>
     </div>
-    <h3>Shop Safely And Worry-Free On PharmEasy</h3>
-    <p>
-      PharmEasy is a renowned name in the online shopping of Over The Counter or
-      healthcare products and other daily essentials. Ordering online on
-      PharmEasy is convenient, fast and hassle-free; you can avoid the annoyance
-      of queuing up at your local pharmacy and also avail of huge discounts of
-      up to 80% OFF. Purchasing the healthcare requirements such as medical
-      devices and nutritional supplements that you need will no longer burn a
-      hole in your pocket. At PharmEasy, you are sure to find everything that
-      you need because we have products across all healthcare categories.
-    </p>
-    <h3>Why choose PharmEasy?</h3>
-    <ul>
-      <li>8400+ Brands</li>
-      <li>35K products in our stock</li>
-      <li>Delivery to 22000+ pin codes</li>
-      <li>Delivered to 50 lakh+ families</li>
-      <li>Over 2M customers served</li>
-    </ul>
-    <h3>Our most popular categories:</h3>
-    <p>We have a range of categories and products, some which are:</p>
-    <h3>Devices</h3>
-    <p>
-      With the pandemic upending our lives, we have all realized that there are
-      some medical devices that we need to keep in our homes such as Oximeter,
-      Thermometer, Inhaler, Blood pressure monitor, Glucometer.
-    </p>
-    <h3>Personal care</h3>
-    <p>
-      Personal care products can include a wide range of products such as Bath
-      products, , Skincare essentials, Razor blades, Toothpaste and toothbrush,
-      Wet wipes, Lip balm, Face masks, Hand sanitizer, etc.
-    </p>
-    <h3>Nutrition and fitness supplements</h3>
-    <p>
-      To give your health a helping hand, you can order a wide variety of health
-      supplements including Health drinks, Nutritional powder, Nutrition
-      tablets/capsules.
-    </p>
-    <h3>Ayurvedic care</h3>
-    <p>
-      Place your trust in the goodness of natural and organic ayurvedic products
-      for an all-around healthy mind and body. There’s plenty to choose from
-      such as Aloe vera juice, Moringa capsules, Garlic capsules.
-    </p>
-    <h3>Home care</h3>
-    <p>
-      Home care products are things you need every day such as disinfectant
-      spray, phenyl, dishwashing liquid, etc. Get them all at spectacular
-      discounts on PharmEasy.
-    </p>
-    <h3>Baby and mom care</h3>
-    <p>
-      PharmEasy also has an impressive range of baby and mom care products
-      including Diapers, Baby bath products, Infant formula food, Mother’s
-      health drinks, Diaper rash creams, Baby wipes.
-    </p>
-    <h3>Our top brands:</h3>
-    <p>
-      Get products from the most famous and trusted brands including Accu-chek,
-      Dettol, Horlicks, Baidyanath, Sebamed.
-    </p>
-    <h3>You are safe with PharmEasy:</h3>
-    <p>
-      Given the times, we are taking all precautions to ensure that we keep
-      everyone safe - our customers and the people we work with.
-    </p>
-    <h3>We ensure</h3>
-    <ul>
-      <li>Regular sanitization of our premises and warehouses</li>
-      <li>Temperature checks of our employees and delivery partners</li>
-      <li>No-contact door-step delivery</li>
-      <li>Sanitized packaging</li>
-    </ul>
-    <h3>Youe safety is our priority</h3>
-    <p>
-      Stay safe at home and shop at your convenience from PharmEasy. All you
-      have to do is place your order and we will try to deliver it at the
-      earliest.
-    </p>
-    <hr class="horizontalline">
-    <!-- <div class="horizontalline"></div> -->
-    <div id="seconddiv">
-      <div>
-        <img
-          src="https://assets.pharmeasy.in/web-assets/dist/9ac2da37.svg?dim=0x72&dpr=1.25&q=100"
-          alt=""
-        />
-        <h3>1 Lakh+ products</h3>
-        <p>
-          We maintain strict quality controls on all our partner retailers, so
-          that you always get standard quality products.
-        </p>
-      </div>
-      <div>
-        <img
-          src="https://assets.pharmeasy.in/web-assets/dist/2f258fe0.svg?dim=0x72&dpr=1.25&q=100"
-          alt=""
-        />
-        <h3>Secure Payment</h3>
-        <p>100% secure and trusted payment protection.</p>
-      </div>
-      <div>
-        <img
-          src="https://assets.pharmeasy.in/web-assets/dist/256fe591.svg?dim=0x72&dpr=1.25&q=100"
-          alt=""
-        />
-        <h3>Easy Return</h3>
-        <p>
-          We have a new and dynamic return window policy for medicines and
-          healthcare items.Refer FAQs section for more details.
-        </p>
-      </div>
-    </div>
+    <!-- main end -->
+
+    <!-- footer start -->
     <hr class="horizontalline2">
     <!-- <div class="horizontalline2"></div> -->
     <div id="thirddiv">
@@ -1058,26 +788,386 @@
         </div>
     </div>
   </div>
+    <!-- footer end -->
   </body>
 </html>
 <script>
+    let productdata=[
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/L79986/everherb-karela-jamun-juice-helps-maintains-healthy-sugar-levels-helps-in-weight-management-1l-2-1654234653.jpg?dim=320x320&dpr=1&q=100",
+      name: "Everherb Karela Jamun Juice",
+      categories: "Health Food and Drinks",
+      MRP: 399,
+      price: 207.48,
+      quantity: 1,
+      uniqueid: "“#m9”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/L59203/supreem-super-foods-normalife-quinoa-puffs-roasted-puffs-snack-with-cheese-garlic-20-gm-2-1652878418.jpg?dim=320x320&dpr=1&q=100",
+      name: "Supreem Super Foods Normalife Quinoa Puffs",
+      categories: "Health Food and Drinks",
+      MRP: 50,
+      price: 32.5,
+      quantity: 1,
+      uniqueid: "“#m10”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/373983/protinex-tasty-chocolate-nutrition-drink-tin-of-400-g-2-1654077686.jpg?dim=320x320&dpr=1&q=100",
+      name: "Protinex Tasty Chocolate Nutrition Drink",
+      categories: "Health Food and Drinks",
+      MRP: 580,
+      price: 522,
+      uniqueid: "“#m11”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/F52227/horlicks-womens-plus-caramel-jar-400-g-2-1654169295.jpg?dim=320x320&dpr=1&q=100",
+      name: "Horlicks Women'S Plus Caramel Jar",
+      categories: "Health Food and Drinks",
+      MRP: 325,
+      price: 299,
+      quantity: 1,
+      uniqueid: "“#m12”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/180461/venusia-max-intensive-moisturizing-cream-for-dry-to-very-dry-skin-repairs-smoothens-skin-150g-2-1654078395.jpg?dim=320x320&dpr=1&q=100",
+      name: "Venusia Max Intensive Moisturizing Cream",
+      categories: "Skin Care",
+      MRP: 504,
+      price: 378,
+      quantity: 1,
+      uniqueid: "#m121",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/I07034/fash-x-gel-face-wash-200gm-2-1654167900.jpg?dim=320x320&dpr=1&q=100",
+      name: "Fash X Gel Face Wash",
+      categories: "Skin Care",
+      MRP: 475,
+      price: 370.5,
+      quantity: 1,
+      uniqueid: "“#m13”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/265998/tetmosol-medicated-soap-for-relief-from-skin-infections-lime-fragrance-100g-2-1654077736.jpg?dim=320x320&dpr=1&q=100",
+      name: "Tetmosol Medicated Soap",
+      categories: "Skin Care",
+      MRP: 88,
+      price: 76.56,
+      quantity: 1,
+      uniqueid: "“#m14”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/273329/episoft-cleansing-lotion-250ml-2-1641398639.jpg?dim=320x320&dpr=1&q=100",
+      name: "Episoft Cleansing Lotion",
+      categories: "Skin Care",
+      MRP: 550,
+      price: 407,
+      uniqueid: "“#m15”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/Q82571/lizol-floral-disinfectant-floor-cleaner-liquid-bottle-of-200-ml-2-1653995428.jpg?dim=320x320&dpr=1&q=100",
+      name: "Lizol Floral Disinfectant Floor Cleaner",
+      categories: "Home Care",
+      MRP: 40,
+      price: 38.4,
+      quantity: 1,
+      uniqueid: "“#m16”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/O35200/dettol-disinfectant-sanitizer-spray-bottle-spring-blossom-225ml-2-1654234201.jpg?dim=320x320&dpr=1&q=100",
+      name: "Dettol Disinfectant Sanitizer Spray",
+      categories: "Home Care",
+      MRP: 159,
+      price: 135.15,
+      quantity: 1,
+      uniqueid: "“#m17”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/H08110/godrej-good-knight-naturals-neem-liquid-vapouriser-refill-pack-of-2-1-1654169259.jpg?dim=320x320&dpr=1&q=100",
+      name: "Godrej Good Knight Naturals Neem Liquid",
+      categories: "Home Care",
+      MRP: 178,
+      price: 153.08,
+      quantity: 1,
+      uniqueid: "“#m18”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/K01212/godrej-aer-power-pocket-bathroom-freshner-assorted-pack-of-5-1-1641793708.jpg?dim=320x320&dpr=1&q=100",
+      name: "Godrej Aer Power Pocket Bathroom Freshner",
+      categories: "Home Care",
+      MRP: 300,
+      price: 276,
+      quantity: 1,
+      uniqueid: "“#m19”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/B02062/harpic-floral-bathroom-cleaner-bottle-of-200-ml-2-1641793037.jpg?dim=320x320&dpr=1&q=100",
+      name: "Harpic Floral Bathroom Cleaner",
+      categories: "Home Care",
+      MRP: 46,
+      price: 44.16,
+      quantity: 1,
+      uniqueid: "“#m20”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/105900/himalaya-liv52-ds-tablets-60s-2-1654078613.jpg",
+      name: "Himalaya Liv.52 Ds Tablets",
+      categories: "Ayurvedic Care",
+      MRP: 170,
+      price: 144.5,
+      quantity: 1,
+      uniqueid: "“#m21”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/Q91163/amrutanjan-strong-pain-relief-balm-bottle-of-275-ml-2-1654250441.jpg?dim=320x320&dpr=1&q=100",
+      name: "Amrutanjan Strong Pain Relief Balm",
+      categories: "Ayurvedic Care",
+      MRP: 95,
+      price: 80.75,
+      quantity: 1,
+      uniqueid: "“#m22”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/347378/zandu-pain-relief-balm-bottle-of-8-ml-1-1654077474.jpg?dim=320x320&dpr=1&q=100",
+      name: "Zandu Pain Relief Balm",
+      categories: "Ayurvedic Care",
+      MRP: 40,
+      price: 36,
+      quantity: 1,
+      uniqueid: "“#m23”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/B39499/pharmeasy-hot-water-bag-blue-2-1645456739.jpg?dim=320x320&dpr=1&q=100",
+      name: "Pharmeasy Hot Water Bag",
+      categories: "Ayurvedic Care",
+      MRP: 349,
+      price: 244.3,
+      quantity: 1,
+      uniqueid: "“#m24”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/226634/i-can-pregnancy-test-kit-1-1654078700.jpg?dim=320x320&dpr=1&q=100",
+      name: "I Can Pregnancy Test Kit",
+      categories: "Sexual Wellness",
+      MRP: 55,
+      price: 35.2,
+      quantity: 1,
+      uniqueid: "“#m25”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/I40161/durex-extra-thin-packet-of-10-condoms-1-1654166208.jpg?dim=320x320&dpr=1&q=100",
+      name: "Durex Extra Thin Packet Condoms",
+      categories: "Sexual Wellness",
+      MRP: 228,
+      price: 193.8,
+      quantity: 1,
+      uniqueid: "“#m26”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/I08024/climax-for-men-bottle-of-12-g-spray-1-1641787589.jpg?dim=320x320&dpr=1&q=100",
+      name: "Climax Spray - For Men",
+      categories: "Sexual Wellness",
+      MRP: 199,
+      price: 179.1,
+      quantity: 1,
+      uniqueid: "“#m27”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/051580/dabur-shilajit-gold-vitality-capsules-strip-of-10-1-1654078818.jpg?dim=320x320&dpr=1&q=100",
+      name: "Dabur Shilajit Gold Vitality Capsules",
+      categories: "Sexual Wellness",
+      MRP: 255,
+      price: 229.5,
+      quantity: 1,
+      uniqueid: "“#m28”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/P96185/patanjali-divya-shilajeet-rasayan-vati-120-tablets-2-1642581102.jpg?dim=320x320&dpr=1&q=100",
+      name: "Patanjali Divya Shilajeet Rasayan Vati",
+      categories: "Sexual Wellness",
+      MRP: 75,
+      price: 60,
+      quantity: 1,
+      uniqueid: "“#m29”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products/071715/evion-600mg-strip-of-10-capsules-2-1641536013.jpg?dim=320x320&dpr=1&q=100",
+      name: "Evion 600mg Strip Of 10 Capsules",
+      categories: "Fitness & Supplements",
+      MRP: 47,
+      price: 42.3,
+      quantity: 1,
+      uniqueid: "“#m30”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/270552/revital-h-men-multivitamin-with-calcium-zinc-ginseng-for-immunity-strong-bones-energy-30-capsules-2-1654077741.jpg?dim=320x320&dpr=1&q=100",
+      name: "Revital H Men Multivitamin",
+      categories: "Fitness & Supplements",
+      MRP: 310,
+      price: 263.5,
+      quantity: 1,
+      uniqueid: "“#m31”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/H37794/liveasy-wellness-calcium-magnesium-vitamin-d3-bones-dental-health-bottle-of-90-tablets-2-1654169056.jpg?dim=320x320&dpr=1&q=100",
+      name: "Liveasy Wellness Calcium",
+      categories: "Fitness & Supplements",
+      MRP: 849,
+      price: 466.95,
+      quantity: 1,
+      uniqueid: "“#m32”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/051140/d-protin-vanilla-diabetes-care-powder-bottle-of-200-g-2-1654078626.jpg?dim=320x320&dpr=1&q=100",
+      name: "D-Protin Vanilla Diabetes Care Powder",
+      categories: "Fitness & Supplements",
+      MRP: 260,
+      price: 221,
+      quantity: 1,
+      uniqueid: "“#m33”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/196240/tedibar-bathing-bar-75gm-1-1654078068.jpg?dim=320x320&dpr=1&q=100",
+      name: "Tedibar Bathing Bar 75gm",
+      categories: "Mother and Baby Care",
+      MRP: 165,
+      price: 132,
+      quantity: 1,
+      uniqueid: "“#m34”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/E35192/horlicks-junior-health-nutrition-drink-vanilla-500-g-jar-2-1654169694.jpg?dim=320x320&dpr=1&q=100",
+      name: "Horlicks Junior Health & Nutrition Drink Vanilla",
+      categories: "Mother and Baby Care",
+      MRP: 299,
+      price: 299,
+      quantity: 1,
+      uniqueid: "“#m35”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/329300/nestle-lactogen-1-infant-formula-powder-upto-6-months-stage-1-400g-bag-in-box-pack-1-1641398772.jpg?dim=320x320&dpr=1&q=100",
+      name: "Nestle Lactogen 1 Infant Formula Powder",
+      categories: "Mother and Baby Care",
+      MRP: 375,
+      price: 375,
+      quantity: 1,
+      uniqueid: "“#m36”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/337418/protinex-mama-vanilla-nutrition-drink-tin-of-250-g-2-1654077494.jpg?dim=320x320&dpr=1&q=100",
+      name: "Protinex Mama Vanilla Nutrition Drink",
+      categories: "Mother and Baby Care",
+      MRP: 415,
+      price: 389.4,
+      quantity: 1,
+      uniqueid: "“#m37”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/131679/onetouch-select-glucometer-test-strips-50s-pack-1-1654078262.jpg?dim=320x320&dpr=1&q=100",
+      name: "Onetouch Select Glucometer Test Strips",
+      categories: "Healthcare Devices",
+      MRP: 1195,
+      price: 1135.25,
+      quantity: 1,
+      uniqueid: "“#m37”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/O70942/coviself-covid-self-test-kit-2-1644415093.jpg?dim=320x320&dpr=1&q=100",
+      name: "Coviself Covid Self Test Kit",
+      categories: "Healthcare Devices",
+      MRP: 250,
+      price: 250,
+      quantity: 1,
+      uniqueid: "“#m38”",
+    },
+    {
+      image:
+        "https://cdn01.pharmeasy.in/dam/products_otc/000660/accu-chek-active-glucometer-kit-with-free-10-strips-1-1654077455.jpg?dim=320x320&dpr=1&q=100",
+      name: "Accu-Chek Active Glucometer Kit",
+      categories: "Healthcare Devices",
+      MRP: 1599,
+      price: 1599,
+      uniqueid: "“#m39”",
+    }
+    ];
+    
+    let cartls=JSON.parse(localStorage.getItem("cart-page"))||[];
+    function displayproduct(productdata) {
+    productdata.forEach(function (element) {
+      let box = document.createElement("div");
+      let imgbox = document.createElement("div");
+      let img = document.createElement("img");
+      img.src = element.image;
+    
+      let name=document.createElement("h3");
+      name.innerText=element.name;
+      let mrp=document.createElement("p");
+      mrp.innerText=element.MRP;
+      let price=document.createElement("h5");
+      price.innerText=element.price;
+      let offer=document.createElement("p");
+      offer.innerText=Math.floor(((element.MRP-element.price)*100)/element.MRP)+"%"+"OFF";
+      offer.style.color="green"
+      let addcart=document.createElement("button");
+      addcart.innerText="Add To Cart";
+  
+      addcart.addEventListener("click",function(){
+       if(addtocartfun(element.uniqueid)===true){
+        alert("product added");
+        cartls.push(element);
+        localStorage.setItem("cart-page",JSON.stringify(cartls));
+       }else{
+        alert("product already present")
+       }
+})
+    
+      
+      imgbox.append(img);
 
-
-
-  document.querySelector("#Covid_Essential")
-    .addEventListener("click", function () {
-      window.location = "covid.html";
+      box.append(imgbox,name,mrp,price,offer,addcart);
+      document.querySelector("#product").append(box);
     });
-document.querySelector("#Personal_Care").addEventListener("click",function(){
-  window.location="personal.html";
-})
-document.querySelector("#FoodandDrinks").addEventListener("click",function(){
-  window.location="health&food.html";
-})
-document.querySelector("#skin").addEventListener("click",function(){
-  window.location="skincare.html";
-})
-document.querySelector("#HomeCare").addEventListener("click",function(){
-  window.location="homecare.html";
-})
+  }
+  displayproduct(productdata);
+
+
+  function addtocartfun(id){
+    for(let i=0;i<cartls.length;i++){
+      if(cartls[i].uniqueid===id){
+        return false;
+      }
+    }
+     return true;
+  }
 </script>
