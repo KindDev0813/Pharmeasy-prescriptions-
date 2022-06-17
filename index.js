@@ -7,9 +7,13 @@ function scroll()
     {
         lowerNav.style.paddingTop = "75px";
         lowerNav.style.marginBottom = "0px";
+        document.querySelector("#scroll").style.opacity ="1";
+        document.querySelector("#offer").style.opacity ="1";
     }else{
         lowerNav.style.paddingTop = "10px";
         lowerNav.style.marginBottom = "20px";
+        document.querySelector("#scroll").style.opacity ="0";
+        document.querySelector("#offer").style.opacity ="0";
     }
 }
 
