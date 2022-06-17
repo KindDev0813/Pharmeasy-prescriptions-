@@ -17,6 +17,13 @@ function scroll()
     }
 }
 
+//linking part
+
+let BacktoHomeImg = document.querySelector("#upperNav>div>img:first-child");
+BacktoHomeImg.addEventListener("click",function(){
+    window.location.href = "index.html";
+})
+
 
 
 
