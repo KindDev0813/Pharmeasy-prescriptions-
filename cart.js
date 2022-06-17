@@ -31,7 +31,7 @@ Healthcare.addEventListener("click",function(){
 });
 
 
-let data=JSON.parse(localStorage.getItem("cart"))||[]
+let data=JSON.parse(localStorage.getItem("cart-page"))||[]
 display(data)
 function display(data){
     document.querySelector("#cartitems").innerHTML="";
@@ -123,14 +123,14 @@ function display(data){
 
 function deletefun(el,i){
     data.splice(i,1)
-    localStorage.setItem("cart",JSON.stringify(data))
+    localStorage.setItem("cart-page",JSON.stringify(data))
     window.location.reload()
 }
 
 function qtychange(el,qty){
     el.quantity=qty.value;
-    localStorage.setItem("cart",JSON.stringify(data))
-    data=JSON.parse(localStorage.getItem("cart")) || []
+    localStorage.setItem("cart-page",JSON.stringify(data))
+    data=JSON.parse(localStorage.getItem("cart-page")) || []
     display(data)
     window.location.reload();
 }

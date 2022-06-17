@@ -222,9 +222,9 @@ input+p{
 </body>
 </html>
 <script>
-   document.getElementById('sign').addEventListener("click", function() {
+//    document.getElementById('sign').addEventListener("click", function() {
 	document.querySelector('.bg-modal').style.display = "flex";
-});
+// });
 
 document.querySelector('.close').addEventListener("click", function() {
 	document.querySelector('.bg-modal').style.display = "none";
@@ -289,7 +289,8 @@ function newdiss(){
     innercardtext.append(leftw,rightw);
 
     var inputsubmit=document.createElement("button");
-    inputsubmit.innerText="continue"
+    inputsubmit.innerText="Continue";
+    
 
     var underbuttontext=document.createElement("p")
     underbuttontext.innerText="By clicking continue, you agree to our Privacy Policy";
@@ -298,6 +299,13 @@ function newdiss(){
     document.querySelector("#newdis").append(card)
 
 }
-
+let cross = document.querySelector(".close");
+cross.addEventListener("click",function(){
+    window.location.href = "index.html";
+});
+let redirecth = document.querySelector("button");
+redirecth.addEventListener("click",function(){
+    window.location.href = "refer.html";
+});
 
 </script>
