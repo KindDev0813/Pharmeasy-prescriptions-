@@ -28,10 +28,10 @@ let cart = document.querySelector("#cart");
 cart.addEventListener("click",function(){
     window.location.href = "cart.html";
 });
-let login = document.querySelector("#login");
-login.addEventListener("click",function(){
-    window.location.href = "login.html";
-})
+// let login = document.querySelector("#login");
+// login.addEventListener("click",function(){
+//     window.location.href = "login.html";
+// })
 let labtest = document.querySelector("#labtestb");
 labtest.addEventListener("click",function(){
     console.log("in");
