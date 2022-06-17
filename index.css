@@ -104,6 +104,42 @@ input{
     
 }
 
+/* Drop Down CSS */
+#cart{
+    display: flex;
+}
+.dropdown{
+    position: relative;
+    display:inline-block;
+}
+.contents{
+    display: none;
+    position: absolute;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+    color:#4f585e;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 25px 100px 0px 20px;
+    border-radius: 10px;
+    left:-70%;
+    top:110%;
+    
+}
+.contents>div{
+    padding-bottom: 25px;
+    display: block;
+}
+.contents a{
+    color: #4f585e;
+}
+.dropdown:hover .contents{
+    display: block;
+}
+
+
+
 #lowerNav>div>div:hover > .highlight
 {
    background-color: white;
