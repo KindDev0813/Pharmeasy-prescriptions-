@@ -58,7 +58,7 @@
                     Offers</div>
                 <div id="login">
                     <img src="images/loginsignup.svg" alt="login/signup">
-                    <p>Login/Signup</p>
+                    <p>User</p>
                 </div>
                 <div id="cart">
                     <img src="images/cart.svg" alt="">
@@ -377,7 +377,10 @@ BacktoHomeImg.addEventListener("click",function(){
 })
 let cart = document.querySelector("#cart");
 cart.addEventListener("click",function(){
+    if(localStorage.getItem("checkLogin")=="Yes")
+    {
     window.location.href = "cart.html";
+    }
 });
 let login = document.querySelector("#login");
 login.addEventListener("click",function(){
