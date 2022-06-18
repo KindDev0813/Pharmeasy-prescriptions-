@@ -58,7 +58,10 @@ let offer = document.querySelector("#offer");
 offer.addEventListener("click",function(){
     window.location.href = "offerPage.html";
 });
-
+let pincode = document.querySelector("#NavPincode");
+pincode.addEventListener("click",function(){
+    window.location.href = "pincode.html";
+});
 //Login Functionality
 
 if(checkLogin=="Yes")
