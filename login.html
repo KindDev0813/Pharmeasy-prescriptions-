@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otp</title>
+    <style>
+        body{
+            background-image: url('https://research-assets.cbinsights.com/2021/10/20063030/PharmEasy-Image-e1634734354314.png');
+        }
+         #signs{
+            display: flex;
+            justify-content: right;
+        }
+
+.bg-modal {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+    left: 0;
+	display: none;
+	justify-content: right;
+	align-items: center;
+}
+
+.modal-contents {
+	height: 630px;
+	width: 330px;
+	background-color: white;
+	/* text-align: center; */
+	padding: 0px;
+	position: relative;
+	border-radius: 4px;
+}
+.modal-contents>form>h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    margin-left: 25px;
+    color: #4F585E;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+	margin: 15px auto;
+	display: block;
+	width: 80%;
+    height: 20px;
+	padding: 8px;
+	border: 1px solid gray;
+    border-radius: 5px;
+}
+.close{
+    background-color: #10847e;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 0;
+	left: -40px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin-top: 20px;
+    /* margin-right: 10px; */
+}
+
+.close>div {
+	/* position: absolute; */
+	/* top: 0;
+	left: -30px; */
+	font-size: 30px;
+	color:white;
+	transform: rotate(45deg);
+	cursor: pointer;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+.button{
+    width:85%;
+    background-color: #10847e;
+    color: white;
+    margin-left: 8%;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 25px;
+    height:30px;
+
+}
+.button:hover{
+    cursor: pointer;
+}
+input+p{
+    font-size: 11px;
+    margin-left: 8%;
+    margin-top: 5%;
+    color: #4F585E;
+}
+.in-up-modal{
+    background-color: #10847e;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.in-up-modal>div:first-child{
+    width:42%;
+    
+}
+.in-up-modal>div:first-child>img{
+    width: 100%;
+    margin-top: 25px;
+}
+.in-up-modal>div:last-child{
+    
+    margin-top: 10px;
+    width:40%
+}
+.in-up-modal>div:last-child>img{
+    width:80%;
+    margin-top: 8px;
+}
+#display{
+    font-family:'Open Sans', sans-serif;
+    font-size: 10px;
+    color: red;
+    margin-left: 25px;
+}
+#newdis{
+    padding-left: 25px;
+    padding-right: 25px;
+    line-height: 15px;
+}
+#newdis>div>h2{
+    font-size: 16px;
+    /* margin-left: 8%;
+    margin-top: 5%; */
+    color: #4F585E;
+    margin-left: 0px;
+    margin-top: 20px;
+}
+
+#newdis>div>div{
+    display: flex;
+    justify-content: space-evenly;
+}
+#newdis>div>div>input{
+    width:30px;
+    height: 20px;
+    border: 1px solid #10847e ;
+}
+
+#newdis>div>div+div{
+    display: flex;
+    justify-content: space-between;
+}
+#newdis>div>div+div>p{
+    color:#10847e;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+}
+#newdis>div>div+div>p:hover{
+    cursor: pointer;
+}
+
+#newdis>div>button{
+    width:95%;
+    background-color: #10847e;
+    color: white;
+    margin-left: 3%;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 35px;
+    height:30px;
+}
+#newdis>div>button:hover{
+    cursor: pointer;
+}
+#newdis>div>p{
+    font-size: 11px;
+    /* margin-left: 8%;
+    margin-top: 5%; */
+    color: #4F585E;
+}
+
+    </style>
+</head>
+<body>
+    <div id="signs">
+        <button id="sign">signup</button>
+    </div>
+    <div class="bg-modal">
+        <div class="modal-contents">
+            <div class="in-up-modal">
+                <div>
+                    <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png"/>
+                </div>
+                <div>
+                    <img src="https://assets.pharmeasy.in/web-assets/dist/1fe1322a.svg"/>
+                </div>
+                
+            </div>
+    
+            <div class="close">
+                <div>+</div>
+            </div>
+    
+            <form id="form" action="">
+                <h2>Quick Log-in/Register</h2>
+                <input type="text" placeholder="Phone Number" id="phonenum">
+                <!-- <button href="#" class="button">Submit</button> -->
+                <input type="submit" class="button" value="continue">
+                <p>By clicking continue, you agree to our Privacy Policy</p>
+                <p id="display"> </p>
+            </form>
+            <form id="newdis">
+            </form>
+    
+        </div>
+    </div>
+</body>
+</html>
+<script>
+//    document.getElementById('sign').addEventListener("click", function() {
+	document.querySelector('.bg-modal').style.display = "flex";
+// });
+
+document.querySelector('.close').addEventListener("click", function() {
+	document.querySelector('.bg-modal').style.display = "none";
+}); 
+// document.querySelector('.bg-modal').addEventListener("click", function() {
+// 	document.querySelector('.bg-modal').style.display = "none";
+// }); 
+document.querySelector('#form').addEventListener("submit",inputs)
+
+
+
+function inputs(event){
+    event.preventDefault();
+    let phone=document.querySelector('#phonenum').value;   
+    let modi=Math.floor(phone);
+    //console.log(modi.length)
+    if(typeof(modi)==='number'){
+        if(phone.length===10){
+            //console.log(modi)
+            //document.getElementById("phonenum").innerHTML="";
+            newdiss(event)
+            //document.querySelector('#newdis').a
+        }
+        else{
+            // console.log("wrong number")
+            // var card=document.createElement("div");
+            document.querySelector('#display').innerText="Wrong number";
+        }
+    }
+    else{
+        //console.log("wrong character")
+        document.querySelector('#display').innerText="Wrong character";
+    }
+}
+
+document.querySelector('.button').addEventListener('click',newdiss)
+
+function newdiss(event){
+    document.querySelector('form').innerHTML="";
+    console.log("gfghj")
+    event.preventDefault()
+    
+    var card=document.createElement("div")
+
+    var heading=document.createElement("h2")
+    heading.innerText="Enter otp to continue";
+
+    var innercard=document.createElement("div");
+    var inputotp1=document.createElement("input");
+    inputotp1.innerText="";
+    var inputotp2=document.createElement("input");
+    inputotp2.innerText="";
+    var inputotp3=document.createElement("input");
+    inputotp3.innerText="";
+    var inputotp4=document.createElement("input");
+    inputotp4.innerText="";
+
+    innercard.append(inputotp1,inputotp2,inputotp3,inputotp4);
+
+    var innercardtext=document.createElement("div");
+    var leftw=document.createElement("p")
+    leftw.innerText="Change Number";
+
+    var rightw=document.createElement("p")
+    rightw.innerText="Resend Otp";
+
+    innercardtext.append(leftw,rightw);
+
+    var inputsubmit=document.createElement("input");
+    inputsubmit.innerText="Continue";
+    inputsubmit.setAttribute("type","submit")
+    inputsubmit.setAttribute("id","continuebtn")
+    inputsubmit.setAttribute("class","button")
+    
+    
+    
+
+    var underbuttontext=document.createElement("p")
+    underbuttontext.innerText="By clicking continue, you agree to our Privacy Policy";
+
+    card.append(heading,innercard,innercardtext,inputsubmit,underbuttontext)
+    document.querySelector("#newdis").append(card)
+
+    document.querySelector('#continuebtn').addEventListener("click",savelogin)
+    function savelogin(){
+    localStorage.setItem("checkLogin","Yes");
+    // console.log("eeeee")
+    }
+
+}
+let cross = document.querySelector(".close");
+cross.addEventListener("click",function(){
+    window.location.href = "index.html";
+});
+// fhghjkhbkjcbkjcbcndk
+
+</script>
