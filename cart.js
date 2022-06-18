@@ -1,4 +1,21 @@
 //linking part
+window.onscroll = function (){scroll()}
+function scroll()
+{
+    let lowerNav = document.querySelector("#lowerNav")
+    if(document.documentElement.scrollTop<1)
+    {
+        lowerNav.style.paddingTop = "75px";
+        lowerNav.style.marginBottom = "0px";
+        document.querySelector("#scroll").style.opacity ="1";
+        document.querySelector("#offer").style.opacity ="1";
+    }else{
+        lowerNav.style.paddingTop = "10px";
+        lowerNav.style.marginBottom = "20px";
+        document.querySelector("#scroll").style.opacity ="0";
+        document.querySelector("#offer").style.opacity ="0";
+    }
+}
 
 let BacktoHomeImg = document.querySelector("#upperNav>div>img:first-child");
 BacktoHomeImg.addEventListener("click",function(){
@@ -29,9 +46,12 @@ Healthcare.addEventListener("click",function(){
     console.log("in");
     window.location.href = "healthcare.html";
 });
+let offer = document.querySelector("#offer");
+offer.addEventListener("click",function(){
+    window.location.href = "offerPage.html";
+});
 
-
-let data=JSON.parse(localStorage.getItem("cart"))||[]
+let data=JSON.parse(localStorage.getItem("cart-page"))||[]
 display(data)
 function display(data){
     document.querySelector("#cartitems").innerHTML="";
@@ -123,14 +143,14 @@ function display(data){
 
 function deletefun(el,i){
     data.splice(i,1)
-    localStorage.setItem("cart",JSON.stringify(data))
+    localStorage.setItem("cart-page",JSON.stringify(data))
     window.location.reload()
 }
 
 function qtychange(el,qty){
     el.quantity=qty.value;
-    localStorage.setItem("cart",JSON.stringify(data))
-    data=JSON.parse(localStorage.getItem("cart")) || []
+    localStorage.setItem("cart-page",JSON.stringify(data))
+    data=JSON.parse(localStorage.getItem("cart-page")) || []
     display(data)
     window.location.reload();
 }

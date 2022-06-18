@@ -6,7 +6,10 @@ BacktoHomeImg.addEventListener("click",function(){
 })
 let cart = document.querySelector("#cart");
 cart.addEventListener("click",function(){
+    if(localStorage.getItem("checkLogin")=="Yes")
+    {
     window.location.href = "cart.html";
+    }
 });
 let login = document.querySelector("#login");
 login.addEventListener("click",function(){
@@ -28,6 +31,10 @@ let Healthcare = document.querySelector("#Health");
 Healthcare.addEventListener("click",function(){
     console.log("in");
     window.location.href = "healthcare.html";
+});
+let offer = document.querySelector("#offer");
+offer.addEventListener("click",function(){
+    window.location.href = "offerPage.html";
 });
 
 

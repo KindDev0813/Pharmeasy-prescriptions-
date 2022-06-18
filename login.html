@@ -7,11 +7,14 @@
     <title>otp</title>
     <style>
         body{
-            background-image: url('https://staticg.sportskeeda.com/Football+wallpapers/CR7/cr7.jpg');
+            background-image: url('https://research-assets.cbinsights.com/2021/10/20063030/PharmEasy-Image-e1634734354314.png');
+            background-repeat: no-repeat;
+            background-size: auto;
         }
          #signs{
             display: flex;
             justify-content: right;
+
         }
 
 .bg-modal {
@@ -187,9 +190,9 @@ input+p{
     </style>
 </head>
 <body>
-    <div id="signs">
+    <!-- <div id="signs">
         <button id="sign">signup</button>
-    </div>
+    </div> -->
     <div class="bg-modal">
         <div class="modal-contents">
             <div class="in-up-modal">
@@ -222,9 +225,9 @@ input+p{
 </body>
 </html>
 <script>
-   document.getElementById('sign').addEventListener("click", function() {
+//    document.getElementById('sign').addEventListener("click", function() {
 	document.querySelector('.bg-modal').style.display = "flex";
-});
+// });
 
 document.querySelector('.close').addEventListener("click", function() {
 	document.querySelector('.bg-modal').style.display = "none";
@@ -245,7 +248,7 @@ function inputs(event){
         if(phone.length===10){
             //console.log(modi)
             //document.getElementById("phonenum").innerHTML="";
-            newdiss()
+            newdiss(event)
             //document.querySelector('#newdis').a
         }
         else{
@@ -260,8 +263,13 @@ function inputs(event){
     }
 }
 
-function newdiss(){
+document.querySelector('.button').addEventListener('click',newdiss)
+
+function newdiss(event){
     document.querySelector('form').innerHTML="";
+    console.log("gfghj")
+    event.preventDefault()
+    
     var card=document.createElement("div")
 
     var heading=document.createElement("h2")
@@ -288,8 +296,14 @@ function newdiss(){
 
     innercardtext.append(leftw,rightw);
 
-    var inputsubmit=document.createElement("button");
-    inputsubmit.innerText="continue"
+    var inputsubmit=document.createElement("input");
+    inputsubmit.innerText="Continue";
+    inputsubmit.setAttribute("type","submit")
+    inputsubmit.setAttribute("id","continuebtn")
+    inputsubmit.setAttribute("class","button")
+    
+    
+    
 
     var underbuttontext=document.createElement("p")
     underbuttontext.innerText="By clicking continue, you agree to our Privacy Policy";
@@ -297,7 +311,19 @@ function newdiss(){
     card.append(heading,innercard,innercardtext,inputsubmit,underbuttontext)
     document.querySelector("#newdis").append(card)
 
-}
+    document.querySelector('#continuebtn').addEventListener("click",savelogin)
+    function savelogin(event){
+        event.preventDefault();
+     localStorage.setItem("checkLogin","Yes");
+    window.location.href="index.html"
+    // console.log("eeeee")
+    }
 
+}
+let cross = document.querySelector(".close");
+cross.addEventListener("click",function(){
+    window.location.href = "index.html";
+});
+// fhghjkhbkjcbkjcbcndk
 
 </script>

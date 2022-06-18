@@ -25,7 +25,10 @@ BacktoHomeImg.addEventListener("click",function(){
 })
 let cart = document.querySelector("#cart");
 cart.addEventListener("click",function(){
+    if(localStorage.getItem("checkLogin")=="Yes")
+    {
     window.location.href = "cart.html";
+    }
 });
 let login = document.querySelector("#login");
 login.addEventListener("click",function(){
@@ -48,9 +51,17 @@ Healthcare.addEventListener("click",function(){
     console.log("in");
     window.location.href = "healthcare.html";
 });
+let offer = document.querySelector("#offer");
+offer.addEventListener("click",function(){
+    window.location.href = "offerPage.html";
+});
 
-
-
+//login Functionality
+if(localStorage.getItem("checkLogin")=="Yes")
+{
+    let status = document.querySelector("#login>img+p");
+    status.innerText = "User";
+}
 
 function first() {
     document.getElementById("sliderimg").src = "https://cms-contents.pharmeasy.in/banner/4acf73cf129-2_MonsoonStomach_HP.jpg"

@@ -104,6 +104,42 @@ input{
     
 }
 
+/* Drop Down CSS */
+#cart{
+    display: flex;
+}
+.dropdown{
+    position: relative;
+    display:inline-block;
+}
+.contents{
+    display: none;
+    position: absolute;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+    color:#4f585e;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 25px 100px 0px 20px;
+    border-radius: 10px;
+    left:-70%;
+    top:110%;
+    
+}
+.contents>div{
+    padding-bottom: 25px;
+    display: block;
+}
+.contents a{
+    color: #4f585e;
+}
+.dropdown:hover .contents{
+    display: block;
+}
+
+
+
 #lowerNav>div>div:hover > .highlight
 {
    background-color: white;
@@ -126,6 +162,7 @@ input{
 }
 #login{
     display: flex;
+    cursor:pointer;
 }
 #login+div{
     display: flex;
@@ -246,15 +283,16 @@ input{
   height:200px;
 }
 .tophalf{
-    /* border:1px solid red; */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     height:65%;
     background-color: #cff0ea;
+    justify-content: space-between;
 }
 #card,#card1,#card2
 {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    height:225px;
 }
 #cont1>div{
     /* border:1px solid blue; */
@@ -315,15 +353,24 @@ input{
 {    
     color:#4f585e;
     display: block;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     width:70%;
     margin-left: 30px;
     font-family: 'Noto Sans', sans-serif;
 }
 .space
-{
-    height:46%;
+{   
+    padding-top: 15%;
+    padding-left: 0px;
+}
+.resize{
+    position: relative;
+    height:147%;
+}
+.resize>img{
+    height:100%;
+    border-top-right-radius: 5px;
 }
 #offerSlider{
     /* border:1px solid green; */
@@ -906,13 +953,10 @@ h3{
     width:100%;
 }
 
-<<<<<<< HEAD
 
 /* Footer css */
 
-=======
 /* Main fooooooooooooooooooooter is here */
->>>>>>> 28da6a5ee47e1270a9bd9d9a1a3fd67373764c42
 #endpart{
     background-color: #f4f7fb;
   

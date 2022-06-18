@@ -59,8 +59,9 @@ input{
     
 }
 #lowerNav>div:first-child>div{
-    padding:20px 15px 10px 20px
+    padding:20px 15px 10px 20px;
     /* border:1px solid red; */
+    margin: auto;
 }
 .highlight
 {
@@ -766,7 +767,10 @@ BacktoHomeImg.addEventListener("click",function(){
 })
 let cart = document.querySelector("#cart");
 cart.addEventListener("click",function(){
+    if(localStorage.getItem("checkLogin")=="Yes")
+    {
     window.location.href = "cart.html";
+    }
 });
 let login = document.querySelector("#login");
 login.addEventListener("click",function(){
@@ -789,6 +793,17 @@ Healthcare.addEventListener("click",function(){
     console.log("in");
     window.location.href = "healthcare.html";
 });
+let offer = document.querySelector("#offer");
+offer.addEventListener("click",function(){
+    window.location.href = "offerPage.html";
+});
+
+//login Functionality
+if(localStorage.getItem("checkLogin")=="Yes")
+{
+    let status = document.querySelector("#login>img+p");
+    status.innerText = "User";
+}
 
 
   // let data=document.querySelector("button").addEventListener("click",callme)

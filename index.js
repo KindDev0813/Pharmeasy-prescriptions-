@@ -1,3 +1,6 @@
+// localStorage.setItem("checkLogin","Yes");
+let checkLogin = localStorage.getItem("checkLogin") || "No";
+
 // Navbar on scroll FUnctionality
 window.onscroll = function (){scroll()}
 function scroll()
@@ -26,27 +29,29 @@ BacktoHomeImg.addEventListener("click",function(){
 })
 let cart = document.querySelector("#cart");
 cart.addEventListener("click",function(){
+    if(localStorage.getItem("checkLogin")=="Yes")
+    {
     window.location.href = "cart.html";
+    }
 });
-let login = document.querySelector("#login");
+let login = document.querySelector(".loginlink");
 login.addEventListener("click",function(){
+    if(checkLogin=="No"){
     window.location.href = "login.html";
+    }
 })
 let labtest = document.querySelector("#labtestb");
 labtest.addEventListener("click",function(){
-    console.log("in");
     window.location.href = "Labtest.html";
 });
 
 let Rtpcr = document.querySelector("#Rtpcr");
 Rtpcr.addEventListener("click",function(){
-    console.log("in");
     window.location.href = "RTPCR.html";
 });
 
 let Healthcare = document.querySelector("#Health");
 Healthcare.addEventListener("click",function(){
-    console.log("in");
     window.location.href = "healthcare.html";
 });
 let orderMedicine = document.querySelector("#orderMedicinebtn");
@@ -54,6 +59,29 @@ orderMedicine.addEventListener("click",function(){
     console.log("in");
     window.location.href = "./OrderMedicine/ordermedicine.html";
 });
+let offer = document.querySelector("#offer");
+offer.addEventListener("click",function(){
+    window.location.href = "offerPage.html";
+});
+
+//Login Functionality
+
+if(checkLogin=="Yes")
+{
+    let status = document.querySelector("#switch>p");
+    status.innerText = "User";
+    document.querySelector("#switch").setAttribute("class","dropdown");
+}
+
+//DropDown Functionality
+let logout = document.querySelector("#logout");
+logout.addEventListener("click",()=>{
+    console.log("in");
+    localStorage.setItem("checkLogin","No");
+    window.location.reload();
+})
+
+
 
 //Carousel 1 auto functionality
 let bigSlider = document.querySelector(".slider-wrapper");
