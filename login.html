@@ -309,8 +309,10 @@ function newdiss(event){
     document.querySelector("#newdis").append(card)
 
     document.querySelector('#continuebtn').addEventListener("click",savelogin)
-    function savelogin(){
-    localStorage.setItem("checkLogin","Yes");
+    function savelogin(event){
+        event.preventDefault();
+     localStorage.setItem("checkLogin","Yes");
+    window.location.href="index.html"
     // console.log("eeeee")
     }
 
