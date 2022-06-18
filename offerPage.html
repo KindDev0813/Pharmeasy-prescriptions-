@@ -90,12 +90,12 @@
       <!-- offer info ends -->
     
       <!-- offers -->
-      <div class="button">
-        <button class="btn">All</button>
-        <button class="btn">Payment</button>
-        <button class="btn">Medicines</button>
-        <button class="btn">Diagnostic</button>
-        <button class="btn">HealthCare</button>
+      <div class="button1">
+        <button class="btn" id="All">All</button>
+        <button class="btn" id="payment">Payment</button>
+        <button class="btn" id="Medicines">Medicines</button>
+        <button class="btn" id="Diagnostic">Diagnostic</button>
+        <button class="btn" id="HealthCare">HealthCare</button>
     </div>
       <div class="offers">
              
@@ -478,7 +478,7 @@ let array=[
        offername:"Fathers Day sale is live",
        desc:"Get FLAT 10% off during Father's day Sale on Healthcare Products on orders above 1000",
        code:"FTH10",
-       offerid:"payment",
+       offerid:"diagnostic",
        click:"click here"
     },
     {
@@ -486,7 +486,7 @@ let array=[
        offername:"Flat 30% off + FREE Plus Membership",
        desc:"Flat 30% off + FREE plus membership on purchase of Diabetic, Cardiac & Gastro medicines & health products.",
        code:"Grand10",
-       offerid:"Medicines",
+       offerid:"medicines",
        click:"click here"
     },
     {
@@ -527,7 +527,7 @@ let array=[
        offername:"Flat 30% off + FREE Plus Membership",
        desc:"Flat 30% off + FREE plus membership on purchase of Diabetic, Cardiac & Gastro medicines & health products.",
        code:"Grand10",
-       offerid:"Medicines",
+       offerid:"diagnostic",
        click:"click here"
     },
     {
@@ -567,7 +567,7 @@ let array=[
        offername:"Flat 30% off + FREE Plus Membership",
        desc:"Flat 30% off + FREE plus membership on purchase of Diabetic, Cardiac & Gastro medicines & health products.",
        code:"Grand10",
-       offerid:"Medicines",
+       offerid:"diagnostic",
        click:"click here"
     },
     {
@@ -607,7 +607,7 @@ let array=[
        offername:"Flat 30% off + FREE Plus Membership",
        desc:"Flat 30% off + FREE plus membership on purchase of Diabetic, Cardiac & Gastro medicines & health products.",
        code:"Grand10",
-       offerid:"Medicines",
+       offerid:"Onetouch5",
        click:"click here"
     },
     {
@@ -615,7 +615,7 @@ let array=[
        offername:"Get upto Rs.300 Paytm cashback",
        desc:"Valid once per user on transactions above ₹600.",
        code:"Grand10",
-       offerid:"payment",
+       offerid:"diagnostic",
        click:"click here"
     },
     {
@@ -631,7 +631,7 @@ let array=[
        offername:"Get extra 5% off on OneTouch products.",
        desc:"Get additional 5% off on select OneTouch products.",
        code:"Welcome400",
-       offerid:"Onetouch5",
+       offerid:"medicines",
        click:"click here"
     },
 ]
@@ -642,10 +642,9 @@ displayoffer(array);
 
 
 function displayoffer(array){
+    document.querySelector(".offers").innerHTML="";
 
    array.forEach(function(el){
-
-
     let div1=document.createElement("div")
     let a=document.createElement("div")
 
@@ -710,6 +709,37 @@ answers.forEach((event) => {
     }
   });
 });
+
+
+let button11 = document.querySelector("#All")
+
+button11.addEventListener("click",function(){
+  if(button11.innerText==="All"){
+    displayoffer(array)
+   console.log(array)
+  }
+})
+
+let button = document.querySelector("#payment")
+
+button.addEventListener("click",function(){
+   let abc=array.filter(function(el){
+    return el.offerid==="payment"
+   })
+   displayoffer(abc)
+   console.log(abc)
+})
+
+let button1 = document.querySelector("#Medicines")
+
+button1.addEventListener("click",function(){
+   let abc1=array.filter(function(el){
+    return el.offerid==="medicines"
+   })
+   displayoffer(abc1)
+   console.log(abc1)
+})
+
 
 </script>
 

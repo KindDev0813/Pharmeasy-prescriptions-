@@ -228,7 +228,7 @@ align-items: center;
     justify-content: center;
     margin-top: 7px;
 }
-.button{
+.button1{
     width: 70%;
     height: 60px;
     margin: auto;
@@ -243,6 +243,10 @@ align-items: center;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     cursor: pointer;
     background-color: white;
+    font-size: 16px;
+}
+.lowerbox>div:last-child{
+    color: teal;
 }
 /* offers ends */
 

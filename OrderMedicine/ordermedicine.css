@@ -114,10 +114,19 @@
     margin-top: 30px;
 }
 
-#btn {
+#Btn {
+  width: 20%;
     height: 50px;
-    border: none;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border-radius: 5px 0px 0px 5px;
+    border: none;
+}
+#Btn>a>button{
+  padding: 12px 1px;
+  margin-top: -12px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  background-color: white;
+  border-radius: 5px;
 }
 
 #searchbar>input {
@@ -171,7 +180,12 @@ svg {
     width: 5%;
     margin-right: 30px;
 }
-
+a{
+  color: white;
+}
+a:hover{
+  text-decoration: underline;
+}
 .ol2_ul {
     width: 70%;
     margin-top: 10px;
@@ -488,9 +502,7 @@ button {
     color: #8897a2;
     text-align: left;
   }
-  .horizontalline2{
-   
-  }
+ 
 
   /* product guaranty end */
 

@@ -49,8 +49,11 @@ Healthcare.addEventListener("click",function(){
     console.log("in");
     window.location.href = "healthcare.html";
 });
-
-
+let orderMedicine = document.querySelector("#orderMedicinebtn");
+orderMedicine.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "./OrderMedicine/ordermedicine.html";
+});
 
 //Carousel 1 auto functionality
 let bigSlider = document.querySelector(".slider-wrapper");

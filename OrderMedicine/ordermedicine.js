@@ -1,9 +1,20 @@
 //linking part
 
-let BacktoHomeImg = document.querySelector("#upperNav>div>img:first-child");
+let BacktoHomeImg = document.querySelector("#logo");
 BacktoHomeImg.addEventListener("click",function(){
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
 })
+
+let BacktoHome = document.querySelector("#navpage>p");
+BacktoHome.addEventListener("click",function(){
+    window.location.href = "../index.html";
+})
+
+let alloffer = document.querySelector("#dontknow");
+alloffer.addEventListener("click",function(){
+    window.location.href = "../offerPage.html";
+})
+//linking part
 
 let img2=document.querySelector("#img2");
 
