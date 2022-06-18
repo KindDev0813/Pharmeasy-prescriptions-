@@ -54,6 +54,10 @@ let Healthcare = document.querySelector("#Health");
 Healthcare.addEventListener("click",function(){
     window.location.href = "healthcare.html";
 });
+let offer = document.querySelector("#offer");
+offer.addEventListener("click",function(){
+    window.location.href = "offerPage.html";
+});
 
 //Login Functionality
 
