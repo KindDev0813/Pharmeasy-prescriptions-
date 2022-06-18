@@ -874,663 +874,361 @@ if(localStorage.getItem("checkLogin")=="Yes")
     status.innerText = "User";
 }
 
-  let productdata = [
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/266249/depura-60000-iu-vitamin-d3-oral-solution-helps-bones-healthy-aids-in-boosting-immunity-sugarfree-1-1654077819.jpg?dim=320x320&dpr=1&q=100",
-      name: "Depura, 60000 Iu Vitamin D3 Oral Solution",
-      categories: "Covid Essentials",
-      MRP: 94.99,
-      price: 71.24,
-      quantity: 1,
-      uniqueid: "“#m1”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/I40124/dettol-antiseptic-liquid-bottle-of-1-l-2-1654166347.jpg?dim=320x320&dpr=1&q=100",
-      name: "Dettol Antiseptic Liquid Bottle Of 1 L",
-      categories: "Covid Essentials",
-      MRP: 331.41,
-      price: 298.27,
-      quantity: 1,
-      uniqueid: "#m2",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/Q83701/pharmeasy-all-in-one-vaporizer-1-1654233812.jpg?dim=320x320&dpr=1&q=100",
-      name: "Pharmeasy All-In -One Vaporizer",
-      categories: "Covid Essentials",
-      MRP: 599,
-      price: 299.5,
-      quantity: 1,
-      uniqueid: "“#m3”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/181140/vicks-vaporub-50ml-relief-from-cold-cough-headache-and-body-pain-2-1654078748.jpg?dim=320x320&dpr=1&q=100",
-      name: "Vicks Vaporub 50ml",
-      categories: "Covid Essentials",
-      MRP: 145,
-      price: 130,
-      quantity: 1,
-      uniqueid: "“#m4”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/T70695/supradyn-daily-multivitamin-tablets-15s-1-1641793954.jpg?dim=320x320&dpr=1&q=100",
-      name: "Supradyn Daily Multivitamin Tablets 15s",
-      categories: "Personal Care",
-      MRP: 50,
-      price: 45,
-      uniqueid:"#m5",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/207833/calcimax-forte-plus-strip-of-30-tablets-2-1654078168.jpg?dim=320x320&dpr=1&q=100",
-      name: "Calcimax Forte Plus Strip Of 30 Tablets",
-      categories: "Personal Care",
-      MRP: 270.5,
-      price: 202.88,
-      quantity: 1,
-      uniqueid: "“#m6”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/270382/scalpe-plus-anti-dandruff-shampoo-bottle-of-75-ml-2-1654518458.jpg?dim=320x320&dpr=1&q=100",
-      name: "Scalpe Plus Anti Dandruff Shampoo",
-      categories: "Personal Care",
-      MRP: 260,
-      price: 200.2,
-      uniqueid: "“#m7”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/P66561/gatsby-cooling-face-wash-oil-control-50gm-2-1648639777.jpg?dim=320x320&dpr=1&q=100",
-      name: "Gatsby Cooling Face Wash",
-      categories: "Personal Care",
-      MRP: 110,
-      price: 110,
-      quantity: 1,
-      uniqueid: "“#m8”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/L79986/everherb-karela-jamun-juice-helps-maintains-healthy-sugar-levels-helps-in-weight-management-1l-2-1654234653.jpg?dim=320x320&dpr=1&q=100",
-      name: "Everherb Karela Jamun Juice",
-      categories: "Health Food and Drinks",
-      MRP: 399,
-      price: 207.48,
-      quantity: 1,
-      uniqueid: "“#m9”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/L59203/supreem-super-foods-normalife-quinoa-puffs-roasted-puffs-snack-with-cheese-garlic-20-gm-2-1652878418.jpg?dim=320x320&dpr=1&q=100",
-      name: "Supreem Super Foods Normalife Quinoa Puffs",
-      categories: "Health Food and Drinks",
-      MRP: 50,
-      price: 32.5,
-      quantity: 1,
-      uniqueid: "“#m10”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/373983/protinex-tasty-chocolate-nutrition-drink-tin-of-400-g-2-1654077686.jpg?dim=320x320&dpr=1&q=100",
-      name: "Protinex Tasty Chocolate Nutrition Drink",
-      categories: "Health Food and Drinks",
-      MRP: 580,
-      price: 522,
-      uniqueid: "“#m11”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/F52227/horlicks-womens-plus-caramel-jar-400-g-2-1654169295.jpg?dim=320x320&dpr=1&q=100",
-      name: "Horlicks Women'S Plus Caramel Jar",
-      categories: "Health Food and Drinks",
-      MRP: 325,
-      price: 299,
-      quantity: 1,
-      uniqueid: "“#m12”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/180461/venusia-max-intensive-moisturizing-cream-for-dry-to-very-dry-skin-repairs-smoothens-skin-150g-2-1654078395.jpg?dim=320x320&dpr=1&q=100",
-      name: "Venusia Max Intensive Moisturizing Cream",
-      categories: "Skin Care",
-      MRP: 504,
-      price: 378,
-      quantity: 1,
-      uniqueid: "#m121",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/I07034/fash-x-gel-face-wash-200gm-2-1654167900.jpg?dim=320x320&dpr=1&q=100",
-      name: "Fash X Gel Face Wash",
-      categories: "Skin Care",
-      MRP: 475,
-      price: 370.5,
-      quantity: 1,
-      uniqueid: "“#m13”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/265998/tetmosol-medicated-soap-for-relief-from-skin-infections-lime-fragrance-100g-2-1654077736.jpg?dim=320x320&dpr=1&q=100",
-      name: "Tetmosol Medicated Soap",
-      categories: "Skin Care",
-      MRP: 88,
-      price: 76.56,
-      quantity: 1,
-      uniqueid: "“#m14”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/273329/episoft-cleansing-lotion-250ml-2-1641398639.jpg?dim=320x320&dpr=1&q=100",
-      name: "Episoft Cleansing Lotion",
-      categories: "Skin Care",
-      MRP: 550,
-      price: 407,
-      uniqueid: "“#m15”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/Q82571/lizol-floral-disinfectant-floor-cleaner-liquid-bottle-of-200-ml-2-1653995428.jpg?dim=320x320&dpr=1&q=100",
-      name: "Lizol Floral Disinfectant Floor Cleaner",
-      categories: "Home Care",
-      MRP: 40,
-      price: 38.4,
-      quantity: 1,
-      uniqueid: "“#m16”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/O35200/dettol-disinfectant-sanitizer-spray-bottle-spring-blossom-225ml-2-1654234201.jpg?dim=320x320&dpr=1&q=100",
-      name: "Dettol Disinfectant Sanitizer Spray",
-      categories: "Home Care",
-      MRP: 159,
-      price: 135.15,
-      quantity: 1,
-      uniqueid: "“#m17”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/H08110/godrej-good-knight-naturals-neem-liquid-vapouriser-refill-pack-of-2-1-1654169259.jpg?dim=320x320&dpr=1&q=100",
-      name: "Godrej Good Knight Naturals Neem Liquid",
-      categories: "Home Care",
-      MRP: 178,
-      price: 153.08,
-      quantity: 1,
-      uniqueid: "“#m18”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/K01212/godrej-aer-power-pocket-bathroom-freshner-assorted-pack-of-5-1-1641793708.jpg?dim=320x320&dpr=1&q=100",
-      name: "Godrej Aer Power Pocket Bathroom Freshner",
-      categories: "Home Care",
-      MRP: 300,
-      price: 276,
-      quantity: 1,
-      uniqueid: "“#m19”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/B02062/harpic-floral-bathroom-cleaner-bottle-of-200-ml-2-1641793037.jpg?dim=320x320&dpr=1&q=100",
-      name: "Harpic Floral Bathroom Cleaner",
-      categories: "Home Care",
-      MRP: 46,
-      price: 44.16,
-      quantity: 1,
-      uniqueid: "“#m20”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/105900/himalaya-liv52-ds-tablets-60s-2-1654078613.jpg",
-      name: "Himalaya Liv.52 Ds Tablets",
-      categories: "Ayurvedic Care",
-      MRP: 170,
-      price: 144.5,
-      quantity: 1,
-      uniqueid: "“#m21”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/Q91163/amrutanjan-strong-pain-relief-balm-bottle-of-275-ml-2-1654250441.jpg?dim=320x320&dpr=1&q=100",
-      name: "Amrutanjan Strong Pain Relief Balm",
-      categories: "Ayurvedic Care",
-      MRP: 95,
-      price: 80.75,
-      quantity: 1,
-      uniqueid: "“#m22”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/347378/zandu-pain-relief-balm-bottle-of-8-ml-1-1654077474.jpg?dim=320x320&dpr=1&q=100",
-      name: "Zandu Pain Relief Balm",
-      categories: "Ayurvedic Care",
-      MRP: 40,
-      price: 36,
-      quantity: 1,
-      uniqueid: "“#m23”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/B39499/pharmeasy-hot-water-bag-blue-2-1645456739.jpg?dim=320x320&dpr=1&q=100",
-      name: "Pharmeasy Hot Water Bag",
-      categories: "Ayurvedic Care",
-      MRP: 349,
-      price: 244.3,
-      quantity: 1,
-      uniqueid: "“#m24”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/226634/i-can-pregnancy-test-kit-1-1654078700.jpg?dim=320x320&dpr=1&q=100",
-      name: "I Can Pregnancy Test Kit",
-      categories: "Sexual Wellness",
-      MRP: 55,
-      price: 35.2,
-      quantity: 1,
-      uniqueid: "“#m25”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/I40161/durex-extra-thin-packet-of-10-condoms-1-1654166208.jpg?dim=320x320&dpr=1&q=100",
-      name: "Durex Extra Thin Packet Condoms",
-      categories: "Sexual Wellness",
-      MRP: 228,
-      price: 193.8,
-      quantity: 1,
-      uniqueid: "“#m26”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/I08024/climax-for-men-bottle-of-12-g-spray-1-1641787589.jpg?dim=320x320&dpr=1&q=100",
-      name: "Climax Spray - For Men",
-      categories: "Sexual Wellness",
-      MRP: 199,
-      price: 179.1,
-      quantity: 1,
-      uniqueid: "“#m27”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/051580/dabur-shilajit-gold-vitality-capsules-strip-of-10-1-1654078818.jpg?dim=320x320&dpr=1&q=100",
-      name: "Dabur Shilajit Gold Vitality Capsules",
-      categories: "Sexual Wellness",
-      MRP: 255,
-      price: 229.5,
-      quantity: 1,
-      uniqueid: "“#m28”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/P96185/patanjali-divya-shilajeet-rasayan-vati-120-tablets-2-1642581102.jpg?dim=320x320&dpr=1&q=100",
-      name: "Patanjali Divya Shilajeet Rasayan Vati",
-      categories: "Sexual Wellness",
-      MRP: 75,
-      price: 60,
-      quantity: 1,
-      uniqueid: "“#m29”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products/071715/evion-600mg-strip-of-10-capsules-2-1641536013.jpg?dim=320x320&dpr=1&q=100",
-      name: "Evion 600mg Strip Of 10 Capsules",
-      categories: "Fitness & Supplements",
-      MRP: 47,
-      price: 42.3,
-      quantity: 1,
-      uniqueid: "“#m30”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/270552/revital-h-men-multivitamin-with-calcium-zinc-ginseng-for-immunity-strong-bones-energy-30-capsules-2-1654077741.jpg?dim=320x320&dpr=1&q=100",
-      name: "Revital H Men Multivitamin",
-      categories: "Fitness & Supplements",
-      MRP: 310,
-      price: 263.5,
-      quantity: 1,
-      uniqueid: "“#m31”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/H37794/liveasy-wellness-calcium-magnesium-vitamin-d3-bones-dental-health-bottle-of-90-tablets-2-1654169056.jpg?dim=320x320&dpr=1&q=100",
-      name: "Liveasy Wellness Calcium",
-      categories: "Fitness & Supplements",
-      MRP: 849,
-      price: 466.95,
-      quantity: 1,
-      uniqueid: "“#m32”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/051140/d-protin-vanilla-diabetes-care-powder-bottle-of-200-g-2-1654078626.jpg?dim=320x320&dpr=1&q=100",
-      name: "D-Protin Vanilla Diabetes Care Powder",
-      categories: "Fitness & Supplements",
-      MRP: 260,
-      price: 221,
-      quantity: 1,
-      uniqueid: "“#m33”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/196240/tedibar-bathing-bar-75gm-1-1654078068.jpg?dim=320x320&dpr=1&q=100",
-      name: "Tedibar Bathing Bar 75gm",
-      categories: "Mother and Baby Care",
-      MRP: 165,
-      price: 132,
-      quantity: 1,
-      uniqueid: "“#m34”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/E35192/horlicks-junior-health-nutrition-drink-vanilla-500-g-jar-2-1654169694.jpg?dim=320x320&dpr=1&q=100",
-      name: "Horlicks Junior Health & Nutrition Drink Vanilla",
-      categories: "Mother and Baby Care",
-      MRP: 299,
-      price: 299,
-      quantity: 1,
-      uniqueid: "“#m35”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/329300/nestle-lactogen-1-infant-formula-powder-upto-6-months-stage-1-400g-bag-in-box-pack-1-1641398772.jpg?dim=320x320&dpr=1&q=100",
-      name: "Nestle Lactogen 1 Infant Formula Powder",
-      categories: "Mother and Baby Care",
-      MRP: 375,
-      price: 375,
-      quantity: 1,
-      uniqueid: "“#m36”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/337418/protinex-mama-vanilla-nutrition-drink-tin-of-250-g-2-1654077494.jpg?dim=320x320&dpr=1&q=100",
-      name: "Protinex Mama Vanilla Nutrition Drink",
-      categories: "Mother and Baby Care",
-      MRP: 415,
-      price: 389.4,
-      quantity: 1,
-      uniqueid: "“#m37”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/131679/onetouch-select-glucometer-test-strips-50s-pack-1-1654078262.jpg?dim=320x320&dpr=1&q=100",
-      name: "Onetouch Select Glucometer Test Strips",
-      categories: "Healthcare Devices",
-      MRP: 1195,
-      price: 1135.25,
-      quantity: 1,
-      uniqueid: "“#m37”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/O70942/coviself-covid-self-test-kit-2-1644415093.jpg?dim=320x320&dpr=1&q=100",
-      name: "Coviself Covid Self Test Kit",
-      categories: "Healthcare Devices",
-      MRP: 250,
-      price: 250,
-      quantity: 1,
-      uniqueid: "“#m38”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/000660/accu-chek-active-glucometer-kit-with-free-10-strips-1-1654077455.jpg?dim=320x320&dpr=1&q=100",
-      name: "Accu-Chek Active Glucometer Kit",
-      categories: "Healthcare Devices",
-      MRP: 1599,
-      price: 1599,
-      uniqueid: "“#m39”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/M67325/bpl-smart-oxy-finger-tip-pulse-black-oximeter-black-2-1654234561.jpg?dim=320x320&dpr=1&q=100",
-      name: "Bpl Smart Oxy Finger Tip Pulse Black Oximeter",
-      categories: "Healthcare Devices",
-      MRP: 3600,
-      price: 1080,
-      quantity: 1,
-      uniqueid: "“#m40”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/021870/b-d-ultra-fine-iii-nano-pen-needles-4mm-32g-15-1-1641399042.jpg?dim=320x320&dpr=1&q=100",
-      name: "BD Ultra-Fine III Nano Pen Needles 4mm 32G 1*5",
-      categories: "Surgicals and Dressings",
-      MRP: 88,
-      price: 88,
-      quantity: 1,
-      uniqueid: "“#m41”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/V02075/liveasy-essentials-cotton-buds-200-sticks-400-swabs-2-1654249956.jpg?dim=320x320&dpr=1&q=100",
-      name: "Liveasy Essentials Cotton Buds",
-      categories: "Surgicals and Dressings",
-      MRP: 95,
-      price: 95,
-      quantity: 1,
-      uniqueid: "“#m42”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/W61733/accusure-ortho-elastic-crepe-bandage-15cm-ecb-2-1653890833.jpg?dim=320x320&dpr=1&q=100",
-      name: "Accusure-Ortho-Elastic Crepe Bandage- 15cm-Ecb",
-      categories: "Surgicals and Dressings",
-      MRP: 370,
-      price: 370,
-      quantity: 1,
-      uniqueid: "“#m43”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/156765/savlon-antiseptic-disinfectant-liquid-1000-ml-2-1654078767.jpg?dim=320x320&dpr=1&q=100",
-      name: "Savlon Antiseptic Disinfectant Liquid 1000 Ml",
-      categories: "Surgicals and Dressings",
-      MRP: 291,
-      price: 253.17,
-      quantity: 1,
-      uniqueid: "“#m44”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/156565/saridon-headache-relief-tablet-strip-of-10-tablets-2-1641398741.jpg?dim=320x320&dpr=1&q=100",
-      name: "Saridon Headache Relief Tablet",
-      categories: "Health Condition",
-      MRP: 42.3,
-      price: 38.92,
-      quantity: 1,
-      uniqueid: "“#m45”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/I04110/cofsils-orange-lozenges-strip-of-10-2-1654251540.jpg?dim=320x320&dpr=1&q=100",
-      name: "Cofsils Orange Lozenges Strip Of 10",
-      categories: "Health Condition",
-      MRP: 30,
-      price: 24,
-      quantity: 1,
-      uniqueid: "“#m46”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/I02282/digene-assorted-antacid-tablets-strip-of-15-2-1654251586.jpg?dim=320x320&dpr=1&q=100",
-      name: "Digene Assorted Antacid Tablets Strip Of 15",
-      categories: "Health Condition",
-      MRP: 24.95,
-      price: 18,
-      quantity: 1,
-      uniqueid: "“#m47”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/I33947/gelusil-mps-mint-flavour-sugar-free-bottle-of-200ml-liquid-2-1641788157.jpg?dim=320x320&dpr=1&q=100",
-      name: "Gelusil Mps Mint Flavour Sugar Free Bottle Of 200ml Liquid",
-      categories: "Health Condition",
-      MRP: 126.49,
-      price: 103.72,
-      quantity: 1,
-      uniqueid: "“#m48”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/T01932/liveasy-essentials-womens-diabetic-orthopedic-slippers-red-size-uk-7-us-10-6.1-1641789092.jpg?dim=320x320&dpr=1&q=100",
-      name: "Liveasy Essentials Women'S Diabetic & Orthopedic Slippers",
-      categories: "Diabetic Care",
-      MRP: 999,
-      price: 519.48,
-      quantity: 1,
-      uniqueid: "“#m49”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/M01493/protinex-diabetes-care-vanilla-400gm-nutrition-drink-for-indian-adults-to-control-blood-sugar-2-1641794900.jpg?dim=320x320&dpr=1&q=100",
-      name: "Protinex Diabetes Care Vanilla 400gm",
-      categories: "Diabetic Care",
-      MRP: 650.0,
-      price: 598.0,
-      quantity: 1,
-      uniqueid: "“#m50”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/I06487/dr-morepen-bg-03-glucometer-test-strips-box-of-25-1-1654168049.jpg?dim=320x320&dpr=1&q=100",
-      name: "Dr Morepen Bg 03 Glucometer Test Strips Box Of 25",
-      categories: "Diabetic Care",
-      MRP: 1490,
-      price: 998.3,
-      quantity: 1,
-      uniqueid: "“#m51”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/J62225/liveasy-ortho-care-acupressure-slippers-women-black-size-8-2-1641793678.jpg?dim=320x320&dpr=1&q=100",
-      name: "Liveasy Ortho Care Acupressure Slippers",
-      categories: "Elderly Care",
-      MRP: 599,
-      price: 311.48,
-      quantity: 1,
-      uniqueid: "“#m52”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/A43900/pharmeasy-lumbar-sacro-support-belt-back-pain-relief-and-sacral-support-1-1643967128.jpg?dim=320x320&dpr=1&q=100",
-      name: "Pharmeasy Lumbar Sacro Support Belt",
-      categories: "Elderly Care",
-      MRP: 799,
-      price: 719.1,
-      quantity: 1,
-      uniqueid: "“#m53”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/J65471/ostocalcium-plus-bottle-of-30-chewable-tablets-3-1641622978.jpg?dim=320x320&dpr=1&q=100",
-      name: "Ostocalcium Plus Bottle Of 30 Chewable Tablet",
-      categories: "Elderly Care",
-      MRP: 178.95,
-      price: 161.05,
-      quantity: 1,
-      uniqueid: "“#m54”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/I40296/amrutanjan-maha-strong-pain-relief-balm-bottle-of-8-ml-2-1654251111.jpg?dim=320x320&dpr=1&q=100",
-      name: "Amrutanjan Maha Strong Pain Relief Balm",
-      categories: "Elderly Care",
-      MRP: 45,
-      price: 38.25,
-      quantity: 1,
-      uniqueid: "“#m55”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/S01055/liveasy-essentials-mens-diabetic-orthopedic-velcro-slippers-black-size-uk-9-2-1632782337.jpg?dim=320x320&dpr=1&q=100",
-      name: "Liveasy Essentials Men'S Diabetic & Orthopedic Velcro Slippers",
-      categories: "Accessories And Wearables",
-      MRP: 899,
-      price: 359.6,
-      quantity: 1,
-      uniqueid: "“#m56”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/Z36722/beurer-ft-09-1-clinical-thermometer-2-1654232977.jpg",
-      name: "Beurer Ft 09/1 Clinical Thermometer",
-      categories: "Accessories And Wearables",
-      MRP: 250,
-      price: 232.5,
-      quantity: 1,
-      uniqueid: "“#m57”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/W00450/liveasy-essentials-copper-bottle-ayurvedic-health-benefits-leak-proof-cap-950ml-1-1641793079.jpg?dim=320x320&dpr=1&q=100",
-      name: "Liveasy Essentials Copper Bottle",
-      categories: "Accessories And Wearables",
-      MRP: 1199,
-      price: 839.3,
-      quantity: 1,
-      uniqueid: "“#m58”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/I08141/friends-premium-adult-diapers-pant-style-10-count-m-waist-size-25-48-inch-635-122cm-1-1654167650.jpg?dim=320x320&dpr=1&q=100",
-      name: "Friends Premium Adult Diapers Pant Style",
-      categories: "Accessories And Wearables",
-      MRP: 550,
-      price: 429,
-      quantity: 1,
-      uniqueid: "“#m59”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/D21553/nivea-men-deo-fresh-active-150ml-2-1654258115.jpg?dim=320x320&dpr=1&q=100",
-      name: "Nivea Men Deo Fresh Active - 150ml",
-      categories: "Beauty",
-      MRP: 225,
-      price: 191.25,
-      quantity: 1,
-      uniqueid: "“#m60”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/T87736/wild-stone-code-titanium-body-perfume-for-men-120ml-pack-of-2-2-1641795780.jpg?dim=320x320&dpr=1&q=100",
-      name: "Wild Stone Code Titanium Body Perfume For Men - 120ml (Pack Of 2)",
-      categories: "Beauty",
-      MRP: 500,
-      price: 500,
-      quantity: 1,
-      uniqueid: "“#m67”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/O80005/yardley-london-morning-dew-daily-wear-perfume-100-ml-2-1641794413.jpg?dim=320x320&dpr=1&q=100",
-      name: "Yardley London Morning Dew Daily Wear Perfume - 100 Ml",
-      categories: "Beauty",
-      MRP: 549,
-      price: 549,
-      quantity: 1,
-      uniqueid: "“#m68”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/R75129/colorbar-velvet-matte-lipstick-d-surprise-2-1649858505.jpg?dim=320x320&dpr=1&q=100",
-      name: "Colorbar Velvet Matte Lipstick- D Surprise!",
-      categories: "Beauty",
-      MRP: 349,
-      price: 268.73,
-      quantity: 1,
-      uniqueid: "“#m69”",
-    },
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/M91708/plum-naturstudio-all-day-wear-kohl-kajal-uptown-brown-with-free-sharpener-12gm-2-1649767236.jpg?dim=320x320&dpr=1&q=100",
-      name: "Plum Naturstudio All- Day- Wear Kohl Kajal Uptown Brown With Free Sharpener",
-      categories: "Beauty",
-      MRP: 495,
-      price: 445.5,
-      quantity: 1,
-      uniqueid: "“#m70”",
-    },
-  ];
+let productdata=[
+
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/L59203/supreem-super-foods-normalife-quinoa-puffs-roasted-puffs-snack-with-cheese-garlic-20-gm-2-1652878418.jpg?dim=320x320&dpr=1&q=100",
+  name: "Supreem Super Foods Normalife Quinoa Puffs",
+  name2:"By USV PVT LTD",
+  description: "Health Food and Drinks",
+  Mrp: 50,
+  price: 32.5,
+  quantity: 1,
+  uniqueid: "“#m10”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/373983/protinex-tasty-chocolate-nutrition-drink-tin-of-400-g-2-1654077686.jpg?dim=320x320&dpr=1&q=100",
+  name: "Protinex Tasty Chocolate Nutrition Drink",
+  name2:"By USV PVT LTD",
+  description: "Health Food and Drinks",
+  Mrp: 580,
+  price: 522,
+  uniqueid: "“#m11”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/F52227/horlicks-womens-plus-caramel-jar-400-g-2-1654169295.jpg?dim=320x320&dpr=1&q=100",
+  name: "Horlicks Women'S Plus Caramel Jar",
+  name2:"By USV PVT LTD",
+  description: "Health Food and Drinks",
+  Mrp: 325,
+  price: 299,
+  quantity: 1,
+  uniqueid: "“#m12”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/180461/venusia-max-intensive-moisturizing-cream-for-dry-to-very-dry-skin-repairs-smoothens-skin-150g-2-1654078395.jpg?dim=320x320&dpr=1&q=100",
+  name: "Venusia Max Intensive Moisturizing Cream",
+  description: "Skin Care",
+  name2:"By USV PVT LTD",
+  Mrp: 504,
+  price: 378,
+  quantity: 1,
+  uniqueid: "#m121",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/I07034/fash-x-gel-face-wash-200gm-2-1654167900.jpg?dim=320x320&dpr=1&q=100",
+  name: "Fash X Gel Face Wash",
+  description: "Skin Care",
+  name2:"By USV PVT LTD",
+  Mrp: 475,
+  price: 370.5,
+  quantity: 1,
+  uniqueid: "“#m13”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/265998/tetmosol-medicated-soap-for-relief-from-skin-infections-lime-fragrance-100g-2-1654077736.jpg?dim=320x320&dpr=1&q=100",
+  name: "Tetmosol Medicated Soap",
+  description: "Skin Care",
+  name2:"By USV PVT LTD",
+  Mrp: 88,
+  price: 76.56,
+  quantity: 1,
+  uniqueid: "“#m14”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/273329/episoft-cleansing-lotion-250ml-2-1641398639.jpg?dim=320x320&dpr=1&q=100",
+  name: "Episoft Cleansing Lotion",
+  description: "Skin Care",
+  Mrp: 550,
+  name2:"By USV PVT LTD",
+  price: 407,
+  quantity: 1,
+  uniqueid: "“#m15”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/Q82571/lizol-floral-disinfectant-floor-cleaner-liquid-bottle-of-200-ml-2-1653995428.jpg?dim=320x320&dpr=1&q=100",
+  name: "Lizol Floral Disinfectant Floor Cleaner",
+  description: "Home Care",
+  Mrp: 40,
+  name2:"By USV PVT LTD",
+  price: 38.4,
+  quantity: 1,
+  uniqueid: "“#m16”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/O35200/dettol-disinfectant-sanitizer-spray-bottle-spring-blossom-225ml-2-1654234201.jpg?dim=320x320&dpr=1&q=100",
+  name: "Dettol Disinfectant Sanitizer Spray",
+  description: "Home Care",
+  Mrp: 159,
+  price: 135.15,
+  name2:"By USV PVT LTD",
+  quantity: 1,
+  uniqueid: "“#m17”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/H08110/godrej-good-knight-naturals-neem-liquid-vapouriser-refill-pack-of-2-1-1654169259.jpg?dim=320x320&dpr=1&q=100",
+  name: "Godrej Good Knight Naturals Neem Liquid",
+  description: "Home Care",
+  Mrp: 178,
+  price: 153.08,
+  name2:"By USV PVT LTD",
+  quantity: 1,
+  uniqueid: "“#m18”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/K01212/godrej-aer-power-pocket-bathroom-freshner-assorted-pack-of-5-1-1641793708.jpg?dim=320x320&dpr=1&q=100",
+  name: "Godrej Aer Power Pocket Bathroom Freshner",
+  description: "Home Care",
+  Mrp: 300,
+  price: 276,
+  name2:"By USV PVT LTD",
+  quantity: 1,
+  uniqueid: "“#m19”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/B02062/harpic-floral-bathroom-cleaner-bottle-of-200-ml-2-1641793037.jpg?dim=320x320&dpr=1&q=100",
+  name: "Harpic Floral Bathroom Cleaner",
+  description: "Home Care",
+  Mrp: 46,
+  price: 44.16,
+  name2:"By USV PVT LTD",
+  quantity: 1,
+  uniqueid: "“#m20”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/105900/himalaya-liv52-ds-tablets-60s-2-1654078613.jpg",
+  name: "Himalaya Liv.52 Ds Tablets",
+  description: "Ayurvedic Care",
+  Mrp: 170,
+  name2:"By USV PVT LTD",
+  price: 144.5,
+  quantity: 1,
+  uniqueid: "“#m21”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/Q91163/amrutanjan-strong-pain-relief-balm-bottle-of-275-ml-2-1654250441.jpg?dim=320x320&dpr=1&q=100",
+  name: "Amrutanjan Strong Pain Relief Balm",
+  description: "Ayurvedic Care",
+  Mrp: 95,
+  price: 80.75,
+  name2:"By USV PVT LTD",
+  quantity: 1,
+  uniqueid: "“#m22”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/347378/zandu-pain-relief-balm-bottle-of-8-ml-1-1654077474.jpg?dim=320x320&dpr=1&q=100",
+  name: "Zandu Pain Relief Balm",
+  description: "Ayurvedic Care",
+  Mrp: 40,
+  price: 36,
+  name2:"By USV PVT LTD",
+  quantity: 1,
+  uniqueid: "“#m23”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/B39499/pharmeasy-hot-water-bag-blue-2-1645456739.jpg?dim=320x320&dpr=1&q=100",
+  name: "Pharmeasy Hot Water Bag",
+  description: "Ayurvedic Care",
+  Mrp: 349,
+  price: 244.3,
+  name2:"By USV PVT LTD",
+  quantity: 1,
+  uniqueid: "“#m24”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/226634/i-can-pregnancy-test-kit-1-1654078700.jpg?dim=320x320&dpr=1&q=100",
+  name: "I Can Pregnancy Test Kit",
+  description: "Sexual Wellness",
+  Mrp: 55,
+  name2:"By USV PVT LTD",
+  price: 35.2,
+  quantity: 1,
+  uniqueid: "“#m25”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/I40161/durex-extra-thin-packet-of-10-condoms-1-1654166208.jpg?dim=320x320&dpr=1&q=100",
+  name: "Durex Extra Thin Packet Condoms",
+  description: "Sexual Wellness",
+  Mrp: 228,
+  name2:"By USV PVT LTD",
+  price: 193.8,
+  quantity: 1,
+  uniqueid: "“#m26”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/I08024/climax-for-men-bottle-of-12-g-spray-1-1641787589.jpg?dim=320x320&dpr=1&q=100",
+  name: "Climax Spray - For Men",
+  description: "Sexual Wellness",
+  Mrp: 199,
+  name2:"By USV PVT LTD",
+  price: 179.1,
+  quantity: 1,
+  uniqueid: "“#m27”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/051580/dabur-shilajit-gold-vitality-capsules-strip-of-10-1-1654078818.jpg?dim=320x320&dpr=1&q=100",
+  name: "Dabur Shilajit Gold Vitality Capsules",
+  description: "Sexual Wellness",
+  Mrp: 255,
+  name2:"By USV PVT LTD",
+  price: 229.5,
+  quantity: 1,
+  uniqueid: "“#m28”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/P96185/patanjali-divya-shilajeet-rasayan-vati-120-tablets-2-1642581102.jpg?dim=320x320&dpr=1&q=100",
+  name: "Patanjali Divya Shilajeet Rasayan Vati",
+  description: "Sexual Wellness",
+  Mrp: 75,
+  name2:"By USV PVT LTD",
+  price: 60,
+  quantity: 1,
+  uniqueid: "“#m29”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products/071715/evion-600mg-strip-of-10-capsules-2-1641536013.jpg?dim=320x320&dpr=1&q=100",
+  name: "Evion 600mg Strip Of 10 Capsules",
+  description: "Fitness & Supplements",
+  Mrp: 47,
+  name2:"By USV PVT LTD",
+  price: 42.3,
+  quantity: 1,
+  uniqueid: "“#m30”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/270552/revital-h-men-multivitamin-with-calcium-zinc-ginseng-for-immunity-strong-bones-energy-30-capsules-2-1654077741.jpg?dim=320x320&dpr=1&q=100",
+  name: "Revital H Men Multivitamin",
+  description: "Fitness & Supplements",
+  Mrp: 310,
+  name2:"By USV PVT LTD",
+  price: 263.5,
+  quantity: 1,
+  uniqueid: "“#m31”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/H37794/liveasy-wellness-calcium-magnesium-vitamin-d3-bones-dental-health-bottle-of-90-tablets-2-1654169056.jpg?dim=320x320&dpr=1&q=100",
+  name: "Liveasy Wellness Calcium",
+  description: "Fitness & Supplements",
+  Mrp: 849,
+  name2:"By USV PVT LTD",
+  price: 466.95,
+  quantity: 1,
+  uniqueid: "“#m32”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/051140/d-protin-vanilla-diabetes-care-powder-bottle-of-200-g-2-1654078626.jpg?dim=320x320&dpr=1&q=100",
+  name: "D-Protin Vanilla Diabetes Care Powder",
+  description: "Fitness & Supplements",
+  Mrp: 260,
+  name2:"By USV PVT LTD",
+  price: 221,
+  quantity: 1,
+  uniqueid: "“#m33”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/196240/tedibar-bathing-bar-75gm-1-1654078068.jpg?dim=320x320&dpr=1&q=100",
+  name: "Tedibar Bathing Bar 75gm",
+  description: "Mother and Baby Care",
+  Mrp: 165,
+  name2:"By USV PVT LTD",
+  price: 132,
+  quantity: 1,
+  uniqueid: "“#m34”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/E35192/horlicks-junior-health-nutrition-drink-vanilla-500-g-jar-2-1654169694.jpg?dim=320x320&dpr=1&q=100",
+  name: "Horlicks Junior Health & Nutrition Drink Vanilla",
+  description: "Mother and Baby Care",
+  Mrp: 299,
+  name2:"By USV PVT LTD",
+  price: 299,
+  quantity: 1,
+  uniqueid: "“#m35”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/329300/nestle-lactogen-1-infant-formula-powder-upto-6-months-stage-1-400g-bag-in-box-pack-1-1641398772.jpg?dim=320x320&dpr=1&q=100",
+  name: "Nestle Lactogen 1 Infant Formula Powder",
+  description: "Mother and Baby Care",
+  Mrp: 375,
+  name2:"By USV PVT LTD",
+  price: 375,
+  quantity: 1,
+  uniqueid: "“#m36”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/337418/protinex-mama-vanilla-nutrition-drink-tin-of-250-g-2-1654077494.jpg?dim=320x320&dpr=1&q=100",
+  name: "Protinex Mama Vanilla Nutrition Drink",
+  description: "Mother and Baby Care",
+  Mrp: 415,
+  name2:"By USV PVT LTD",
+  price: 389.4,
+  quantity: 1,
+  uniqueid: "“#m37”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/131679/onetouch-select-glucometer-test-strips-50s-pack-1-1654078262.jpg?dim=320x320&dpr=1&q=100",
+  name: "Onetouch Select Glucometer Test Strips",
+  description: "Healthcare Devices",
+  Mrp: 1195,
+  name2:"By USV PVT LTD",
+  price: 1135.25,
+  quantity: 1,
+  uniqueid: "“#m379”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/O70942/coviself-covid-self-test-kit-2-1644415093.jpg?dim=320x320&dpr=1&q=100",
+  name: "Coviself Covid Self Test Kit",
+  description: "Healthcare Devices",
+  Mrp: 250,
+  price: 250,
+  name2:"By USV PVT LTD",
+  quantity: 1,
+  uniqueid: "“#m38”",
+},
+{
+  image:
+    "https://cdn01.pharmeasy.in/dam/products_otc/000660/accu-chek-active-glucometer-kit-with-free-10-strips-1-1654077455.jpg?dim=320x320&dpr=1&q=100",
+  name: "Accu-Chek Active Glucometer Kit",
+  description: "Healthcare Devices",
+  Mrp: 1599,
+  price: 1599,
+  quantity: 1,
+  name2:"By USV PVT LTD",
+  uniqueid: "“#m39”",
+}
+];
+
   
  let cartls=JSON.parse(localStorage.getItem("cart-page"))||[];
   function displayproduct(productdata) {
@@ -1543,13 +1241,13 @@ if(localStorage.getItem("checkLogin")=="Yes")
     
       let name=document.createElement("h3");
       name.innerText=element.name;
-      let mrp=document.createElement("p");
-      mrp.innerText="₹"+element.MRP;
+      let Mrp=document.createElement("p");
+      Mrp.innerText="₹"+element.Mrp;
       let price=document.createElement("h5");
       price.innerText="₹"+element.price;
 
       let offer=document.createElement("p");
-       offer.innerHTML=Math.floor(((element.MRP-element.price)*100)/element.MRP)+"%"+"OFF";
+       offer.innerHTML=Math.floor(((element.Mrp-element.price)*100)/element.Mrp)+"%"+"OFF";
       offer.style.color="green"
 
 
@@ -1569,7 +1267,7 @@ if(localStorage.getItem("checkLogin")=="Yes")
       
       imgbox.append(img);
 
-      box.append(imgbox,name,mrp,price,offer,addcart);
+      box.append(imgbox,name,Mrp,price,offer,addcart);
       document.querySelector("#product").append(box);
     });
   }
