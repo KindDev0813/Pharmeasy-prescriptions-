@@ -835,16 +835,7 @@ Healthcare.addEventListener("click",function(){
 });
 
     let productdata=[
-    {
-      image:
-        "https://cdn01.pharmeasy.in/dam/products_otc/L79986/everherb-karela-jamun-juice-helps-maintains-healthy-sugar-levels-helps-in-weight-management-1l-2-1654234653.jpg?dim=320x320&dpr=1&q=100",
-      name: "Everherb Karela Jamun Juice",
-      categories: "Health Food and Drinks",
-      MRP: 399,
-      price: 207.48,
-      quantity: 1,
-      uniqueid: "“#m9”",
-    },
+
     {
       image:
         "https://cdn01.pharmeasy.in/dam/products_otc/L59203/supreem-super-foods-normalife-quinoa-puffs-roasted-puffs-snack-with-cheese-garlic-20-gm-2-1652878418.jpg?dim=320x320&dpr=1&q=100",
@@ -1175,7 +1166,7 @@ Healthcare.addEventListener("click",function(){
       let name=document.createElement("h3");
       name.innerText=element.name;
       let mrp=document.createElement("p");
-      mrp.innerText=element.MRP;
+      mrp.innerText=element.Mrp;
       let price=document.createElement("h5");
       price.innerText=element.price;
       let offer=document.createElement("p");
@@ -1193,7 +1184,6 @@ Healthcare.addEventListener("click",function(){
         alert("product already present")
        }
 })
-    
       
       imgbox.append(img);
 
