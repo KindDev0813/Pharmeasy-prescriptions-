@@ -29,7 +29,10 @@ Healthcare.addEventListener("click",function(){
     console.log("in");
     window.location.href = "healthcare.html";
 });
-
+let offer = document.querySelector("#offer");
+offer.addEventListener("click",function(){
+    window.location.href = "offerPage.html";
+});
 
 let data=JSON.parse(localStorage.getItem("cart-page"))||[]
 display(data)

@@ -51,6 +51,10 @@ Healthcare.addEventListener("click",function(){
     console.log("in");
     window.location.href = "healthcare.html";
 });
+let offer = document.querySelector("#offer");
+offer.addEventListener("click",function(){
+    window.location.href = "offerPage.html";
+});
 
 //login Functionality
 if(localStorage.getItem("checkLogin")=="Yes")
