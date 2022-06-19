@@ -498,7 +498,7 @@ box-shadow:1px 1px 1px 1px #8897a2;
       <div id="lowerNav">
         <div>
           <div>
-            <p>Order Medicines</p>
+            <p id="orderMedicinebtn">Order Medicines</p>
             <div class="highlight"></div>
           </div>
           <div id="Health">
@@ -830,6 +830,11 @@ let labtest = document.querySelector("#labtestb");
 labtest.addEventListener("click",function(){
     console.log("in");
     window.location.href = "Labtest.html";
+});
+let orderMedicine = document.querySelector("#orderMedicinebtn");
+orderMedicine.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "./OrderMedicine/ordermedicine.html";
 });
 
 let Rtpcr = document.querySelector("#Rtpcr");

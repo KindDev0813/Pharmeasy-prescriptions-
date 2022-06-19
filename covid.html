@@ -497,7 +497,7 @@ legend{
       <div id="lowerNav">
         <div>
           <div>
-            <p>Order Medicines</p>
+            <p id="orderMedicinebtn">Order Medicines</p>
             <div class="highlight"></div>
           </div>
           <div id="Health">
@@ -863,6 +863,12 @@ let Rtpcr = document.querySelector("#Rtpcr");
 Rtpcr.addEventListener("click",function(){
     console.log("in");
     window.location.href = "RTPCR.html";
+});
+
+let orderMedicine = document.querySelector("#orderMedicinebtn");
+orderMedicine.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "./OrderMedicine/ordermedicine.html";
 });
 
 let Healthcare = document.querySelector("#Health");

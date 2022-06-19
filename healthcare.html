@@ -547,7 +547,7 @@
       <div id="lowerNav">
         <div>
           <div>
-            <p>Order Medicines</p>
+            <p id="orderMedicinebtn">Order Medicines</p>
             <div class="highlight"></div>
           </div>
           <div id="Health">
@@ -1095,6 +1095,11 @@ let BacktoHomeImg = document.querySelector("#upperNav>div>img:first-child");
 BacktoHomeImg.addEventListener("click",function(){
     window.location.href = "index.html";
 })
+let orderMedicine = document.querySelector("#orderMedicinebtn");
+orderMedicine.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "./OrderMedicine/ordermedicine.html";
+});
 let cart = document.querySelector("#cart");
 cart.addEventListener("click",function(){
     if(localStorage.getItem("checkLogin")=="Yes")

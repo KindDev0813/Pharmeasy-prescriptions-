@@ -40,6 +40,11 @@ Rtpcr.addEventListener("click",function(){
     console.log("in");
     window.location.href = "RTPCR.html";
 });
+let orderMedicine = document.querySelector("#orderMedicinebtn");
+orderMedicine.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "./OrderMedicine/ordermedicine.html";
+});
 
 let Healthcare = document.querySelector("#Health");
 Healthcare.addEventListener("click",function(){

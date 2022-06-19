@@ -32,7 +32,7 @@
         <div id="lowerNav">
             <div>
                 <div>
-                    <p>Order Medicines</p> 
+                    <p id="orderMedicinebtn">Order Medicines</p> 
                     <div class="highlight"></div>
                 </div>
                 <div id="Health">Healthcare Products
@@ -515,6 +515,12 @@ let offer = document.querySelector("#offer");
 offer.addEventListener("click",function(){
     window.location.href = "offerPage.html";
 });
+let orderMedicine = document.querySelector("#orderMedicinebtn");
+orderMedicine.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "./OrderMedicine/ordermedicine.html";
+});
+
 let array=[
     {
        img:"https://cms-contents.pharmeasy.in/offer/6e091f6c840-Father_day_Logo.jpg",

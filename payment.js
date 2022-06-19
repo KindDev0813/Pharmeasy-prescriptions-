@@ -36,6 +36,11 @@ let offer = document.querySelector("#offer");
 offer.addEventListener("click",function(){
     window.location.href = "offerPage.html";
 });
+let orderMedicine = document.querySelector("#orderMedicinebtn");
+orderMedicine.addEventListener("click",function(){
+    console.log("in");
+    window.location.href = "./OrderMedicine/ordermedicine.html";
+});
 
 
 var elements = document.getElementsByClassName("linkwallet");
