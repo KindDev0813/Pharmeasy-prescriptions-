@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <title>Document</title>
+    <link rel="icon" type="image/png" href="images/pharmeasyfavicon.png">
+    <title>Personal Care</title>
     <style>
          /* --Navbar-- */
       * {
@@ -187,6 +188,7 @@
     margin-top: 7px;
     font-size: 20px;
     text-align: left;
+    
   }
   
   #seconddiv>div>p {
@@ -418,9 +420,10 @@
     justify-content: space-between;
   }
   #main >#filtred{
-width: 30%;
-box-shadow:1px 1px 1px 1px #8897a2;
+width: 20%;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 margin-top: 30px;
+height: 400px;
   }
   #main>#product{
 width: 60%;
@@ -443,10 +446,11 @@ box-shadow:1px 1px 1px 1px #8897a2;
     margin: auto;
     justify-content: center;
     align-items: center;
+    
   }
   #main>#product>div>div>img{
-    width: 158px;
-    height: 108px;
+    width: 88px;
+    height: 88px;
   }
 
   /* header */
@@ -472,8 +476,13 @@ padding-right: 10px;
 }
 #product >.offerpro img{
 width: 20px;
-height: auto;
+height:auto;
 }
+legend{
+    color:#4f585e ;
+    font-weight: bold;
+    font-size: 18px;
+  }
   
     </style>
   </head>
@@ -535,8 +544,8 @@ height: auto;
     <!-- header start -->
 
     <div id="header">
-     <h1>Filter</h1>
-     <h1>Personal Care</h1>
+     <h1 style="color:#4F585E;">Filter</h1>
+     <h1 style="color:#4F585E;">Personal Care</h1>
      <div>
      <label for="">sort by:</label>
      <select name="sort" id="sorting">
@@ -551,33 +560,33 @@ height: auto;
     <div id="main">
       <div id="filtred">
         <div class="category">
-            <fieldset>
+            <fieldset style="border-radius: 5px; height: 60px;">
             <legend>Category</legend>
-            <label for="category">Personal Care</label>
+            <label for="category" style="font-size:14px;color:#4F585E ;font-family: 'Open Sans', sans-serif;">Personal Care</label>
             <input type="checkbox" id="category" value="Covid Essentials" checked>
             
             </fieldset>
       </div> 
-            <hr>
-            <fieldset>
+            <hr style="margin-top: 25px;">
+            <fieldset style="border-radius: 5px; height: 100px; ">
                 <legend>Sub Category:</legend>
             
                 <div>
                  
-                  <label for="scales">Men Care</label>
-                  <input type="checkbox" id="scales" name="scales"
+                  <label for="scales" style="font-size:14px;color:#4F585E ;font-family: 'Open Sans', sans-serif;">Men Care</label>
+                  <input type="checkbox" id="scales" name="scales" style="margin-left: 25px;"
                   >
                 </div>
             
                 <div>
                   
-                  <label for="disinfectants">Women Care</label>
-                  <input type="checkbox" id="disinfectants" name="disinfectants">
+                  <label for="disinfectants" style="font-size:14px;color:#4F585E ;font-family: 'Open Sans', sans-serif;">Women Care</label>
+                  <input type="checkbox" id="disinfectants" name="disinfectants" style="margin-left: 5px;">
                 </div>
                 <div>
                   
-                    <label for="Hygiene">Oral Care</label>
-                    <input type="checkbox" id="Hygiene" name="Hygiene">
+                    <label for="Hygiene" style="font-size:14px;color:#4F585E ;font-family: 'Open Sans', sans-serif;">Oral Care</label>
+                    <input type="checkbox" id="Hygiene" name="Hygiene" style="margin-left: 25px;">
                   </div>
             </fieldset>
         
@@ -1216,17 +1225,23 @@ let productdata=[
   function displayproduct(productdata) {
     productdata.forEach(function (element) {
       let box = document.createElement("div");
+      box.style.paddingBottom="15px";
       let imgbox = document.createElement("div");
       let img = document.createElement("img");
       img.src = element.image;
     
       let name=document.createElement("h3");
       name.innerText=element.name;
+      name.style.color="#"
+      name.style.fontSize="15px";
+      name.style.color="#4F585E";
       let Mrp=document.createElement("p");
       Mrp.innerText=element.Mrp;
+      Mrp.style.textDecoration="line-through"
+      Mrp.style.color="#4F585E";
       let price=document.createElement("h5");
       price.innerText=element.price;
-
+      price.style.color="#4F585E";
       let offershow=document.createElement("div");
       offershow.className="offerpro";
       let offerimg=document.createElement("img");
@@ -1238,6 +1253,15 @@ let productdata=[
       offer.style.color="white"
       let addcart=document.createElement("button");
       addcart.innerText="Add To Cart";
+      addcart.style.marginLeft="65px";
+      addcart.style.backgroundColor="#10847e";
+      addcart.style.border="none";
+      addcart.style.padding="5px";
+      // addcart.style.paddingLeft="20%"
+      // addcart.style.paddingRight="50%"
+      addcart.style.color="white";
+      addcart.style.marginTop="15px";
+      addcart.style.borderRadius="3px";
     
       offershow.append(offerimg,offer);
       imgbox.append(img);

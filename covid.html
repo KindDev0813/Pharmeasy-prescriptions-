@@ -345,6 +345,7 @@
     font-family: Open Sans, sans-serif;
     text-rendering: optimizeLegibility;
     font-weight: 400;
+    
   }
   
   #followus>div {
@@ -413,13 +414,15 @@
     width: 90%;
     margin: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
   }
-  #main >#filtred{
-width: 30%;
-box-shadow:1px 1px 1px 1px #8897a2;
+  #main>#filtred{
+    width: 20%;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 margin-top: 30px;
+height: 400px;
+
   }
   #main>#product{
 width: 60%;
@@ -455,6 +458,7 @@ box-shadow:1px 1px 1px 1px #8897a2;
   }
   #product >div+h3{
     font-size: bold;
+    
   }
 #header{
     width: 90%;
@@ -464,7 +468,11 @@ box-shadow:1px 1px 1px 1px #8897a2;
     justify-content: space-between;
     align-items: center;
 }
-
+legend{
+    color:#4f585e ;
+    font-weight: bold;
+    font-size: 18px;
+  }
     </style>
   </head>
   <body>
@@ -524,8 +532,8 @@ box-shadow:1px 1px 1px 1px #8897a2;
     <!-- --Navbar end-- -->
     <!-- header start -->
     <div id="header">
-     <h1>Filter</h1>
-     <h1>Covid Essentials</h1>
+     <h1 style="color:#4F585E;">Filter</h1>
+     <h1 style="color:#4F585E;">Covid Essentials</h1>
      <div>
      <label for="">sort by:</label>
      <select name="sort" id="sorting">
@@ -540,33 +548,33 @@ box-shadow:1px 1px 1px 1px #8897a2;
     <div id="main">
       <div id="filtred">
         <div class="category">
-            <fieldset>
+            <fieldset style="border-radius: 5px; height: 60px;">
             <legend>Category</legend>
             <label for="category">Covid Essentials</label>
             <input type="checkbox" id="category" value="Covid Essentials" checked>
             
             </fieldset>
       </div> 
-            <hr>
-            <fieldset>
+            <hr style="margin-top: 25px;">
+            <fieldset style="border-radius: 5px; height: 100px;">
                 <legend>Sub Category:</legend>
             
                 <div>
                  
-                  <label for="scales">Covid Test Kit</label>
-                  <input type="checkbox" id="scales" name="scales"
+                  <label for="scales" style="font-size:14px;color:#4F585E ;font-family: 'Open Sans', sans-serif;">Covid Test Kit</label>
+                  <input type="checkbox" id="scales" name="scales" style="margin-left:25px"
                   >
                 </div>
             
                 <div>
                   
-                  <label for="disinfectants">Disinfectants</label>
-                  <input type="checkbox" id="disinfectants" name="disinfectants">
+                  <label for="disinfectants" style="font-size:14px;color:#4F585E ;font-family: 'Open Sans', sans-serif;">Disinfectants</label>
+                  <input type="checkbox" id="disinfectants" name="disinfectants" style="margin-left:30px">
                 </div>
                 <div>
                   
-                    <label for="Hygiene">Home Hygiene Essentials</label>
-                    <input type="checkbox" id="Hygiene" name="Hygiene">
+                    <label for="Hygiene" style="font-size:14px;color:#4F585E ;font-family: 'Open Sans', sans-serif;">Home Hygiene Essentials</label>
+                    <input type="checkbox" id="Hygiene" name="Hygiene" style="margin-left:-50px">
                   </div>
             </fieldset>
         
@@ -577,9 +585,9 @@ box-shadow:1px 1px 1px 1px #8897a2;
     </div>
     <!-- main end -->
 <!-- question and about section -->
-<div class="question">
+<!-- <div class="question" style="margin-top: 65px;line-height: 35px;">
 <div class="asked">
-  <label>Q1. Which face mask are the best?</label>
+  <label >Q1. Which face mask are the best?</label>
    
   <p>N95 masks are proven to be the best and are preferred over several others available in the market.<p>
 </div>
@@ -604,7 +612,7 @@ box-shadow:1px 1px 1px 1px #8897a2;
 
   <h3>Youe safety is our priority</h3>
   <p>Stay safe at home and shop at your convenience from PharmEasy. All you have to do is place your order and we will try to deliver it at the earliest.</p>
-</div>
+</div> -->
 <!-- question and about section -->
     <!-- footer start -->
     <hr class="horizontalline2">
@@ -1235,17 +1243,23 @@ let productdata=[
     
     productdata.forEach(function (element) {
       let box = document.createElement("div");
+      box.style.paddingBottom="15px";
       let imgbox = document.createElement("div");
       let img = document.createElement("img");
       img.src = element.image;
+      img.style.height="105px";
+      img.style.width="105px";
     
       let name=document.createElement("h3");
       name.innerText=element.name;
+      name.style.color="#4F585E";
       let Mrp=document.createElement("p");
       Mrp.innerText="₹"+element.Mrp;
+      Mrp.style.color="#4F585E";
+      Mrp.style.textDecoration="line-through"
       let price=document.createElement("h5");
       price.innerText="₹"+element.price;
-
+      price.style.color="#4F585E";
       let offer=document.createElement("p");
        offer.innerHTML=Math.floor(((element.Mrp-element.price)*100)/element.Mrp)+"%"+"OFF";
       offer.style.color="green"
@@ -1253,6 +1267,16 @@ let productdata=[
 
       let addcart=document.createElement("button");
       addcart.innerText="Add To Cart";
+      addcart.style.marginLeft="5px";
+      addcart.style.backgroundColor="#10847e";
+      addcart.style.border="none";
+      addcart.style.padding="5px";
+      addcart.style.width="105px";
+      addcart.style.marginLeft="65px";
+      
+      addcart.style.color="white";
+      addcart.style.marginTop="15px";
+      addcart.style.borderRadius="3px";
   
       addcart.addEventListener("click",function(){
        if(addtocartfun(element.uniqueid)===true){

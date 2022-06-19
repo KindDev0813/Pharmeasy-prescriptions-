@@ -189,6 +189,7 @@
     margin-top: 7px;
     font-size: 20px;
     text-align: left;
+    
   }
   
   #seconddiv>div>p {
@@ -420,9 +421,10 @@
     justify-content: space-between;
   }
   #main >#filtred{
-width: 30%;
-box-shadow:1px 1px 1px 1px #8897a2;
+    width: 25%;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 margin-top: 30px;
+height: 400px;
   }
   #main>#product{
 width: 60%;
@@ -465,6 +467,12 @@ box-shadow:1px 1px 1px 1px #8897a2;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  legend{
+    color:#4f585e ;
+    font-weight: bold;
+    font-size: 18px;
+    
   }
     </style>
 </head>
@@ -526,8 +534,8 @@ box-shadow:1px 1px 1px 1px #8897a2;
     <!-- header start -->
 
     <div id="header">
-     <h1>Filter</h1>
-     <h1>Health Food and Drinks</h1>
+     <h1 style="color:#4F585E;">Filter</h1>
+     <h1 style="color:#4F585E;">Health Food and Drinks</h1>
      <div>
      <label for="">sort by:</label>
      <select name="sort" id="sorting">
@@ -542,33 +550,33 @@ box-shadow:1px 1px 1px 1px #8897a2;
     <div id="main">
       <div id="filtred">
         <div class="category">
-            <fieldset>
+            <fieldset style="border-radius: 5px; height: 60px;">
             <legend>Category</legend>
-            <label for="category">Health Food and Drinks</label>
-            <input type="checkbox" id="category" value="Covid Essentials" checked>
+            <label for="category" style="font-size:14px;color:#4F585E ;font-family: 'Open Sans', sans-serif;">Health Food and Drinks</label>
+            <input type="checkbox" id="category" value="Covid Essentials" checked  style="margin-left: -60px;">
             
             </fieldset>
       </div> 
-            <hr>
-            <fieldset>
+            <hr style="margin-top: 25px;">
+            <fieldset style="border-radius: 5px; height: 100px;">
                 <legend>Sub Category:</legend>
             
                 <div>
                  
-                  <label for="scales">Men Care</label>
-                  <input type="checkbox" id="scales" name="scales"
+                  <label for="scales" style="font-size:14px;color:#4F585E ;font-family: 'Open Sans', sans-serif;">Men Care</label>
+                  <input type="checkbox" id="scales" name="scales" style="margin-left: 20px;"
                   >
                 </div>
             
                 <div>
                   
-                  <label for="disinfectants">Women Care</label>
-                  <input type="checkbox" id="disinfectants" name="disinfectants">
+                  <label for="disinfectants" style="font-size:14px;color:#4F585E ;font-family: 'Open Sans', sans-serif;">Women Care</label>
+                  <input type="checkbox" id="disinfectants" name="disinfectants" >
                 </div>
                 <div>
                   
-                    <label for="Hygiene">Oral Care</label>
-                    <input type="checkbox" id="Hygiene" name="Hygiene">
+                    <Oral for="Hygiene" style="font-size:14px;color:#4F585E ;font-family: 'Open Sans', sans-serif;">Oral Care</label>
+                    <input type="checkbox" id="Hygiene" name="Hygiene" style="margin-left: 22px;">
                   </div>
             </fieldset>
         
@@ -1210,21 +1218,36 @@ if(localStorage.getItem("checkLogin")=="Yes")
     function displayproduct(productdata) {
     productdata.forEach(function (element) {
       let box = document.createElement("div");
+      box.style.paddingBottom="15px";
       let imgbox = document.createElement("div");
       let img = document.createElement("img");
       img.src = element.image;
-    
+      img.style.height="105px";
+      img.style.width="105px";
       let name=document.createElement("h3");
       name.innerText=element.name;
+      name.style.color="#4F585E";
       let Mrp=document.createElement("p");
       Mrp.innerText=element.Mrp;
+      Mrp.style.color="#4F585E";
+      Mrp.style.textDecoration="line-through"
       let price=document.createElement("h5");
       price.innerText=element.price;
+      price.style.color="#4F585E";
       let offer=document.createElement("p");
       offer.innerText=Math.floor(((element.Mrp-element.price)*100)/element.Mrp)+"%"+"OFF";
       offer.style.color="green"
       let addcart=document.createElement("button");
       addcart.innerText="Add To Cart";
+      addcart.style.marginLeft="5px";
+      addcart.style.backgroundColor="#10847e";
+      addcart.style.border="none";
+      addcart.style.padding="5px";
+      addcart.style.width="105px";
+      addcart.style.marginLeft="65px";
+      addcart.style.color="white";
+      addcart.style.marginTop="15px";
+      addcart.style.borderRadius="3px";
   
       addcart.addEventListener("click",function(){
        if(addtocartfun(element.uniqueid)===true){
