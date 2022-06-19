@@ -1237,10 +1237,35 @@ let productdata=[
 }
 ];
 
-  
+//Sort Functionality
+
+let sort = document.querySelector("#sorting");
+sort.addEventListener("change",sortFunc);
+function sortFunc()
+{
+  let sortType = (sort.value);
+  if(sortType =="low")
+  {
+    console.log("in");
+    productdata.sort(function(a,b){
+      return a.price-b.price;
+    })
+  }else if (sortType == "high")
+  {
+    productdata.sort(function(a,b){
+      return b.price-a.price;
+  })
+}
+  displayproduct(productdata);
+}
+
+
+
+
+
  let cartls=JSON.parse(localStorage.getItem("cart-page"))||[];
   function displayproduct(productdata) {
-    
+    document.querySelector("#product").innerHTML = "";
     productdata.forEach(function (element) {
       let box = document.createElement("div");
       box.style.paddingBottom="15px";
