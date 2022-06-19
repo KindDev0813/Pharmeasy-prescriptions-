@@ -187,7 +187,26 @@ input+p{
     margin-top: 5%; */
     color: #4F585E;
 }
-
+.button1{
+    width:95%;
+    background-color: #10847e;
+    color: white;
+    margin-left: 3%;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 35px;
+    height:30px;   
+}
+#asdfg{
+    width:80%;
+    background-color: #10847e;
+    color: white;
+    margin-left: 10%;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 35px;
+    height:30px;
+}
     </style>
 </head>
 <body>
@@ -214,7 +233,7 @@ input+p{
                 <h2>Quick Log-in/Register</h2>
                 <input type="text" placeholder="Phone Number" id="phonenum">
                 <!-- <button href="#" class="button">Submit</button> -->
-                <input type="submit" class="button" value="continue">
+                <input type="submit" id="asdfg" value="continue">
                 <p>By clicking continue, you agree to our Privacy Policy</p>
                 <p id="display"> </p>
             </form>
@@ -268,7 +287,7 @@ document.querySelector('.button').addEventListener('click',newdiss)
 
 function newdiss(event){
     document.querySelector('form').innerHTML="";
-    console.log("gfghj")
+    //console.log("gfghj")
     event.preventDefault()
     
     var card=document.createElement("div")
@@ -301,7 +320,7 @@ function newdiss(event){
     inputsubmit.innerText="Continue";
     inputsubmit.setAttribute("type","submit")
     inputsubmit.setAttribute("id","continuebtn")
-    inputsubmit.setAttribute("class","button")
+    inputsubmit.setAttribute("class","button1")
     
     
     
