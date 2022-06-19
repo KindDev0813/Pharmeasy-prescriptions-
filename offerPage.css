@@ -65,6 +65,13 @@
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
 input{
     font-size: 20px;
     width:46%;
