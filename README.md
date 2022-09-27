@@ -1,4 +1,5 @@
 # PharmEasy - Clone
+### https://roaring-creponne-d99230.netlify.app
 
 We have tried cloning the PharmEasy app as a construct week project in the second week of our Masai Journey. We, a team of 5 people have completed this project in a span of 5 days using our knowledge of HTML, CSS and JavaScript.
 
@@ -37,4 +38,23 @@ One Clicking on the login and signup button you will be redirected to the login 
 ***********************************************************************************************************************************************************************
 ![heathcare_products](https://user-images.githubusercontent.com/103635205/192605926-a5e5f39e-e2a4-40d1-964d-977f079fa182.png)
 
-Healthcare products page contains all the products bifercated into different healthcare genres. On selecting one you will be shown all the products of the particular type 
+Healthcare products page contains all the products bifercated into different healthcare genres. On selecting one you will be shown all the products of the particular type. This Page in particular houses the **Sorting** functionality. Thus you can sort the products in the ascending order of their price. Clicking add to cart the item will be stored in the local Storage that will used to update cart and finializing the total amount to be paid. Also will get a pop up saying so. 
+***********************************************************************************************************************************************************************
+![cartPage](https://user-images.githubusercontent.com/103635205/192608477-8ac1fc57-c155-49dc-baef-e95378e5c524.png)
+
+Cart Page will show the number the products in the cart, Your Individual products as well as along with the total amount. Discounted value is also calculated if applicable and in the proced to buy button you will be taken to multiple payment options.
+***********************************************************************************************************************************************************************
+![cartPage](https://user-images.githubusercontent.com/103635205/192620572-1a82d2d4-7af2-4a68-a838-86dc1dacf767.png)
+
+Payments Gateway page will taken in card details. Will be redirected to the OTP Authentication Page. Authentication will be checked on entering the correct OTP(1234)
+you will be redirected to the Payment ackowledgment.
+*******************************************************************
+
+![paymentSuccess](https://user-images.githubusercontent.com/103635205/192624804-4f6e2c47-d461-417a-a248-e3229b2ff7ab.png)
+
+Many new things was learned in this project our understand. Being my first project, It was fun and interesting to encounter bugs, solving them and reading up on new features and implementing them in the project. I grateful and thankful for the help of my team mates and Masai School.
+
+## Live Link:
+## https://roaring-creponne-d99230.netlify.app
+
+
